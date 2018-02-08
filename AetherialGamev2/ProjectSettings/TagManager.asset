@@ -44,9 +44,9 @@ TagManager:
   - name: Player
     uniqueID: 37018853
     locked: 0
-  - name: Gun
-    uniqueID: 1555573839
-    locked: 0
   - name: Harpoon
     uniqueID: 724537883
+    locked: 0
+  - name: Gun
+    uniqueID: 1555573839
     locked: 0
