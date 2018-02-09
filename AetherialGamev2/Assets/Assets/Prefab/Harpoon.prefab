@@ -22,7 +22,6 @@ GameObject:
   - component: {fileID: 212784003492458418}
   - component: {fileID: 70409877484913648}
   - component: {fileID: 50306774460584070}
-  - component: {fileID: 114783324982556680}
   - component: {fileID: 82546060317724838}
   m_Layer: 0
   m_Name: Harpoon
@@ -159,20 +158,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
---- !u!114 &114783324982556680
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1519540075702588}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b5ed0fa7931b72c48919d379d0b1aa1d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 10
-  body: {fileID: 0}
-  timer: 0
 --- !u!212 &212784003492458418
 SpriteRenderer:
   m_ObjectHideFlags: 1
