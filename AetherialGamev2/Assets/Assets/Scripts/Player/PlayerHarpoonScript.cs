@@ -2,15 +2,36 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerHarpoonScript : MonoBehaviour {
+public class PlayerHarpoonScript : MonoBehaviour
+{
+    Rigidbody2D rb;
 
-	// Use this for initialization
-	void Start () {
-		
-	}
+	void Start ()
+    {
+        rb = GetComponent<Rigidbody2D>();
+    }
 	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+	void Update ()
+    {
+
+    }
+
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "EnemyChase")
+        {
+            collision.gameObject.GetComponent<EnemyChase>().Damage();
+            Die();
+        }
+        if (collision.gameObject.tag == "EnemyProximity")
+        {
+            collision.gameObject.GetComponent<EnemyProximity>().Damage();
+            Die();
+        }
+    }
+
+    void Die()
+    {
+        Destroy(gameObject);
+    }
 }

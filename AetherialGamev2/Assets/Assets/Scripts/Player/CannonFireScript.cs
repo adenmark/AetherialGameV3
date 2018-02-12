@@ -4,11 +4,9 @@ using UnityEngine;
 
 public class CannonFireScript : MonoBehaviour
 {
-
     private Vector3 mouseDirection;
 
     public float fireRate = 0;      // Fire Rate of the Cannon
-    public float damage = 1;        // Damage of the Harpoons, for now they are 1
     public float harpoonSpeed;      // Speed of Harpoon
         
     public GameObject Harpoon;
@@ -18,6 +16,7 @@ public class CannonFireScript : MonoBehaviour
 
     private void Start()
     {
+
     }
 
     void Awake ()
@@ -31,8 +30,6 @@ public class CannonFireScript : MonoBehaviour
 	
 	void Update ()
     {
-
-
         if (fireRate == 0)      // Is it a Single-Fire Weapon?
         {
             if (Input.GetMouseButtonDown(0))        // Left Click

@@ -21,20 +21,24 @@ public class EnemyProjectileScript : MonoBehaviour {
 
         transform.position = Vector2.MoveTowards(transform.position, target, speed * Time.deltaTime);
 
-        if (transform.position.x == target.x && transform.position.y == target.y)
+        if (transform.position.x == target.x && transform.position.y == target.y) //ComeBackToThis
         {
-            DestroyProjectile();
+            Die();
         }
     }
-    private void OnTriggerEnter2D(Collider2D other)
+
+    void OnTriggerEnter2D(Collider2D collision)
     {
-        if(other.CompareTag("Player"))
+        if (collision.gameObject.tag == "Player")
         {
-            DestroyProjectile();
+            collision.gameObject.GetComponent<PlayerMovementScript>().Damage();
+            Die();
         }
     }
-    void DestroyProjectile()
+
+    void Die()
     {
         Destroy(gameObject);
     }
+
 }

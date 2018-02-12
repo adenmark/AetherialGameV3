@@ -4,26 +4,27 @@ using UnityEngine;
 
 public class PlayerMovementScript : MonoBehaviour
 {
-    private Rigidbody2D rb2D;
-
+    private Rigidbody2D rb;
     public float speed;
-    public Vector2 moveVelocity;
-    
-    // Use this for initialization
+    public float health;
+
     void Start()
     {
-        rb2D = GetComponent<Rigidbody2D>();
+        rb = GetComponent<Rigidbody2D>();
     }
 
     void Update()
     {
-        Vector2 moveInput = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
-        moveVelocity = moveInput.normalized * speed;
+        rb.AddForce(new Vector2(Input.GetAxis("Horizontal") * speed, 0));
+        rb.AddForce(new Vector2(0, Input.GetAxis("Vertical") * speed));
     }
 
-    void FixedUpdate()
+    public void Damage()
     {
-        rb2D.MovePosition(rb2D.position + moveVelocity * Time.deltaTime);
+        health--;
+        if(health == 0)
+        {
+            Destroy(gameObject);
+        }
     }
-        
 }

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyScript : MonoBehaviour {
+public class EnemyProximity : MonoBehaviour {
 
     public float speed;
     public float stoppingDistance;
@@ -13,6 +13,8 @@ public class EnemyScript : MonoBehaviour {
 
     public GameObject projectile;
     public Transform player;
+
+    public float health;
 
     void Start ()
     {
@@ -44,4 +46,27 @@ public class EnemyScript : MonoBehaviour {
             timeBetweenShots -= Time.deltaTime;
         }
 	}
+
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Player")
+        {
+            collision.gameObject.GetComponent<PlayerMovementScript>().Damage();
+            Die();
+        }
+    }
+
+    public void Damage()
+    {
+        health--;
+        if (health == 0)
+        {
+            Destroy(gameObject);
+        }
+    }
+
+    void Die()
+    {
+        Destroy(gameObject);
+    }
 }
