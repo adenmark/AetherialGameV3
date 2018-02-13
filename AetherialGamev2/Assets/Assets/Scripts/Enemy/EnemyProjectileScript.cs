@@ -31,7 +31,7 @@ public class EnemyProjectileScript : MonoBehaviour {
     {
         if (collision.gameObject.tag == "Player")
         {
-            collision.gameObject.GetComponent<PlayerMovementScript>().Damage();
+            collision.gameObject.GetComponent<PlayerScript>().Damage();
             Die();
         }
     }

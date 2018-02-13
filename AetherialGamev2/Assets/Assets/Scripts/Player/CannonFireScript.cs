@@ -46,6 +46,7 @@ public class CannonFireScript : MonoBehaviour
             }
         }
 	}
+
     void Shoot()
     {
         Vector2 mousePosition = new Vector2(Camera.main.ScreenToWorldPoint(Input.mousePosition).x, Camera.main.ScreenToWorldPoint(Input.mousePosition).y); // Used to do a Raycast

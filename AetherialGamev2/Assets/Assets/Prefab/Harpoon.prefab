@@ -20,10 +20,11 @@ GameObject:
   m_Component:
   - component: {fileID: 4536210394849396}
   - component: {fileID: 212784003492458418}
-  - component: {fileID: 60761744575528210}
-  - component: {fileID: 50356568258957474}
   - component: {fileID: 114454733253210910}
   - component: {fileID: 82546060317724838}
+  - component: {fileID: 50314545333209228}
+  - component: {fileID: 60761983092586970}
+  - component: {fileID: 114715033182486234}
   m_Layer: 10
   m_Name: Harpoon
   m_TagString: Untagged
@@ -38,13 +39,13 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1519540075702588}
   m_LocalRotation: {x: 0, y: -0, z: 0.7071068, w: -0.7071068}
-  m_LocalPosition: {x: -5.61, y: -1.07, z: 0}
+  m_LocalPosition: {x: 5.2589674, y: 0.0398283, z: 0}
   m_LocalScale: {x: 0.02, y: 0.02, z: 0.05}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 270}
---- !u!50 &50356568258957474
+--- !u!50 &50314545333209228
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 1
@@ -64,7 +65,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!60 &60761744575528210
+--- !u!60 &60761983092586970
 PolygonCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -341,6 +342,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d1ceceea7ca7404a8da8e51f0b021e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114715033182486234
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1519540075702588}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d699baaa3ea27e4ab3fef4ee6d2cc4f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeToDestroy: 1
 --- !u!212 &212784003492458418
 SpriteRenderer:
   m_ObjectHideFlags: 1
