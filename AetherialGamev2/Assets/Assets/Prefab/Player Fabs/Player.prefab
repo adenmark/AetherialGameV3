@@ -160,8 +160,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9bae7a5be6c6ece48a66377f13cbf01d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  teleportationExplosion: {fileID: 0}
   speed: 10
   health: 1
+  aether: 0
 --- !u!114 &114151534612034038
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -174,7 +176,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireRate: 1
-  damage: 1
   harpoonSpeed: 1500
   Harpoon: {fileID: 1519540075702588, guid: cd2a8d1324a7c1c4a9935714d5eaffc2, type: 2}
   firePoint: {fileID: 4911923772263200}

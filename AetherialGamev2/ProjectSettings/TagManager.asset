@@ -6,6 +6,7 @@ TagManager:
   tags:
   - EnemyChase
   - EnemyProximity
+  - BossLeviathan
   layers:
   - Default
   - TransparentFX
