@@ -12,6 +12,7 @@ public class PlayerScript : MonoBehaviour
     public float speed;
     public float health;
     public float aether;
+    public float teleportDelayTime;
 
     void Start()
     {
@@ -26,9 +27,17 @@ public class PlayerScript : MonoBehaviour
 
         if (Input.GetMouseButtonDown(1) && aether >= 1)                                                // Right Click to Teleport
         {
-            Teleport(player);
-            Instantiate(teleportationExplosion, player.position, Quaternion.identity);
+            StartCoroutine(teleportDelay());
+            //Teleport(player);
+            //Instantiate(teleportationExplosion, player.position, Quaternion.identity);
         }
+    }
+
+    IEnumerator teleportDelay()
+    {
+        yield return new WaitForSeconds(teleportDelayTime);
+        Teleport(player);
+        Instantiate(teleportationExplosion, player.position, Quaternion.identity);
     }
 
     void Teleport(Transform teleport_transform)

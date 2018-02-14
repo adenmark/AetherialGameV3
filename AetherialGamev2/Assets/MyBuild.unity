@@ -210,6 +210,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 1788809522998484, guid: 2d5e95758556d7045ad2d9bbdd9da334, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2d5e95758556d7045ad2d9bbdd9da334, type: 2}
   m_IsPrefabParent: 0
@@ -301,12 +305,12 @@ Prefab:
     - target: {fileID: 114308706486654116, guid: 5190c73483cda4c4aa752ad3dfa730fc,
         type: 2}
       propertyPath: stoppingDistance
-      value: 12
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 114308706486654116, guid: 5190c73483cda4c4aa752ad3dfa730fc,
         type: 2}
       propertyPath: retreatDistance
-      value: 10
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 114308706486654116, guid: 5190c73483cda4c4aa752ad3dfa730fc,
         type: 2}
@@ -450,6 +454,11 @@ Prefab:
       value: 
       objectReference: {fileID: 4049090492426686, guid: 25dee56ef954cbe4eaa6ea1852d54523,
         type: 2}
+    - target: {fileID: 114000987103770474, guid: 68a1378dfc1894842a9a72bd403997d7,
+        type: 2}
+      propertyPath: teleportDelayTime
+      value: 0.2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 68a1378dfc1894842a9a72bd403997d7, type: 2}
   m_IsPrefabParent: 0
