@@ -1,6 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-
+using UnityEngine.SceneManagement;
 using UnityEngine;
 
 public class PlayerScript : MonoBehaviour
@@ -11,25 +11,25 @@ public class PlayerScript : MonoBehaviour
     private Rigidbody2D rb;
 
     public float speed;
-    public float health;
+    //public float health;
     public float aether;
     public float teleportDelayTime;
 
 
-    //[SerializeField]        //remove after testing serializedfield
-    //private Stat healthBar;
+    [SerializeField]        //remove after testing serializedfield
+    private Stat health;
 
-    //[SerializeField]        //remove after testing  serializedfield
-    //private Stat aetherBar;
+    [SerializeField]        //remove after testing  serializedfield
+    private Stat aetherBar;
 
 
-    //private void Awake()
-    //{
-    //    healthBar.Initialize();
-    //    aetherBar.Initialize();
-        //}
+    private void Awake()
+    {
+        health.Initialize();
+        aetherBar.Initialize();
+    }
 
-        void Start()
+    void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         player = GameObject.FindGameObjectWithTag("Player").transform;                  // Get the Data to Store in Transform player
@@ -44,6 +44,19 @@ public class PlayerScript : MonoBehaviour
         {
             StartCoroutine(TeleportDelay());
         }
+
+        //remove this code -------
+        //if (Input.GetKeyDown(KeyCode.Q))  //test of healthbar
+        //{
+        //    health.CurrentVal += 1;
+
+        //}
+        //if (Input.GetKeyDown(KeyCode.E))   //test of healthbar
+        //{
+        //    health.CurrentVal -= 1;
+
+        //}
+        //-----------------------------
     }
 
     IEnumerator TeleportDelay()
@@ -62,24 +75,27 @@ public class PlayerScript : MonoBehaviour
             new_pos.z = teleport_transform.position.z;                                  // Makes sure the Z position is still whatever it was before Teleportation
             teleport_transform.position = new_pos;                                      // 
             aether--;                                                                   // Reduces Aether by 1
-           
+
+            aetherBar.CurrentVal--;                                                     //decresing the eather bar
 
 
         }
+
     }
 
     public void Damage()
     {
-        health--;
+        health.CurrentVal--;                                                            //health bar decras on damage
 
         /*if (health == 1)
         {
             Destroy(gameObject);
         }*/
 
-        if (health == 0)
+        if (health.CurrentVal == 0)
         {
             Destroy(gameObject);
+            //SceneManager.LoadScene("MyBuildOskarBuild", LoadSceneMode.Single);
         }
     }
 }
