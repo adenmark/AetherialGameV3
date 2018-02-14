@@ -27,9 +27,9 @@ public class PlayerScript : MonoBehaviour
     //{
     //    healthBar.Initialize();
     //    aetherBar.Initialize();
-    //}
+        //}
 
-    void Start()
+        void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         player = GameObject.FindGameObjectWithTag("Player").transform;                  // Get the Data to Store in Transform player
