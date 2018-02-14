@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EnemyChase : MonoBehaviour
 {
-    Rigidbody2D rb;
+    //Rigidbody2D rb;
 
     public Transform player;
 
@@ -13,13 +13,16 @@ public class EnemyChase : MonoBehaviour
 
     void Start ()
     {
-        rb = GetComponent<Rigidbody2D>();
+        //rb = GetComponent<Rigidbody2D>();
         player = GameObject.FindWithTag("Player").transform;
     }
 	
 	void Update ()
     {
-        transform.position = Vector2.MoveTowards(transform.position, player.position, speed * Time.deltaTime);
+        if(player != null) // Temporary Fix
+        {
+            transform.position = Vector2.MoveTowards(transform.position, player.position, speed * Time.deltaTime);
+        }
     }
 
     void OnCollisionEnter2D(Collision2D collision)

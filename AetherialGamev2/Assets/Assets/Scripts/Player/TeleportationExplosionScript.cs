@@ -2,18 +2,23 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerHarpoonScript : MonoBehaviour
-{
-    //Rigidbody2D rb;
+public class TeleportationExplosionScript : MonoBehaviour {
 
-	void Start ()
+    public float timeToDestroy;
+
+    void Start ()
     {
-        //rb = GetComponent<Rigidbody2D>();
-    }
+		
+	}
 	
 	void Update ()
     {
+        timeToDestroy -= Time.deltaTime;
 
+        if (timeToDestroy <= 0)
+        {
+            Destroy(gameObject);
+        }
     }
 
     void OnTriggerEnter2D(Collider2D collision)
@@ -21,17 +26,10 @@ public class PlayerHarpoonScript : MonoBehaviour
         if (collision.gameObject.tag == "EnemyChase")
         {
             collision.gameObject.GetComponent<EnemyChase>().Damage();
-            Die();
         }
         if (collision.gameObject.tag == "EnemyProximity")
         {
             collision.gameObject.GetComponent<EnemyProximity>().Damage();
-            Die();
         }
-    }
-
-    void Die()
-    {
-        Destroy(gameObject);
     }
 }

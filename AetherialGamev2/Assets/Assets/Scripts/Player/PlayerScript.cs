@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PlayerScript : MonoBehaviour
 {
+    public Transform teleportationExplosion;
+
     private Transform player;                                                           // Set up a place to Store Player Position, Rotation, and Scale.
     private Rigidbody2D rb;
 
@@ -22,9 +24,10 @@ public class PlayerScript : MonoBehaviour
         rb.AddForce(new Vector2(Input.GetAxis("Horizontal") * speed, 0));
         rb.AddForce(new Vector2(0, Input.GetAxis("Vertical") * speed));
 
-        if (Input.GetMouseButtonDown(1))                                                // Right Click to Teleport
+        if (Input.GetMouseButtonDown(1) && aether >= 1)                                                // Right Click to Teleport
         {
             Teleport(player);
+            Instantiate(teleportationExplosion, player.position, Quaternion.identity);
         }
     }
 

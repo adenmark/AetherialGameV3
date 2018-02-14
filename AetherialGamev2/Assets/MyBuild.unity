@@ -217,11 +217,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4404605433525060, guid: 5190c73483cda4c4aa752ad3dfa730fc, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 5
+      value: 23.81
       objectReference: {fileID: 0}
     - target: {fileID: 4404605433525060, guid: 5190c73483cda4c4aa752ad3dfa730fc, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 1.28
       objectReference: {fileID: 0}
     - target: {fileID: 4404605433525060, guid: 5190c73483cda4c4aa752ad3dfa730fc, type: 2}
       propertyPath: m_LocalPosition.z
@@ -254,6 +254,16 @@ Prefab:
     - target: {fileID: 1502264478294638, guid: 5190c73483cda4c4aa752ad3dfa730fc, type: 2}
       propertyPath: m_TagString
       value: EnemyProximity
+      objectReference: {fileID: 0}
+    - target: {fileID: 114308706486654116, guid: 5190c73483cda4c4aa752ad3dfa730fc,
+        type: 2}
+      propertyPath: stoppingDistance
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 114308706486654116, guid: 5190c73483cda4c4aa752ad3dfa730fc,
+        type: 2}
+      propertyPath: speed
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5190c73483cda4c4aa752ad3dfa730fc, type: 2}
@@ -600,7 +610,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 10
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2

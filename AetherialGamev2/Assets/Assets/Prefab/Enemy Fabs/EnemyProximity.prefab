@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 114308706486654116}
   m_Layer: 10
   m_Name: EnemyProximity
-  m_TagString: Enemy
+  m_TagString: EnemyProximity
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -36,7 +36,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1502264478294638}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.44, y: -0.58, z: -0.10381068}
+  m_LocalPosition: {x: 16.4, y: 6.1, z: -5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -80,8 +80,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67cd398e28f1749419539b1362ba1d09, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
-  stoppingDistance: 12
+  speed: 8
+  stoppingDistance: 10
   retreatDistance: 8
   timeBetweenShots: 0
   startTimeBetweenShots: 2
