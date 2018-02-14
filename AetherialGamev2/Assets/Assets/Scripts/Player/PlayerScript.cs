@@ -25,17 +25,15 @@ public class PlayerScript : MonoBehaviour
         rb.AddForce(new Vector2(Input.GetAxis("Horizontal") * speed, 0));
         rb.AddForce(new Vector2(0, Input.GetAxis("Vertical") * speed));
 
-        if (Input.GetMouseButtonDown(1) && aether >= 1)                                                // Right Click to Teleport
+        if (Input.GetMouseButtonDown(1) && aether >= 1)                                 // Right Click to Teleport
         {
-            StartCoroutine(teleportDelay());
-            //Teleport(player);
-            //Instantiate(teleportationExplosion, player.position, Quaternion.identity);
+            StartCoroutine(TeleportDelay());
         }
     }
 
-    IEnumerator teleportDelay()
+    IEnumerator TeleportDelay()
     {
-        yield return new WaitForSeconds(teleportDelayTime);
+        yield return new WaitForSeconds(teleportDelayTime);                             // How Long we wait
         Teleport(player);
         Instantiate(teleportationExplosion, player.position, Quaternion.identity);
     }
