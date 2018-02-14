@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+
 using UnityEngine;
 
 public class PlayerScript : MonoBehaviour
@@ -13,6 +14,20 @@ public class PlayerScript : MonoBehaviour
     public float health;
     public float aether;
     public float teleportDelayTime;
+
+
+    //[SerializeField]        //remove after testing serializedfield
+    //private Stat healthBar;
+
+    //[SerializeField]        //remove after testing  serializedfield
+    //private Stat aetherBar;
+
+
+    //private void Awake()
+    //{
+    //    healthBar.Initialize();
+    //    aetherBar.Initialize();
+    //}
 
     void Start()
     {
@@ -40,12 +55,16 @@ public class PlayerScript : MonoBehaviour
 
     void Teleport(Transform teleport_transform)
     {
+        
         if (aether >= 1)                                                                // Make sure we can't Teleport without Aether
         {
             Vector3 new_pos = Camera.main.ScreenToWorldPoint(Input.mousePosition);      // Makes the Position == Mouse Position
             new_pos.z = teleport_transform.position.z;                                  // Makes sure the Z position is still whatever it was before Teleportation
             teleport_transform.position = new_pos;                                      // 
             aether--;                                                                   // Reduces Aether by 1
+           
+
+
         }
     }
 
