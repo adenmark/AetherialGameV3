@@ -11,7 +11,6 @@ public class PlayerScript : MonoBehaviour
     private Rigidbody2D rb;
 
     public float speed;
-    //public float health;
     public float aether;
     public float teleportDelayTime;
 
@@ -44,19 +43,6 @@ public class PlayerScript : MonoBehaviour
         {
             StartCoroutine(TeleportDelay());
         }
-
-        //remove this code -------
-        //if (Input.GetKeyDown(KeyCode.Q))  //test of healthbar
-        //{
-        //    health.CurrentVal += 1;
-
-        //}
-        //if (Input.GetKeyDown(KeyCode.E))   //test of healthbar
-        //{
-        //    health.CurrentVal -= 1;
-
-        //}
-        //-----------------------------
     }
 
     IEnumerator TeleportDelay()
@@ -76,22 +62,13 @@ public class PlayerScript : MonoBehaviour
             teleport_transform.position = new_pos;                                      // 
             aether--;                                                                   // Reduces Aether by 1
 
-            aetherBar.CurrentVal--;                                                     //decresing the eather bar
-
-
+            aetherBar.CurrentVal--;                                                     // decresing the eather bar
         }
-
     }
 
     public void Damage()
     {
         health.CurrentVal--;                                                            //health bar decras on damage
-
-        /*if (health == 1)
-        {
-            Destroy(gameObject);
-        }*/
-
         if (health.CurrentVal == 0)
         {
             Destroy(gameObject);
