@@ -203,9 +203,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9bae7a5be6c6ece48a66377f13cbf01d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  teleportationExplosion: {fileID: 0}
   speed: 5
-  inertia: 15
-  maxThrust: 50
+  aether: 0
+  teleportDelayTime: 0
+  health:
+    bar: {fileID: 0}
+    maxVal: 0
+    currentVal: 0
+  aetherBar:
+    bar: {fileID: 0}
+    maxVal: 0
+    currentVal: 0
 --- !u!61 &250348648
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -362,12 +371,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireRate: 0
-  damage: 1
-  whatToHit:
-    serializedVersion: 2
-    m_Bits: 0
+  harpoonSpeed: 0
   Harpoon: {fileID: 1519540075702588, guid: cd2a8d1324a7c1c4a9935714d5eaffc2, type: 2}
-  HarpoonSpawn: {fileID: 2100824727}
   firePoint: {fileID: 0}
 --- !u!1 &1107752221
 GameObject:
@@ -516,8 +521,3 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 27bf55390064da8409f6579e1e7f497f, type: 2}
   m_IsPrefabParent: 0
---- !u!4 &2100824727 stripped
-Transform:
-  m_PrefabParentObject: {fileID: 4868332965163604, guid: 27bf55390064da8409f6579e1e7f497f,
-    type: 2}
-  m_PrefabInternal: {fileID: 1886294440}
