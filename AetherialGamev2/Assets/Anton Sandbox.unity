@@ -382,6 +382,128 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: adb1f64ae240a444fb2a743257f4caec, type: 2}
   m_IsPrefabParent: 0
+--- !u!1001 &430638981
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4441329459307770, guid: 68a1378dfc1894842a9a72bd403997d7, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 1.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 4441329459307770, guid: 68a1378dfc1894842a9a72bd403997d7, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4441329459307770, guid: 68a1378dfc1894842a9a72bd403997d7, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4441329459307770, guid: 68a1378dfc1894842a9a72bd403997d7, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4441329459307770, guid: 68a1378dfc1894842a9a72bd403997d7, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4441329459307770, guid: 68a1378dfc1894842a9a72bd403997d7, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4441329459307770, guid: 68a1378dfc1894842a9a72bd403997d7, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4441329459307770, guid: 68a1378dfc1894842a9a72bd403997d7, type: 2}
+      propertyPath: m_RootOrder
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 61227783851115424, guid: 68a1378dfc1894842a9a72bd403997d7,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000987103770474, guid: 68a1378dfc1894842a9a72bd403997d7,
+        type: 2}
+      propertyPath: speed
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000987103770474, guid: 68a1378dfc1894842a9a72bd403997d7,
+        type: 2}
+      propertyPath: health
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 50476100770334022, guid: 68a1378dfc1894842a9a72bd403997d7,
+        type: 2}
+      propertyPath: m_LinearDrag
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114151534612034038, guid: 68a1378dfc1894842a9a72bd403997d7,
+        type: 2}
+      propertyPath: harpoonSpeed
+      value: 1500
+      objectReference: {fileID: 0}
+    - target: {fileID: 114946489952239586, guid: 68a1378dfc1894842a9a72bd403997d7,
+        type: 2}
+      propertyPath: speed
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000987103770474, guid: 68a1378dfc1894842a9a72bd403997d7,
+        type: 2}
+      propertyPath: aether
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000987103770474, guid: 68a1378dfc1894842a9a72bd403997d7,
+        type: 2}
+      propertyPath: teleportationExplosion
+      value: 
+      objectReference: {fileID: 4049090492426686, guid: 25dee56ef954cbe4eaa6ea1852d54523,
+        type: 2}
+    - target: {fileID: 114000987103770474, guid: 68a1378dfc1894842a9a72bd403997d7,
+        type: 2}
+      propertyPath: teleportDelayTime
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000987103770474, guid: 68a1378dfc1894842a9a72bd403997d7,
+        type: 2}
+      propertyPath: health.maxVal
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000987103770474, guid: 68a1378dfc1894842a9a72bd403997d7,
+        type: 2}
+      propertyPath: health.currentVal
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000987103770474, guid: 68a1378dfc1894842a9a72bd403997d7,
+        type: 2}
+      propertyPath: health.bar
+      value: 
+      objectReference: {fileID: 1695481836}
+    - target: {fileID: 114000987103770474, guid: 68a1378dfc1894842a9a72bd403997d7,
+        type: 2}
+      propertyPath: aetherBar.bar
+      value: 
+      objectReference: {fileID: 578216134}
+    - target: {fileID: 114000987103770474, guid: 68a1378dfc1894842a9a72bd403997d7,
+        type: 2}
+      propertyPath: aetherBar.maxVal
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000987103770474, guid: 68a1378dfc1894842a9a72bd403997d7,
+        type: 2}
+      propertyPath: aetherBar.currentVal
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1843716985747982, guid: 68a1378dfc1894842a9a72bd403997d7, type: 2}
+      propertyPath: m_Name
+      value: Player (1)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 68a1378dfc1894842a9a72bd403997d7, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1001 &506152881
 Prefab:
   m_ObjectHideFlags: 0
@@ -1361,7 +1483,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 101.4, y: -18.3}
+  m_AnchoredPosition: {x: 101.399994, y: -18.300049}
   m_SizeDelta: {x: 166.35, y: 19.88}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1695481834
@@ -1411,6 +1533,28 @@ MonoBehaviour:
   fillAmount: 10
   lerpSpeed: 1
   content: {fileID: 1350487268}
+--- !u!1 &1712961334 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1843716985747982, guid: 68a1378dfc1894842a9a72bd403997d7,
+    type: 2}
+  m_PrefabInternal: {fileID: 430638981}
+--- !u!95 &1712961335
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1712961334}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 63c5790405c9de94c8464818ad958d93, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1 &1999561697
 GameObject:
   m_ObjectHideFlags: 0
