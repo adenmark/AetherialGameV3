@@ -72,7 +72,7 @@ public class PlayerScript : MonoBehaviour
         if (health.CurrentVal == 0)
         {
             Destroy(gameObject);
-            //SceneManager.LoadScene("MyBuildOskarBuild", LoadSceneMode.Single);
+            SceneManager.LoadScene("MainMenu", LoadSceneMode.Single);
         }
     }
 }
