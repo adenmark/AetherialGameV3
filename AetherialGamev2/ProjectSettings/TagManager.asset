@@ -7,6 +7,8 @@ TagManager:
   - EnemyChase
   - EnemyProximity
   - BossLeviathan
+  - Enemy
+  - LevelOne
   layers:
   - Default
   - TransparentFX
@@ -52,4 +54,7 @@ TagManager:
     locked: 0
   - name: Gun
     uniqueID: 1555573839
+    locked: 0
+  - name: InfrontOfPlayer
+    uniqueID: 1176857233
     locked: 0
