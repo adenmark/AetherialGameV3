@@ -9,9 +9,11 @@ public class PlayerScript : MonoBehaviour
 
     private Transform player;                                                           // Set up a place to Store Player Position, Rotation, and Scale.
     private Rigidbody2D rb;
+    private float teleportCooldownTimer = 0;
 
     public float speed;
     public float aether;
+    public float teleportCooldown;
     public float teleportDelayTime;
 
     [SerializeField]        //remove after testing serializedfield
@@ -36,10 +38,25 @@ public class PlayerScript : MonoBehaviour
     {
         rb.AddForce(new Vector2(Input.GetAxis("Horizontal") * speed, 0));
         rb.AddForce(new Vector2(0, Input.GetAxis("Vertical") * speed));
+        teleportCooldownFunction();
 
-        if (Input.GetMouseButtonDown(1) && aether >= 1)                                 // Right Click to Teleport
+        if (Input.GetMouseButtonDown(1) && aether >= 1 && teleportCooldownTimer == 0)                                 // Right Click to Teleport
         {
             StartCoroutine(TeleportDelay());
+            teleportCooldownTimer = teleportCooldown;
+        }
+    }
+
+    void teleportCooldownFunction()
+    {
+        if (teleportCooldownTimer > 0)
+        {
+            teleportCooldownTimer -= Time.deltaTime;
+        }
+
+        if (teleportCooldownTimer < 0)
+        {
+            teleportCooldownTimer = 0;
         }
     }
 

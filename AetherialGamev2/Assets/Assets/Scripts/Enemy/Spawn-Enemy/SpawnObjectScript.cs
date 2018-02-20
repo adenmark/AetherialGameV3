@@ -4,13 +4,22 @@ using UnityEngine;
 
 public class SpawnObjectScript : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
+    public float health;
+
+    void Start () {
 		
 	}
 	
-	// Update is called once per frame
 	void Update () {
 		
 	}
+
+    public void Damage()
+    {
+        health--;
+        if (health == 0)
+        {
+            Destroy(gameObject);
+        }
+    }
 }

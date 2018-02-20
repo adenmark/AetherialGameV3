@@ -6,7 +6,7 @@ public class CannonFireScript : MonoBehaviour
 {
     private Vector3 mouseDirection;
 
-    public float fireRate = 0;      // Fire Rate of the Cannon
+    public float fireRate;      // Fire Rate of the Cannon
     public float harpoonSpeed;      // Speed of Harpoon
         
     public GameObject Harpoon;
@@ -22,15 +22,11 @@ public class CannonFireScript : MonoBehaviour
     void Awake ()
     {
         firePoint = transform.Find("HarpoonSpawn");     // Will find the point at which Harpoons will spawn
-        if (firePoint == null)                          // Standard Error Checker
-        {
-            Debug.LogError("No Fire Point? WHAT!!!");
-        }
 	}
 	
 	void Update ()
     {
-        if (fireRate == 0)      // Is it a Single-Fire Weapon?
+        if (fireRate == 0)                          // Is it a Single-Fire Weapon?
         {
             if (Input.GetMouseButtonDown(0))        // Left Click
             {

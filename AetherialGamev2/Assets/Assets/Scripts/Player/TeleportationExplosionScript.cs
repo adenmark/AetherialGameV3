@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TeleportationExplosionScript : MonoBehaviour {
+public class TeleportationExplosionScript : MonoBehaviour
+{
 
     public float timeToDestroy;
 
@@ -21,15 +22,19 @@ public class TeleportationExplosionScript : MonoBehaviour {
         }
     }
 
-    void OnTriggerEnter2D(Collider2D collision)
+    void OnTriggerEnter2D(Collider2D trigger)
     {
-        if (collision.gameObject.tag == "EnemyChase")
+        if (trigger.gameObject.tag == "EnemyChase")
         {
-            collision.gameObject.GetComponent<EnemyChase>().Damage();
+            trigger.gameObject.GetComponent<EnemyChase>().Damage();
         }
-        if (collision.gameObject.tag == "EnemyProximity")
+        if (trigger.gameObject.tag == "EnemyProximity")
         {
-            collision.gameObject.GetComponent<EnemyProximity>().Damage();
+            trigger.gameObject.GetComponent<EnemyProximity>().Damage();
+        }
+        if (trigger.gameObject.tag == "Spawner")
+        {
+            trigger.gameObject.GetComponent<SpawnObjectScript>().Damage();
         }
     }
 }

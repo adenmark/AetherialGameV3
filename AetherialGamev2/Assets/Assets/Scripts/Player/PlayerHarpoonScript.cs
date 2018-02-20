@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class PlayerHarpoonScript : MonoBehaviour
 {
-    //Rigidbody2D rb;
+
 
 	void Start ()
     {
-        //rb = GetComponent<Rigidbody2D>();
+
     }
 	
 	void Update ()
@@ -16,19 +16,24 @@ public class PlayerHarpoonScript : MonoBehaviour
 
     }
 
-    void OnTriggerEnter2D(Collider2D collision)
+    void OnTriggerEnter2D(Collider2D trigger)
     {
-        if (collision.gameObject.tag == "EnemyChase")
+        if (trigger.gameObject.tag == "EnemyChase")
         {
-            collision.gameObject.GetComponent<EnemyChase>().Damage();
+            trigger.gameObject.GetComponent<EnemyChase>().Damage();
             Die();
         }
-        if (collision.gameObject.tag == "EnemyProximity")
+        if (trigger.gameObject.tag == "EnemyProximity")
         {
-            collision.gameObject.GetComponent<EnemyProximity>().Damage();
+            trigger.gameObject.GetComponent<EnemyProximity>().Damage();
             Die();
         }
-        if (collision.gameObject.tag == "Scenery")
+        if (trigger.gameObject.tag == "Spawner")
+        {
+            trigger.gameObject.GetComponent<SpawnObjectScript>().Damage();
+            Die();
+        }
+        if (trigger.gameObject.tag == "Scenery")
         {
             Die();
         }
@@ -39,3 +44,4 @@ public class PlayerHarpoonScript : MonoBehaviour
         Destroy(gameObject);
     }
 }
+

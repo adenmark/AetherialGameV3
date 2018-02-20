@@ -181,9 +181,11 @@ GameObject:
   - component: {fileID: 165656411}
   - component: {fileID: 165656412}
   - component: {fileID: 165656413}
+  - component: {fileID: 165656414}
+  - component: {fileID: 165656415}
   m_Layer: 0
   m_Name: Spawner
-  m_TagString: Untagged
+  m_TagString: Spawner
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -261,6 +263,38 @@ CircleCollider2D:
   m_Offset: {x: 0.0034418106, y: 0}
   serializedVersion: 2
   m_Radius: 0.5722723
+--- !u!114 &165656414
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 165656410}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5d6e50172c028649b1363666987d903, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 2
+--- !u!50 &165656415
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 165656410}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1.0288578
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!4 &265018168 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4629252331376194, guid: e832d1a76adcf5e4b89c7f52aae12037,
@@ -658,6 +692,21 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 0.12152273
       objectReference: {fileID: 0}
+    - target: {fileID: 114000987103770474, guid: 68a1378dfc1894842a9a72bd403997d7,
+        type: 2}
+      propertyPath: coolDownPeriodInSeconds
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000987103770474, guid: 68a1378dfc1894842a9a72bd403997d7,
+        type: 2}
+      propertyPath: teleportCooldown
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000987103770474, guid: 68a1378dfc1894842a9a72bd403997d7,
+        type: 2}
+      propertyPath: teleportCooldownTimer
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 68a1378dfc1894842a9a72bd403997d7, type: 2}
   m_IsPrefabParent: 0
@@ -896,7 +945,7 @@ GameObject:
   - component: {fileID: 1006433915}
   m_Layer: 0
   m_Name: Floating Island
-  m_TagString: Untagged
+  m_TagString: Scenery
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1724,11 +1773,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4644611091851388, guid: c671ffa87a34f0a46bec15e91e936168, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -13.310245
+      value: 0.92
       objectReference: {fileID: 0}
     - target: {fileID: 4644611091851388, guid: c671ffa87a34f0a46bec15e91e936168, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 5.9887466
+      value: 6.09
       objectReference: {fileID: 0}
     - target: {fileID: 4644611091851388, guid: c671ffa87a34f0a46bec15e91e936168, type: 2}
       propertyPath: m_LocalPosition.z
@@ -1763,7 +1812,16 @@ Prefab:
     - target: {fileID: 114898751196479092, guid: c671ffa87a34f0a46bec15e91e936168,
         type: 2}
       propertyPath: speed
-      value: 20
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1142224820579342, guid: c671ffa87a34f0a46bec15e91e936168, type: 2}
+      propertyPath: m_TagString
+      value: EnemyChase
+      objectReference: {fileID: 0}
+    - target: {fileID: 114898751196479092, guid: c671ffa87a34f0a46bec15e91e936168,
+        type: 2}
+      propertyPath: health
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c671ffa87a34f0a46bec15e91e936168, type: 2}

@@ -104,6 +104,7 @@ MonoBehaviour:
   player: {fileID: 4441329459307770, guid: 68a1378dfc1894842a9a72bd403997d7, type: 2}
   speed: 10
   health: 1
+  explosion: {fileID: 1666918869126482, guid: 1b617aedabcb0f84c82123cfd2e1e792, type: 2}
 --- !u!212 &212480359902501944
 SpriteRenderer:
   m_ObjectHideFlags: 1
