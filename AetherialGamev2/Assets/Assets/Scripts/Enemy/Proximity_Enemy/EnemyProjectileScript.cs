@@ -25,7 +25,6 @@ public class EnemyProjectileScript : MonoBehaviour {
 
         if (transform.position.x == target.x && transform.position.y == target.y) //ComeBackToThis
         {
-            Instantiate(explosion, transform.position, Quaternion.identity);
             Die();
         }
     }
@@ -35,7 +34,6 @@ public class EnemyProjectileScript : MonoBehaviour {
         if (collision.gameObject.tag == "Player")
         {
             collision.gameObject.GetComponent<PlayerScript>().Damage();
-            Instantiate(explosion, transform.position, Quaternion.identity);
             Die();
         }
     }

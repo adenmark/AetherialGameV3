@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ProximityExplosionScript : MonoBehaviour {
+public class EnemyExplosionScript : MonoBehaviour {
 
     public float timeToDestroy;
 

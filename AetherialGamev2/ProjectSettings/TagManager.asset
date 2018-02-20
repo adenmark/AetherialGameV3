@@ -7,6 +7,8 @@ TagManager:
   - EnemyChase
   - EnemyProximity
   - BossLeviathan
+  - Enemy
+  - Scenery
   layers:
   - Default
   - TransparentFX

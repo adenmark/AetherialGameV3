@@ -14,13 +14,11 @@ public class PlayerScript : MonoBehaviour
     public float aether;
     public float teleportDelayTime;
 
-
     [SerializeField]        //remove after testing serializedfield
     private Stat health;
 
     [SerializeField]        //remove after testing  serializedfield
     private Stat aetherBar;
-
 
     private void Awake()
     {

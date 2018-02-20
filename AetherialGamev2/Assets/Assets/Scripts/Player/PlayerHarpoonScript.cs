@@ -28,6 +28,10 @@ public class PlayerHarpoonScript : MonoBehaviour
             collision.gameObject.GetComponent<EnemyProximity>().Damage();
             Die();
         }
+        if (collision.gameObject.tag == "Scenery")
+        {
+            Die();
+        }
     }
 
     void Die()

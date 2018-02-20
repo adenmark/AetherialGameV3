@@ -11,6 +11,8 @@ public class EnemyChase : MonoBehaviour
     public float speed;
     public float health;
 
+    public GameObject explosion;
+
     void Start ()
     {
         //rb = GetComponent<Rigidbody2D>();
@@ -30,6 +32,7 @@ public class EnemyChase : MonoBehaviour
         if(collision.gameObject.tag=="Player")
         {
             collision.gameObject.GetComponent<PlayerScript>().Damage();
+            Instantiate(explosion, transform.position, Quaternion.identity);
             Die();
         }
     }
