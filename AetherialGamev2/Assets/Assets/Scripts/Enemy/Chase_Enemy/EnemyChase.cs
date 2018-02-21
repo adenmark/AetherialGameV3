@@ -4,14 +4,13 @@ using UnityEngine;
 
 public class EnemyChase : MonoBehaviour
 {
-    //Rigidbody2D rb;
-
     public Transform player;
 
     public float speed;
     public float health;
 
     public GameObject explosion;
+    //public GameObject explosionEffect;
 
     void Start ()
     {
@@ -30,6 +29,7 @@ public class EnemyChase : MonoBehaviour
     {
         if(collision.gameObject.tag=="Player")
         {
+            //Instantiate(explosionEffect, transform.position, Quaternion.identity);
             Instantiate(explosion, transform.position, Quaternion.identity);
             Die();
         }
@@ -40,7 +40,9 @@ public class EnemyChase : MonoBehaviour
         health--;
         if (health == 0)
         {
+            //Instantiate(explosionEffect, transform.position, Quaternion.identity);
             Destroy(gameObject);
+            Instantiate(explosion, transform.position, Quaternion.identity);
         }
     }
 

@@ -20,6 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4654363886339448}
   - component: {fileID: 114695976008882498}
+  - component: {fileID: 58063066494843030}
   m_Layer: 0
   m_Name: SpawnPoint
   m_TagString: Untagged
@@ -40,6 +41,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!58 &58063066494843030
+CircleCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1323398733484402}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.5
 --- !u!114 &114695976008882498
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -53,8 +69,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EnemyProximity: {fileID: 1826518216978556, guid: adb1f64ae240a444fb2a743257f4caec,
     type: 2}
-  spawnValues: {x: 20, y: 2, z: 0}
-  hazardCount: 1
-  spawnWait: 5
-  startWait: 2
-  waveWait: 3
+  spawnRate: 0
+  enemyPosition: {fileID: 4872811498345286, guid: a48fc3d08efbb08429ec198c569705cd,
+    type: 2}

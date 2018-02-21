@@ -36,6 +36,10 @@ public class EnemyProjectileScript : MonoBehaviour {
             collision.gameObject.GetComponent<PlayerScript>().Damage();
             Die();
         }
+        if (collision.gameObject.tag == "Scenery")
+        {
+            Die();
+        }
     }
 
     void Die()

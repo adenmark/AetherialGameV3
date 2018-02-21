@@ -38,16 +38,16 @@ public class PlayerScript : MonoBehaviour
     {
         rb.AddForce(new Vector2(Input.GetAxis("Horizontal") * speed, 0));
         rb.AddForce(new Vector2(0, Input.GetAxis("Vertical") * speed));
-        teleportCooldownFunction();
+        TeleportCooldownFunction();
 
-        if (Input.GetMouseButtonDown(1) && aether >= 1 && teleportCooldownTimer == 0)                                 // Right Click to Teleport
+        if (Input.GetMouseButtonDown(1) && teleportCooldownTimer == 0)                  // Right Click to Teleport
         {
             StartCoroutine(TeleportDelay());
             teleportCooldownTimer = teleportCooldown;
         }
     }
 
-    void teleportCooldownFunction()
+    void TeleportCooldownFunction()
     {
         if (teleportCooldownTimer > 0)
         {
