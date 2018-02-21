@@ -6,6 +6,9 @@ public class SpawnObjectScript : MonoBehaviour {
 
     public float health;
 
+    public GameObject DamageParticle;
+    public Transform particlePosition;
+
     void Start () {
 		
 	}
@@ -17,6 +20,7 @@ public class SpawnObjectScript : MonoBehaviour {
     public void Damage()
     {
         health--;
+        Instantiate(DamageParticle, particlePosition.position, particlePosition.rotation);
         if (health == 0)
         {
             Destroy(gameObject);

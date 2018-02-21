@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 114194485043081714}
   - component: {fileID: 50359373774819382}
   m_Layer: 0
-  m_Name: Spawner
+  m_Name: SpawnerProximity
   m_TagString: Spawner
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -39,6 +39,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4559374060265530}
   - component: {fileID: 114978962567262476}
+  - component: {fileID: 58759744531765290}
   m_Layer: 0
   m_Name: SpawnPoint
   m_TagString: Untagged
@@ -53,7 +54,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1269893838033476}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.27, y: -0.32, z: 0.60862446}
+  m_LocalPosition: {x: -0.36, y: -0.23, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4872811498345286}
@@ -66,7 +67,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1250470967973018}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -8.38, y: 7.43, z: -0.60862446}
+  m_LocalPosition: {x: -9.83, y: 2.68, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4559374060265530}
@@ -108,6 +109,21 @@ CircleCollider2D:
   m_Offset: {x: 0.0034418106, y: 0}
   serializedVersion: 2
   m_Radius: 0.5722723
+--- !u!58 &58759744531765290
+CircleCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1269893838033476}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 10
 --- !u!114 &114194485043081714
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -119,7 +135,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5d6e50172c028649b1363666987d903, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 2
+  health: 3
+  DamageParticle: {fileID: 1155007538153334, guid: 357100ab2bad1744e9f87f91e561d3a3,
+    type: 2}
+  particlePosition: {fileID: 4872811498345286}
 --- !u!114 &114978962567262476
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -131,10 +150,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b141fd456ff61674a8a30731a4321f8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  EnemyProximity: {fileID: 1826518216978556, guid: adb1f64ae240a444fb2a743257f4caec,
+  EnemyType: {fileID: 0}
+  DamageParticle: {fileID: 1572862221653884, guid: 7d92576cfb5172b4d930ed2b325f4356,
     type: 2}
-  spawnRate: 0
-  enemyPosition: {fileID: 0}
+  particlePosition: {fileID: 4872811498345286}
+  spawnRate: 3
+  spawnCap: 5
+  enemyPosition: {fileID: 4872811498345286}
 --- !u!212 &212309969129132096
 SpriteRenderer:
   m_ObjectHideFlags: 1

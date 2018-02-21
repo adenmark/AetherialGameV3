@@ -3,9 +3,12 @@ using System.Collections;
 
 public class SpawnPointScript : MonoBehaviour
 {
-    public GameObject EnemyProximity;                                                       // What Time of Enemy
+    public GameObject EnemyType;                                                            // What Time of Enemy
+    public GameObject DamageParticle;
+    public Transform particlePosition;
 
     public float spawnRate;                                                                 // How Often they Spawn
+    public float spawnCap;                                                                  // How Many Will Spawn before Death
     public Transform enemyPosition;                                                         // The Position of the Enemy
 
     void Start()
@@ -18,16 +21,18 @@ public class SpawnPointScript : MonoBehaviour
         
     }
 
-    void OnTriggerStay2D(Collider2D trigger)
+    void OnTriggerEnter2D(Collider2D trigger)
     {
-        if(trigger.gameObject.tag == "Player")                                              // The Triggerer == Player
+        if (trigger.gameObject.tag == "Player")                                                 // The Triggerer == Player
         {
-            InvokeRepeating("EnemySpawner", 0.1f, spawnRate);                               // Call function, Time Delay, and then SpawnRate
+            InvokeRepeating("EnemySpawner", time: 0.0f, repeatRate: spawnRate);                 // Call function, Time Delay, and then SpawnRate
+            Destroy(gameObject, spawnRate * spawnCap);
         }
     }
 
     void EnemySpawner()
     {
-        Instantiate(EnemyProximity, enemyPosition.position, enemyPosition.rotation);        // Summon Enemy
+        Instantiate(EnemyType, enemyPosition.position, enemyPosition.rotation);                                 // Summon Enemy
+        Instantiate(DamageParticle, position: particlePosition.position, rotation: particlePosition.rotation);
     }
 }

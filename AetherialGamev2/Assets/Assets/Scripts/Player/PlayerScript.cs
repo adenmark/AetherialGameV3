@@ -69,12 +69,12 @@ public class PlayerScript : MonoBehaviour
 
     void Teleport(Transform teleport_transform)
     {
-        
         if (aether >= 1)                                                                // Make sure we can't Teleport without Aether
         {
+            //mathf.clamp
             Vector3 new_pos = Camera.main.ScreenToWorldPoint(Input.mousePosition);      // Makes the Position == Mouse Position
             new_pos.z = teleport_transform.position.z;                                  // Makes sure the Z position is still whatever it was before Teleportation
-            teleport_transform.position = new_pos;                                      // 
+            teleport_transform.position = new_pos;
             aether--;                                                                   // Reduces Aether by 1
 
             aetherBar.CurrentVal--;                                                     // decresing the eather bar
