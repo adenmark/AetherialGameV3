@@ -27,6 +27,8 @@ public class SceneLevelLoader : MonoBehaviour {
 
                 //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
                 Debug.Log("scene Master loaded");
+
+            
             }
 
     }

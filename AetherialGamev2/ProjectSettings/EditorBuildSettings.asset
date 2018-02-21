@@ -14,3 +14,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Oskar Sandbox.unity
     guid: 50ac4350ed8154648adeba35c9fbc65a
+  - enabled: 1
+    path: Assets/Petrut Sandbox.unity
+    guid: 7d4f0209008e45b48be71c6d73133583
