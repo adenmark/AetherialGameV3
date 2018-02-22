@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 212018650618402620}
   - component: {fileID: 60790299690995608}
   m_Layer: 0
-  m_Name: Floating Island
+  m_Name: FloatingIsland
   m_TagString: Scenery
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

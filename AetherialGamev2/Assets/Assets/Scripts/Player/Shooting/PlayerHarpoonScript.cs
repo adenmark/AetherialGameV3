@@ -33,6 +33,11 @@ public class PlayerHarpoonScript : MonoBehaviour
             trigger.gameObject.GetComponent<SpawnObjectScript>().Damage();
             Die();
         }
+        if (trigger.gameObject.tag == "EnemyTurret")
+        {
+            trigger.gameObject.GetComponent<TurretBodyScript>().Damage();
+            Die();
+        }
         if (trigger.gameObject.tag == "Scenery")
         {
             Die();

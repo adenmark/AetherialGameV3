@@ -67,8 +67,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b141fd456ff61674a8a30731a4321f8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  EnemyProximity: {fileID: 1826518216978556, guid: adb1f64ae240a444fb2a743257f4caec,
-    type: 2}
+  EnemyType: {fileID: 0}
+  DamageParticle: {fileID: 0}
+  particlePosition: {fileID: 0}
   spawnRate: 0
+  spawnCap: 0
   enemyPosition: {fileID: 4872811498345286, guid: a48fc3d08efbb08429ec198c569705cd,
     type: 2}

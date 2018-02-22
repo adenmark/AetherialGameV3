@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4880873499776616}
   - component: {fileID: 198211303323604834}
   - component: {fileID: 199496336595929390}
+  - component: {fileID: 114598625719604120}
   m_Layer: 0
   m_Name: SpawnerDamagedEffect
   m_TagString: Untagged
@@ -41,6 +42,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 180, y: 0, z: 0}
+--- !u!114 &114598625719604120
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1155007538153334}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d699baaa3ea27e4ab3fef4ee6d2cc4f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeToDestroy: 1.5
 --- !u!198 &198211303323604834
 ParticleSystem:
   m_ObjectHideFlags: 1
