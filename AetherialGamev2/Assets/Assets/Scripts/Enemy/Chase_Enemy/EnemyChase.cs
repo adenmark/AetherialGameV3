@@ -10,7 +10,7 @@ public class EnemyChase : MonoBehaviour
     public float health;
 
     public GameObject explosion;
-    //public GameObject explosionEffect;
+    public GameObject explosionEffect;
 
     void Start ()
     {
@@ -29,7 +29,7 @@ public class EnemyChase : MonoBehaviour
     {
         if(collision.gameObject.tag=="Player")
         {
-            //Instantiate(explosionEffect, transform.position, Quaternion.identity);
+            Instantiate(explosionEffect, transform.position, Quaternion.identity);
             Instantiate(explosion, transform.position, Quaternion.identity);
             Die();
         }
@@ -40,7 +40,7 @@ public class EnemyChase : MonoBehaviour
         health--;
         if (health == 0)
         {
-            //Instantiate(explosionEffect, transform.position, Quaternion.identity);
+            Instantiate(explosionEffect, transform.position, Quaternion.identity);
             Destroy(gameObject);
             Instantiate(explosion, transform.position, Quaternion.identity);
         }

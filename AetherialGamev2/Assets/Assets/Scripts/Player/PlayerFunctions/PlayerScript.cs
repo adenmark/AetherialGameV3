@@ -12,7 +12,6 @@ public class PlayerScript : MonoBehaviour
     private float teleportCooldownTimer = 0;
 
     public float speed;
-    public float aether;
     public float teleportCooldown;
     public float teleportDelayTime;
 
@@ -64,19 +63,18 @@ public class PlayerScript : MonoBehaviour
     {
         yield return new WaitForSeconds(teleportDelayTime);                             // How Long we wait
         Teleport(player);
-        Instantiate(teleportationExplosion, player.position, Quaternion.identity);
     }
 
     void Teleport(Transform teleport_transform)
     {
-        if (aether >= 1)                                                                // Make sure we can't Teleport without Aether
+        if (aetherBar.CurrentVal >= 1)                                                                // Make sure we can't Teleport without Aether
         {
             //mathf.clamp
             Vector3 new_pos = Camera.main.ScreenToWorldPoint(Input.mousePosition);      // Makes the Position == Mouse Position
             new_pos.z = teleport_transform.position.z;                                  // Makes sure the Z position is still whatever it was before Teleportation
             teleport_transform.position = new_pos;
-            aether--;                                                                   // Reduces Aether by 1
 
+            Instantiate(teleportationExplosion, player.position, Quaternion.identity);
             aetherBar.CurrentVal--;                                                     // decresing the eather bar
         }
     }

@@ -105,6 +105,8 @@ MonoBehaviour:
   speed: 5
   health: 1
   explosion: {fileID: 1666918869126482, guid: 1b617aedabcb0f84c82123cfd2e1e792, type: 2}
+  explosionEffect: {fileID: 1905283569719564, guid: 2d5e5251869f9654f82110e5bee7988c,
+    type: 2}
 --- !u!212 &212480359902501944
 SpriteRenderer:
   m_ObjectHideFlags: 1

@@ -11,6 +11,8 @@ public class SpawnPointScript : MonoBehaviour
     public float spawnCap;                                                                  // How Many Will Spawn before Death
     public Transform enemyPosition;                                                         // The Position of the Enemy
 
+    private float enemiesSpawned = 0;
+
     void Start()
     {
         
@@ -32,7 +34,11 @@ public class SpawnPointScript : MonoBehaviour
 
     void EnemySpawner()
     {
-        Instantiate(EnemyType, enemyPosition.position, enemyPosition.rotation);                                 // Summon Enemy
-        Instantiate(DamageParticle, position: particlePosition.position, rotation: particlePosition.rotation);
+        if (enemiesSpawned <= spawnCap)
+        {
+            Instantiate(EnemyType, enemyPosition.position, enemyPosition.rotation);                                 // Summon Enemy
+            Instantiate(DamageParticle, position: particlePosition.position, rotation: particlePosition.rotation);
+            enemiesSpawned++;
+        }
     }
 }
