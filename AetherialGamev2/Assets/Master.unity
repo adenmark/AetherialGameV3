@@ -558,7 +558,7 @@ Prefab:
     - target: {fileID: 114151534612034038, guid: 68a1378dfc1894842a9a72bd403997d7,
         type: 2}
       propertyPath: harpoonSpeed
-      value: 1500
+      value: 2500
       objectReference: {fileID: 0}
     - target: {fileID: 114946489952239586, guid: 68a1378dfc1894842a9a72bd403997d7,
         type: 2}
@@ -672,9 +672,9 @@ GameObject:
   m_Component:
   - component: {fileID: 754615070}
   - component: {fileID: 754615074}
-  - component: {fileID: 754615073}
   - component: {fileID: 754615072}
   - component: {fileID: 754615071}
+  - component: {fileID: 754615073}
   m_Layer: 10
   m_Name: Turret_Body
   m_TagString: EnemyTurret
@@ -689,7 +689,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 754615069}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -29.17, y: 11.24, z: 0}
+  m_LocalPosition: {x: -19.26, y: 9.98, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1341720687}
@@ -752,9 +752,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d49c50242c78574baf677a7bc69f643, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 308450550}
-  rotatingGun: {fileID: 1341720687}
-  range: 15
   health: 1
 --- !u!212 &754615074
 SpriteRenderer:
@@ -1373,11 +1370,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 1341720686}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e71152eba3af04949b6dd042877b0cf6, type: 3}
+  m_Script: {fileID: 11500000, guid: 87f8b4fc1b7e605419ff9db12bff3dbd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 15
+  TurretBullet: {fileID: 1175312272523012, guid: 803c80f3fb9f20c4895d538def93bd1b,
+    type: 2}
   target: {fileID: 308450550}
+  range: 15
+  fireRate: 2
+  bulletSpeed: 500
+  rotationSpeed: 10
 --- !u!1 &1350487266
 GameObject:
   m_ObjectHideFlags: 0

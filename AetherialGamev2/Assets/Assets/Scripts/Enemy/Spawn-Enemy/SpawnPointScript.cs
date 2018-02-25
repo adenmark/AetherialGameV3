@@ -27,7 +27,7 @@ public class SpawnPointScript : MonoBehaviour
     {
         if (trigger.gameObject.tag == "Player")                                                 // The Triggerer == Player
         {
-            InvokeRepeating("EnemySpawner", time: 0.0f, repeatRate: spawnRate);                 // Call function, Time Delay, and then SpawnRate
+            InvokeRepeating("EnemySpawner", time: 0.5f, repeatRate: spawnRate);                 // Call function, Time Delay, and then SpawnRate
             Destroy(gameObject, spawnRate * spawnCap);
         }
     }

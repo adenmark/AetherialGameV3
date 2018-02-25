@@ -32,6 +32,10 @@ public class TeleportationExplosionScript : MonoBehaviour
         {
             trigger.gameObject.GetComponent<EnemyProximity>().Damage();
         }
+        if (trigger.gameObject.tag == "EnemyTurret")
+        {
+            trigger.gameObject.GetComponent<TurretBodyScript>().Damage();
+        }
         if (trigger.gameObject.tag == "Spawner")
         {
             trigger.gameObject.GetComponent<SpawnObjectScript>().Damage();
