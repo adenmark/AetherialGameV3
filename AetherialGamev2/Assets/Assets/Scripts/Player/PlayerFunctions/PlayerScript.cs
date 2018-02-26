@@ -7,6 +7,7 @@ public class PlayerScript : MonoBehaviour
 {
     public Transform teleportationExplosion;
 
+    private float timer;
     private Transform player;                                                           // Set up a place to Store Player Position, Rotation, and Scale.
     private Rigidbody2D rb;
     private float teleportCooldownTimer = 0;
@@ -14,6 +15,8 @@ public class PlayerScript : MonoBehaviour
     public float speed;
     public float teleportCooldown;
     public float teleportDelayTime;
+
+    private Animator animator;
 
     [SerializeField]        //remove after testing serializedfield
     private Stat health;
@@ -29,8 +32,10 @@ public class PlayerScript : MonoBehaviour
 
     void Start()
     {
+        
         rb = GetComponent<Rigidbody2D>();
         player = GameObject.FindGameObjectWithTag("Player").transform;                  // Get the Data to Store in Transform player
+        animator = GetComponent<Animator>();
     }
 
     void Update()
@@ -41,6 +46,7 @@ public class PlayerScript : MonoBehaviour
 
         if (Input.GetMouseButtonDown(1) && teleportCooldownTimer == 0)                  // Right Click to Teleport
         {
+            animator.SetTrigger("PlayerDash"); //caling the animation
             StartCoroutine(TeleportDelay());
             teleportCooldownTimer = teleportCooldown;
         }
@@ -84,8 +90,13 @@ public class PlayerScript : MonoBehaviour
         health.CurrentVal--;                                                            //health bar decras on damage
         if (health.CurrentVal == 0)
         {
-            Destroy(gameObject);
+            animator.SetTrigger("PlayerDeath");   //caling the animation
+            Destroy(gameObject, 5);
+
             SceneManager.LoadScene("MainMenu", LoadSceneMode.Single);
         }
+        
+        
     }
+    
 }

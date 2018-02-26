@@ -17,6 +17,7 @@ public class EnemyProximity : MonoBehaviour {
 
     [Header("Projectile Attribute")]
 
+<<<<<<< HEAD
     private float fireCountdown;
     public float fireRate;
     public float projectileSpeed;
@@ -24,6 +25,19 @@ public class EnemyProximity : MonoBehaviour {
     void Start ()
     {
         target = GameObject.FindWithTag("Player").transform;
+=======
+    public GameObject projectile;
+    public Transform player;
+    private Animator animator;
+
+    public float health;
+
+    void Start ()
+    {
+        player = GameObject.FindWithTag("Player").transform;
+        animator = GetComponent<Animator>();
+        timeBetweenShots = startTimeBetweenShots;
+>>>>>>> Animations-and-Sprites
 	}
 	
 	void Update ()
@@ -46,8 +60,19 @@ public class EnemyProximity : MonoBehaviour {
 
             if (fireCountdown <= 0f)
             {
+<<<<<<< HEAD
                 Shoot();
                 fireCountdown = 1f / fireRate;
+=======
+
+                animator.SetTrigger("AetherAttack");
+                Instantiate(projectile, transform.position, Quaternion.identity);
+                timeBetweenShots = startTimeBetweenShots;
+            }
+            else
+            {
+                timeBetweenShots -= Time.deltaTime;
+>>>>>>> Animations-and-Sprites
             }
 
             fireCountdown -= Time.deltaTime;
@@ -78,6 +103,7 @@ public class EnemyProximity : MonoBehaviour {
         health--;
         if (health == 0)
         {
+            //animator.SetTrigger("AetherDeath");
             Destroy(gameObject);
         }
     }
