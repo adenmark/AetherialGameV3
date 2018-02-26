@@ -56,6 +56,8 @@ GameObject:
   - component: {fileID: 50476100770334022}
   - component: {fileID: 61227783851115424}
   - component: {fileID: 114000987103770474}
+  - component: {fileID: 111831513655826962}
+  - component: {fileID: 95741121166957730}
   m_Layer: 8
   m_Name: Player
   m_TagString: Player
@@ -149,6 +151,39 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 14.943048, y: 8.36745}
   m_EdgeRadius: 0
+--- !u!95 &95741121166957730
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1843716985747982}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 77e16d04f70e8634797c573b199e99e5, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+--- !u!111 &111831513655826962
+Animation:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1843716985747982}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: b8b0f9718f36d4148acee68cbcfba007, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: 0a8117477f0a8c7488881769fabc8f1c, type: 2}
+  - {fileID: 7400000, guid: c1120d1d34907b14ca87f680675292da, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!114 &114000987103770474
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -163,8 +198,9 @@ MonoBehaviour:
   teleportationExplosion: {fileID: 4049090492426686, guid: 25dee56ef954cbe4eaa6ea1852d54523,
     type: 2}
   speed: 12
-  aether: 10
+  teleportCooldown: 0
   teleportDelayTime: 0.2
+  invisibilityDuration: 0
   health:
     bar: {fileID: 0}
     maxVal: 5
@@ -187,6 +223,7 @@ MonoBehaviour:
   fireRate: 2
   harpoonSpeed: 1500
   Harpoon: {fileID: 1519540075702588, guid: cd2a8d1324a7c1c4a9935714d5eaffc2, type: 2}
+  Laser: {fileID: 0}
   firePoint: {fileID: 4911923772263200}
 --- !u!114 &114946489952239586
 MonoBehaviour:

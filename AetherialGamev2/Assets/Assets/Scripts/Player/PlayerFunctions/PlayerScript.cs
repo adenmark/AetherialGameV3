@@ -11,6 +11,7 @@ public class PlayerScript : MonoBehaviour
     private Rigidbody2D rb;
     private float teleportCooldownTimer = 0;
     private bool invincible = false;
+    private Animator animator;
 
     [Header("Attributes")]
 
@@ -35,6 +36,7 @@ public class PlayerScript : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         player = GameObject.FindGameObjectWithTag("Player").transform;
+        animator = GetComponent<Animator>();
     }
 
     void Update()
@@ -45,6 +47,7 @@ public class PlayerScript : MonoBehaviour
 
         if (Input.GetMouseButtonDown(1) && teleportCooldownTimer == 0)
         {
+            animator.SetTrigger("PlayerDash");
             StartCoroutine(TeleportDelay());
             teleportCooldownTimer = teleportCooldown;
         }
@@ -97,8 +100,11 @@ public class PlayerScript : MonoBehaviour
             health.CurrentVal--;
             if (health.CurrentVal == 0)
             {
-                Destroy(gameObject);
-                SceneManager.LoadScene("MainMenu", LoadSceneMode.Single);
+
+                
+                animator.SetTrigger("PlayerDeath");   //caling the animation
+                Destroy(gameObject, 5);
+                //SceneManager.LoadScene("MainMenu", LoadSceneMode.Single);
             }
         }
     }
