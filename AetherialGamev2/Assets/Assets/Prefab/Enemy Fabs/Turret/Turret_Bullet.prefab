@@ -23,6 +23,7 @@ GameObject:
   - component: {fileID: 114006204831943306}
   - component: {fileID: 58555749003893124}
   - component: {fileID: 50308814429333328}
+  - component: {fileID: 114397521992839604}
   m_Layer: 0
   m_Name: Turret_Bullet
   m_TagString: Untagged
@@ -72,7 +73,7 @@ CircleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -89,6 +90,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09cc4eeffd02e414885ec27ed8203ba2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114397521992839604
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1175312272523012}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d699baaa3ea27e4ab3fef4ee6d2cc4f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeToDestroy: 3.5
 --- !u!212 &212172292947534214
 SpriteRenderer:
   m_ObjectHideFlags: 1

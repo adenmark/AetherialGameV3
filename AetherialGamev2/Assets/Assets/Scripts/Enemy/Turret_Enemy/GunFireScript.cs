@@ -39,7 +39,7 @@ public class GunFireScript : MonoBehaviour
             transform.rotation = Quaternion.Slerp(transform.rotation, rotation, rotationSpeed * Time.deltaTime);
         }
 
-        if (fireCountdown <= 0f)
+        if (fireCountdown <= 0f && Vector2.Distance(transform.position, target.position) < range)
         {
             Shoot();
             fireCountdown = 1f / fireRate;

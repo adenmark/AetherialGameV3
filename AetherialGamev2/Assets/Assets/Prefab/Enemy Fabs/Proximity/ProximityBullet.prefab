@@ -20,8 +20,10 @@ GameObject:
   m_Component:
   - component: {fileID: 4301244991568302}
   - component: {fileID: 212659541296183280}
-  - component: {fileID: 114539360247872610}
   - component: {fileID: 60673458193593486}
+  - component: {fileID: 50239867509642722}
+  - component: {fileID: 114539360247872610}
+  - component: {fileID: 114101914454039762}
   - component: {fileID: 111738224175697262}
   - component: {fileID: 95445655693486810}
   m_Layer: 10
@@ -44,6 +46,26 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!50 &50239867509642722
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1755749297636656}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!60 &60673458193593486
 PolygonCollider2D:
   m_ObjectHideFlags: 1
@@ -103,6 +125,18 @@ Animation:
   m_PlayAutomatically: 1
   m_AnimatePhysics: 0
   m_CullingType: 0
+--- !u!114 &114101914454039762
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1755749297636656}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d699baaa3ea27e4ab3fef4ee6d2cc4f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeToDestroy: 3.5
 --- !u!114 &114539360247872610
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -114,8 +148,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85de970b5b4b50848a8625f2bac23d18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
-  explosion: {fileID: 1666918869126482, guid: 1b617aedabcb0f84c82123cfd2e1e792, type: 2}
 --- !u!212 &212659541296183280
 SpriteRenderer:
   m_ObjectHideFlags: 1
