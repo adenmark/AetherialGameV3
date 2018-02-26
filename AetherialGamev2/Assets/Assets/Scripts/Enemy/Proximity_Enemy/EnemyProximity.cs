@@ -4,54 +4,65 @@ using UnityEngine;
 
 public class EnemyProximity : MonoBehaviour {
 
+    private Vector3 fireTo;
+    public GameObject projectile;
+    public Transform target;
+
+    [Header("Enemy Attributes")]
+
+    public float health;
     public float speed;
     public float stoppingDistance;
     public float retreatDistance;
 
-    public float timeBetweenShots;
-    public float startTimeBetweenShots;
+    [Header("Projectile Attribute")]
 
-    public GameObject projectile;
-    public Transform player;
-
-    public float health;
+    private float fireCountdown;
+    public float fireRate;
+    public float projectileSpeed;
 
     void Start ()
     {
-        player = GameObject.FindWithTag("Player").transform;
-
-        timeBetweenShots = startTimeBetweenShots;
+        target = GameObject.FindWithTag("Player").transform;
 	}
 	
 	void Update ()
     {
-        if (player != null) // Temporary Fix
+        if (target != null) // Temporary Fix
         {
-            if (Vector2.Distance(transform.position, player.position) > stoppingDistance)
+            if (Vector2.Distance(transform.position, target.position) > stoppingDistance)
             {
-                transform.position = Vector2.MoveTowards(transform.position, player.position, speed * Time.deltaTime);
+                transform.position = Vector2.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
 
             }
-            else if (Vector2.Distance(transform.position, player.position) < stoppingDistance && Vector2.Distance(transform.position, player.position) > retreatDistance)
+            else if (Vector2.Distance(transform.position, target.position) < stoppingDistance && Vector2.Distance(transform.position, target.position) > retreatDistance)
             {
                 transform.position = this.transform.position;
             }
-            else if (Vector2.Distance(transform.position, player.position) < retreatDistance)
+            else if (Vector2.Distance(transform.position, target.position) < retreatDistance)
             {
-                transform.position = Vector2.MoveTowards(transform.position, player.position, -speed * Time.deltaTime);
+                transform.position = Vector2.MoveTowards(transform.position, target.position, -speed * Time.deltaTime);
             }
 
-            if (timeBetweenShots <= 0)
+            if (fireCountdown <= 0f)
             {
-                Instantiate(projectile, transform.position, Quaternion.identity);
-                timeBetweenShots = startTimeBetweenShots;
+                Shoot();
+                fireCountdown = 1f / fireRate;
             }
-            else
-            {
-                timeBetweenShots -= Time.deltaTime;
-            }
+
+            fireCountdown -= Time.deltaTime;
         }
 	}
+
+    void Shoot()
+    {
+        Vector2 targetPosition = new Vector2(target.position.x, target.position.y);
+        fireTo = new Vector3(targetPosition.x, targetPosition.y, 0f) - transform.position;
+
+        GameObject Bullet = Instantiate(projectile, transform.position, Quaternion.identity) as GameObject;
+
+        Bullet.GetComponent<Rigidbody2D>().AddForce(fireTo.normalized * projectileSpeed);
+    }
 
     void OnCollisionEnter2D(Collision2D collision)
     {
