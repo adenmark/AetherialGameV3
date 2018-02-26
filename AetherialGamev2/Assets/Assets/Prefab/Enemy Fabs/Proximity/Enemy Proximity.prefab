@@ -113,7 +113,7 @@ MonoBehaviour:
   startTimeBetweenShots: 2
   projectile: {fileID: 1755749297636656, guid: 34cd3f9b3a5247c4a9c46dd01faf5980, type: 2}
   player: {fileID: 4441329459307770, guid: 68a1378dfc1894842a9a72bd403997d7, type: 2}
-  health: 1
+  health: 2
 --- !u!212 &212132834908380990
 SpriteRenderer:
   m_ObjectHideFlags: 1

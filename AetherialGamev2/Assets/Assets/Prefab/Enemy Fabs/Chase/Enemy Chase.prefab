@@ -102,7 +102,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 4441329459307770, guid: 68a1378dfc1894842a9a72bd403997d7, type: 2}
-  speed: 5
+  speed: 8.5
   health: 1
   explosion: {fileID: 1666918869126482, guid: 1b617aedabcb0f84c82123cfd2e1e792, type: 2}
   explosionEffect: {fileID: 1905283569719564, guid: 2d5e5251869f9654f82110e5bee7988c,
@@ -142,7 +142,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 68d6a54868dd6a44e9621e1c8c8f66a7, type: 3}
-  m_Color: {r: 0.116, g: 0.703, b: 0.006896496, a: 1}
+  m_Color: {r: 0.9117647, g: 0, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
