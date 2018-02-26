@@ -21,8 +21,8 @@ GameObject:
   - component: {fileID: 4303005646265674}
   - component: {fileID: 212132834908380990}
   - component: {fileID: 60511952649742890}
-  - component: {fileID: 114094737348227288}
   - component: {fileID: 50217203884488108}
+  - component: {fileID: 114094737348227288}
   m_Layer: 10
   m_Name: Enemy Proximity
   m_TagString: EnemyProximity
@@ -106,14 +106,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67cd398e28f1749419539b1362ba1d09, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  projectile: {fileID: 1755749297636656, guid: 34cd3f9b3a5247c4a9c46dd01faf5980, type: 2}
+  target: {fileID: 0}
+  health: 1
   speed: 10
   stoppingDistance: 10
   retreatDistance: 8
+<<<<<<< HEAD
   timeBetweenShots: 1
   startTimeBetweenShots: 2
   projectile: {fileID: 1755749297636656, guid: 34cd3f9b3a5247c4a9c46dd01faf5980, type: 2}
   player: {fileID: 4441329459307770, guid: 68a1378dfc1894842a9a72bd403997d7, type: 2}
   health: 2
+=======
+  fireRate: 1
+  projectileSpeed: 500
+>>>>>>> master
 --- !u!212 &212132834908380990
 SpriteRenderer:
   m_ObjectHideFlags: 1
