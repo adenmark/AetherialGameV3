@@ -7,18 +7,22 @@ public class PlayerScript : MonoBehaviour
 {
     public Transform teleportationExplosion;
 
-    private Transform player;                                                           // Set up a place to Store Player Position, Rotation, and Scale.
+    private Transform player;
     private Rigidbody2D rb;
     private float teleportCooldownTimer = 0;
+    private bool invincible = false;
+
+    [Header("Attributes")]
 
     public float speed;
     public float teleportCooldown;
     public float teleportDelayTime;
+    public float invisibilityDuration;
 
-    [SerializeField]        //remove after testing serializedfield
+    [SerializeField]
     private Stat health;
 
-    [SerializeField]        //remove after testing  serializedfield
+    [SerializeField]
     private Stat aetherBar;
 
     private void Awake()
@@ -30,7 +34,7 @@ public class PlayerScript : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        player = GameObject.FindGameObjectWithTag("Player").transform;                  // Get the Data to Store in Transform player
+        player = GameObject.FindGameObjectWithTag("Player").transform;
     }
 
     void Update()
@@ -39,7 +43,7 @@ public class PlayerScript : MonoBehaviour
         rb.AddForce(new Vector2(0, Input.GetAxis("Vertical") * speed));
         TeleportCooldownFunction();
 
-        if (Input.GetMouseButtonDown(1) && teleportCooldownTimer == 0)                  // Right Click to Teleport
+        if (Input.GetMouseButtonDown(1) && teleportCooldownTimer == 0)
         {
             StartCoroutine(TeleportDelay());
             teleportCooldownTimer = teleportCooldown;
@@ -67,25 +71,40 @@ public class PlayerScript : MonoBehaviour
 
     void Teleport(Transform teleport_transform)
     {
-        if (aetherBar.CurrentVal >= 1)                                                                // Make sure we can't Teleport without Aether
+        if (!invincible) // come back
         {
-            //mathf.clamp
-            Vector3 new_pos = Camera.main.ScreenToWorldPoint(Input.mousePosition);      // Makes the Position == Mouse Position
-            new_pos.z = teleport_transform.position.z;                                  // Makes sure the Z position is still whatever it was before Teleportation
-            teleport_transform.position = new_pos;
+            if (aetherBar.CurrentVal >= 1)                                                                // Make sure we can't Teleport without Aether
+            {
+                //mathf.clamp
+                invincible = true;
+                Invoke(methodName: "ResetInvinsibility", time: invisibilityDuration);
+                Vector3 new_pos = Camera.main.ScreenToWorldPoint(Input.mousePosition);      // Makes the Position == Mouse Position
+                new_pos.z = teleport_transform.position.z;                                  // Makes sure the Z position is still whatever it was before Teleportation
+                teleport_transform.position = new_pos;
 
-            Instantiate(teleportationExplosion, player.position, Quaternion.identity);
-            aetherBar.CurrentVal--;                                                     // decresing the eather bar
+                Instantiate(teleportationExplosion, player.position, Quaternion.identity);
+                aetherBar.CurrentVal--;                                                     // decresing the eather bar
+            }
         }
     }
 
     public void Damage()
     {
-        health.CurrentVal--;                                                            //health bar decras on damage
-        if (health.CurrentVal == 0)
+        if (!invincible)
         {
-            Destroy(gameObject);
-            SceneManager.LoadScene("MainMenu", LoadSceneMode.Single);
+            invincible = true;
+            Invoke(methodName: "ResetInvinsibility", time: invisibilityDuration);
+            health.CurrentVal--;
+            if (health.CurrentVal == 0)
+            {
+                Destroy(gameObject);
+                SceneManager.LoadScene("MainMenu", LoadSceneMode.Single);
+            }
         }
+    }
+
+    void ResetInvinsibility()
+    {
+        invincible = false;
     }
 }
