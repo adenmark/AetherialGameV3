@@ -23,6 +23,8 @@ GameObject:
   - component: {fileID: 60511952649742890}
   - component: {fileID: 114094737348227288}
   - component: {fileID: 50217203884488108}
+  - component: {fileID: 111284241312925142}
+  - component: {fileID: 95488422582499036}
   m_Layer: 10
   m_Name: Enemy Proximity
   m_TagString: EnemyProximity
@@ -95,6 +97,38 @@ PolygonCollider2D:
       - {x: -8.0227375, y: -0.3130722}
       - {x: -3.3675432, y: -1.6534734}
       - {x: 0.8795738, y: -0.25000095}
+--- !u!95 &95488422582499036
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1826518216978556}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 866bf906393a98b4bbf7ca0a8910ab8b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+--- !u!111 &111284241312925142
+Animation:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1826518216978556}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: 8b5ffcb21af2b9c46b3cf0e9de26caef, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: 2804c52dffdd3a64ab53670000e16034, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!114 &114094737348227288
 MonoBehaviour:
   m_ObjectHideFlags: 1
