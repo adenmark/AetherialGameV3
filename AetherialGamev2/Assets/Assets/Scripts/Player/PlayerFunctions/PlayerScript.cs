@@ -12,6 +12,7 @@ public class PlayerScript : MonoBehaviour
     private float teleportCooldownTimer = 0;
     private bool invincible = false;
     private Animator animator;
+    private float deathTimer = 0;
 
     [Header("Attributes")]
 
@@ -101,12 +102,19 @@ public class PlayerScript : MonoBehaviour
             if (health.CurrentVal == 0)
             {
 
-                
                 animator.SetTrigger("PlayerDeath");   //caling the animation
-                Destroy(gameObject, 5);
-                //SceneManager.LoadScene("MainMenu", LoadSceneMode.Single);
+                Destroy(GameObject.Find("Cannon"));
+                deathTimer++;
+                if (deathTimer > 5.0)   //workes but i thinks it laggs?
+                {
+                   SceneManager.LoadScene("MainMenu", LoadSceneMode.Single);
+                   Destroy(gameObject);
+
+                }
+                
             }
         }
+        
     }
 
     void ResetInvinsibility()
