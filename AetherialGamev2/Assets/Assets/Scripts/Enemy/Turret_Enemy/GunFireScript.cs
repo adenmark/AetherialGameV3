@@ -19,14 +19,9 @@ public class GunFireScript : MonoBehaviour
 
     public float rotationSpeed;
 
-    void Start ()
+    void Start()
     {
-        InvokeRepeating("UpdateTarget", 0f, 0.5f);
-    }
 
-    void UpdateTarget()
-    {
-        target = GameObject.FindGameObjectWithTag("Player").transform;
     }
 
     void Update ()
@@ -39,7 +34,7 @@ public class GunFireScript : MonoBehaviour
             transform.rotation = Quaternion.Slerp(transform.rotation, rotation, rotationSpeed * Time.deltaTime);
         }
 
-        if (fireCountdown <= 0f && Vector2.Distance(transform.position, target.position) < range)
+        if (target != null && fireCountdown <= 0f && Vector2.Distance(transform.position, target.position) < range)
         {
             Shoot();
             fireCountdown = 1f / fireRate;

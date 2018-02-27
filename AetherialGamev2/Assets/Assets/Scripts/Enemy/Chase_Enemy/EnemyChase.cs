@@ -29,25 +29,13 @@ public class EnemyChase : MonoBehaviour
     {
         if(collision.gameObject.tag=="Player")
         {
-            Instantiate(explosionEffect, transform.position, Quaternion.identity);
-            Instantiate(explosion, transform.position, Quaternion.identity);
-            Die();
-        }
-    }
-
-    public void Damage()
-    {
-        health--;
-        if (health == 0)
-        {
-            Instantiate(explosionEffect, transform.position, Quaternion.identity);
             Destroy(gameObject);
-            Instantiate(explosion, transform.position, Quaternion.identity);
         }
     }
 
-    void Die()
+    void OnDestroy()
     {
-        Destroy(gameObject);
+        Instantiate(explosionEffect, transform.position, Quaternion.identity);
+        Instantiate(explosion, transform.position, Quaternion.identity);
     }
 }

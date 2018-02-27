@@ -11,7 +11,6 @@ public class EnemyProximity : MonoBehaviour {
 
     [Header("Enemy Attributes")]
 
-    public float health;
     public float speed;
     public float stoppingDistance;
     public float retreatDistance;
@@ -67,27 +66,8 @@ public class EnemyProximity : MonoBehaviour {
         Bullet.GetComponent<Rigidbody2D>().AddForce(fireTo.normalized * projectileSpeed);
     }
 
-    void OnCollisionEnter2D(Collision2D collision)
+    void OnDestroy()
     {
-        if (collision.gameObject.tag == "Player")
-        {
-            collision.gameObject.GetComponent<PlayerScript>().Damage();
-            Die();
-        }
-    }
-
-    public void Damage()
-    {
-        health--;
-        if (health == 0)
-        {
-            animator.SetTrigger("AetherDeath");
-            Destroy(gameObject, 1);
-        }
-    }
-
-    void Die()
-    {
-        Destroy(gameObject);
+        animator.SetTrigger("AetherDeath");
     }
 }

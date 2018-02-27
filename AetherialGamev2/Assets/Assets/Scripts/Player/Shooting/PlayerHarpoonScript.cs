@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerHarpoonScript : MonoBehaviour
 {
-
+    public GameObject Turret;
 
 	void Start ()
     {
@@ -16,29 +16,15 @@ public class PlayerHarpoonScript : MonoBehaviour
 
     }
 
+
     void OnTriggerEnter2D(Collider2D trigger)
     {
-        if (trigger.gameObject.tag == "EnemyChase")
+        if (trigger.CompareTag("Enemy"))
         {
-            trigger.gameObject.GetComponent<EnemyChase>().Damage();
+            trigger.GetComponent<HealthScript>().Damage();
             Die();
         }
-        if (trigger.gameObject.tag == "EnemyProximity")
-        {
-            trigger.gameObject.GetComponent<EnemyProximity>().Damage();
-            Die();
-        }
-        if (trigger.gameObject.tag == "Spawner")
-        {
-            trigger.gameObject.GetComponent<SpawnObjectScript>().Damage();
-            Die();
-        }
-        if (trigger.gameObject.tag == "EnemyTurret")
-        {
-            trigger.gameObject.GetComponent<TurretBodyScript>().Damage();
-            Die();
-        }
-        if (trigger.gameObject.tag == "Scenery")
+        if (trigger.CompareTag("Scenery"))
         {
             Die();
         }

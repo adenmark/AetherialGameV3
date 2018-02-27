@@ -24,21 +24,9 @@ public class TeleportationExplosionScript : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D trigger)
     {
-        if (trigger.gameObject.tag == "EnemyChase")
+        if (trigger.CompareTag("Enemy"))
         {
-            trigger.gameObject.GetComponent<EnemyChase>().Damage();
-        }
-        if (trigger.gameObject.tag == "EnemyProximity")
-        {
-            trigger.gameObject.GetComponent<EnemyProximity>().Damage();
-        }
-        if (trigger.gameObject.tag == "EnemyTurret")
-        {
-            trigger.gameObject.GetComponent<TurretBodyScript>().Damage();
-        }
-        if (trigger.gameObject.tag == "Spawner")
-        {
-            trigger.gameObject.GetComponent<SpawnObjectScript>().Damage();
+            trigger.GetComponent<HealthScript>().Damage();
         }
     }
 }

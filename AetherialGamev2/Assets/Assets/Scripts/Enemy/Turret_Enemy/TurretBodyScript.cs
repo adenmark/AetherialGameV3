@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class TurretBodyScript : MonoBehaviour
 {
-    public float health;
-
     void Start ()
     {
     }
@@ -23,18 +21,8 @@ public class TurretBodyScript : MonoBehaviour
         }
     }
 
-    public void Damage()
+    void OnDestroy()
     {
-        health--;
-        if (health == 0)
-        {
-            //Instantiate(explosionEffect, transform.position, Quaternion.identity);
-            Destroy(gameObject);
-        }
-    }
-
-    void Die()
-    {
-        Destroy(gameObject);
+        
     }
 }

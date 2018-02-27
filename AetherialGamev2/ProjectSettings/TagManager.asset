@@ -4,13 +4,10 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - EnemyChase
-  - EnemyProximity
   - BossLeviathan
   - Enemy
   - Scenery
   - Spawner
-  - EnemyTurret
   layers:
   - Default
   - TransparentFX

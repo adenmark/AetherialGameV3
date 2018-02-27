@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4337474523157888}
   - component: {fileID: 212540088962801104}
   - component: {fileID: 114057127214851974}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: Turret_Gun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40,9 +40,10 @@ GameObject:
   - component: {fileID: 50839254690222052}
   - component: {fileID: 61411420992905104}
   - component: {fileID: 114302169632031462}
-  m_Layer: 10
+  - component: {fileID: 114684140601714238}
+  m_Layer: 0
   m_Name: Turret_Body
-  m_TagString: EnemyTurret
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -67,7 +68,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1429373710331014}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -13.34, y: 8.19, z: 0}
+  m_LocalPosition: {x: -20.170935, y: 12.347287, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4337474523157888}
@@ -93,7 +94,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 3
+  m_Constraints: 7
 --- !u!61 &61411420992905104
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -148,7 +149,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d49c50242c78574baf677a7bc69f643, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 1
+--- !u!114 &114684140601714238
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1429373710331014}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc15ffbde474dda44b3a838bac2c938e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Health: 1
 --- !u!212 &212342905553584794
 SpriteRenderer:
   m_ObjectHideFlags: 1

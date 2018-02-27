@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class SpawnObjectScript : MonoBehaviour {
 
-    public float health;
-
     public GameObject DamageParticle;
     public Transform particlePosition;
 
@@ -17,13 +15,8 @@ public class SpawnObjectScript : MonoBehaviour {
 		
 	}
 
-    public void Damage()
+    void OnDestroy()
     {
-        health--;
         Instantiate(DamageParticle, particlePosition.position, particlePosition.rotation);
-        if (health == 0)
-        {
-            Destroy(gameObject);
-        }
     }
 }

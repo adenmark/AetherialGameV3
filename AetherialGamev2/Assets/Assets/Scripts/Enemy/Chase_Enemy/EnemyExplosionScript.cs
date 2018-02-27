@@ -23,9 +23,13 @@ public class EnemyExplosionScript : MonoBehaviour {
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Player")
+        if (collision.CompareTag ("Player"))
         {
-            collision.gameObject.GetComponent<PlayerScript>().Damage();
+            collision.GetComponent<PlayerScript>().Damage();
+        }
+        if (collision.CompareTag ("Enemy"))
+        {
+            collision.GetComponent<HealthScript>().Damage();
         }
     }
 }

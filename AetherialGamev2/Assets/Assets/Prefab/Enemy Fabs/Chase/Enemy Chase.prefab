@@ -23,9 +23,10 @@ GameObject:
   - component: {fileID: 50744306848589914}
   - component: {fileID: 60353624706890144}
   - component: {fileID: 114898751196479092}
+  - component: {fileID: 114212983474656164}
   m_Layer: 10
   m_Name: Enemy Chase
-  m_TagString: EnemyChase
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -90,6 +91,18 @@ PolygonCollider2D:
     - - {x: 0, y: 0.5}
       - {x: -0.4330127, y: -0.25000003}
       - {x: 0.43301272, y: -0.24999996}
+--- !u!114 &114212983474656164
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1142224820579342}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc15ffbde474dda44b3a838bac2c938e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Health: 1
 --- !u!114 &114898751196479092
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -25,9 +25,10 @@ GameObject:
   - component: {fileID: 114094737348227288}
   - component: {fileID: 111163942963181680}
   - component: {fileID: 95645808140661306}
-  m_Layer: 10
+  - component: {fileID: 114509357889646772}
+  m_Layer: 0
   m_Name: Enemy Proximity
-  m_TagString: EnemyProximity
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -149,6 +150,18 @@ MonoBehaviour:
   retreatDistance: 8
   fireRate: 1
   projectileSpeed: 500
+--- !u!114 &114509357889646772
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1826518216978556}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc15ffbde474dda44b3a838bac2c938e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 1
 --- !u!212 &212132834908380990
 SpriteRenderer:
   m_ObjectHideFlags: 1
