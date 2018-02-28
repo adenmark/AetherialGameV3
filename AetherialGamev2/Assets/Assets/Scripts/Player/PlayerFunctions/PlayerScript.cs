@@ -13,6 +13,10 @@ public class PlayerScript : MonoBehaviour
     private bool invincible = false;
     private Animator animator;
     private float deathTimer = 0;
+    public float timer;
+    public GameObject Cannon;
+
+
 
     [Header("Attributes")]
 
@@ -38,6 +42,7 @@ public class PlayerScript : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         player = GameObject.FindGameObjectWithTag("Player").transform;
         animator = GetComponent<Animator>();
+        
     }
 
     void Update()
@@ -49,6 +54,7 @@ public class PlayerScript : MonoBehaviour
         if (Input.GetMouseButtonDown(1) && teleportCooldownTimer == 0)
         {
             animator.SetTrigger("PlayerDash");
+
             StartCoroutine(TeleportDelay());
             teleportCooldownTimer = teleportCooldown;
         }
@@ -102,10 +108,10 @@ public class PlayerScript : MonoBehaviour
             if (health.CurrentVal == 0)
             {
 
-                animator.SetTrigger("PlayerDeath");   //caling the animation
-                Destroy(GameObject.Find("Cannon"));
+                animator.SetTrigger("PlayerDeath");                         //caling the animation
+                Destroy(GameObject.Find("Cannon"));                         //destroys the childe of player - cannon
                 deathTimer++;
-                if (deathTimer > 5.0)   //workes but i thinks it laggs?
+                if (deathTimer > 5.0)                                       //workes but i thinks it laggs?
                 {
                    SceneManager.LoadScene("MainMenu", LoadSceneMode.Single);
                    Destroy(gameObject);

@@ -12,6 +12,7 @@ public class EnemyProjectileScript : MonoBehaviour
 
     void Update()
     {
+        
 
     }
 

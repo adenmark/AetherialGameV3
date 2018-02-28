@@ -8,6 +8,7 @@ public class EnemyProximity : MonoBehaviour {
     public GameObject projectile;
     public Transform target;
     private Animator animator;
+    //private float deathTimer;
 
     [Header("Enemy Attributes")]
 
@@ -29,8 +30,11 @@ public class EnemyProximity : MonoBehaviour {
 	
 	void Update ()
     {
+        RotateToPlayer();
+
         if (target != null) // Temporary Fix
         {
+         
             if (Vector2.Distance(transform.position, target.position) > stoppingDistance)
             {
                 transform.position = Vector2.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
@@ -66,8 +70,19 @@ public class EnemyProximity : MonoBehaviour {
         Bullet.GetComponent<Rigidbody2D>().AddForce(fireTo.normalized * projectileSpeed);
     }
 
+    void RotateToPlayer()
+    {
+        if (target != null)
+        {
+            transform.LookAt(target.position);
+
+            transform.Rotate(new Vector3(0, 90, 0), Space.Self);
+        }
+    }
+
     void OnDestroy()
     {
-        animator.SetTrigger("AetherDeath");
+
+            animator.SetTrigger("AetherDeath");
     }
 }
