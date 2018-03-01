@@ -11,10 +11,12 @@ public class PlayerScript : MonoBehaviour
     private Rigidbody2D rb;
     private float teleportCooldownTimer = 0;
     private bool invincible = false;
-    private Animator animator;
+
+    private Animator anim;
     private float deathTimer = 0;
     public float timer;
-    public GameObject Cannon;
+    public Transform Cannon;
+    
 
 
 
@@ -41,8 +43,9 @@ public class PlayerScript : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         player = GameObject.FindGameObjectWithTag("Player").transform;
-        animator = GetComponent<Animator>();
+        anim = GetComponent<Animator>();
         
+
     }
 
     void Update()
@@ -53,10 +56,18 @@ public class PlayerScript : MonoBehaviour
 
         if (Input.GetMouseButtonDown(1) && teleportCooldownTimer == 0)
         {
-            animator.SetTrigger("PlayerDash");
+            anim.SetTrigger("PlayerDash");
+            //Cannon = this.gameObject.transform.GetChild(0);
+            //Cannon.GetComponent<SpriteRenderer>().enabled = false;      //cant get the cannon to disapare during the animation and then appera again
+            ////timer++;
+            //if (timer > 5)
+            //{
+            //    Cannon.GetComponent<SpriteRenderer>().enabled = true;
+            //}
 
             StartCoroutine(TeleportDelay());
             teleportCooldownTimer = teleportCooldown;
+            
         }
     }
 
@@ -108,7 +119,7 @@ public class PlayerScript : MonoBehaviour
             if (health.CurrentVal == 0)
             {
 
-                animator.SetTrigger("PlayerDeath");                         //caling the animation
+                anim.SetTrigger("PlayerDeath");                         //caling the animation
                 Destroy(GameObject.Find("Cannon"));                         //destroys the childe of player - cannon
                 deathTimer++;
                 if (deathTimer > 5.0)                                       //workes but i thinks it laggs?
