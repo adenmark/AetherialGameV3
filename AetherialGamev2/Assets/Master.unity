@@ -152,22 +152,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4629252331376194, guid: e832d1a76adcf5e4b89c7f52aae12037, type: 2}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4629252331376194, guid: e832d1a76adcf5e4b89c7f52aae12037, type: 2}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1801959707112124, guid: e832d1a76adcf5e4b89c7f52aae12037, type: 2}
-      propertyPath: m_Name
-      value: BackGround
-      objectReference: {fileID: 0}
-    - target: {fileID: 1801959707112124, guid: e832d1a76adcf5e4b89c7f52aae12037, type: 2}
-      propertyPath: m_Layer
-      value: 9
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e832d1a76adcf5e4b89c7f52aae12037, type: 2}
   m_IsPrefabParent: 0

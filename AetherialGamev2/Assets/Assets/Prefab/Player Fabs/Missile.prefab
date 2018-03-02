@@ -132,10 +132,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d19e60c75c5297a41b1e030c0e7a8db9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 4441329459307770, guid: 68a1378dfc1894842a9a72bd403997d7, type: 2}
+  target: {fileID: 0}
+  enemyTag: Enemy
   missileSpeed: 10
   rotateSpeed: 350
-  missileRange: 0
+  missileRange: 15
 --- !u!198 &198773860611256628
 ParticleSystem:
   m_ObjectHideFlags: 1
