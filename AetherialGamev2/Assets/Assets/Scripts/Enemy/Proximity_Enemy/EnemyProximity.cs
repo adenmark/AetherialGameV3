@@ -63,6 +63,8 @@ public class EnemyProximity : MonoBehaviour {
 
         GameObject Bullet = Instantiate(projectile, transform.position, Quaternion.identity) as GameObject;
 
+        //Bullet.transform. = target.position;
+
         Bullet.GetComponent<Rigidbody2D>().AddForce(fireTo.normalized * projectileSpeed);
     }
 

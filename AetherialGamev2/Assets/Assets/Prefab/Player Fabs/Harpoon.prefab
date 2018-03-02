@@ -27,7 +27,7 @@ GameObject:
   - component: {fileID: 114715033182486234}
   m_Layer: 10
   m_Name: Harpoon
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -342,6 +342,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d1ceceea7ca7404a8da8e51f0b021e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Turret: {fileID: 0}
 --- !u!114 &114715033182486234
 MonoBehaviour:
   m_ObjectHideFlags: 1

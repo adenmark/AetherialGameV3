@@ -15,6 +15,14 @@ public class SpawnObjectScript : MonoBehaviour {
 		
 	}
 
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Player")
+        {
+            Instantiate(DamageParticle, position: particlePosition.position, rotation: particlePosition.rotation);
+        }
+    }
+
     void OnDestroy()
     {
         Instantiate(DamageParticle, particlePosition.position, particlePosition.rotation);

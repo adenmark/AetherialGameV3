@@ -26,7 +26,7 @@ public class GunFireScript : MonoBehaviour
 
     void Update ()
     {
-        if (target != null)
+        if (target != null && Vector2.Distance(transform.position, target.position) < range)
         {
             Vector2 direction = target.position - transform.position;
             float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;

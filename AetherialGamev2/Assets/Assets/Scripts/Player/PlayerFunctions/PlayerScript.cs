@@ -74,19 +74,19 @@ public class PlayerScript : MonoBehaviour
 
     void Teleport(Transform teleport_transform)
     {
-        if (!invincible) // come back
+        if (!invincible)
         {
-            if (aetherBar.CurrentVal >= 1)                                                                // Make sure we can't Teleport without Aether
+            if (aetherBar.CurrentVal >= 1)
             {
                 //mathf.clamp
                 invincible = true;
                 Invoke(methodName: "ResetInvinsibility", time: invisibilityDuration);
-                Vector3 new_pos = Camera.main.ScreenToWorldPoint(Input.mousePosition);      // Makes the Position == Mouse Position
-                new_pos.z = teleport_transform.position.z;                                  // Makes sure the Z position is still whatever it was before Teleportation
+                Vector3 new_pos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+                new_pos.z = teleport_transform.position.z;
                 teleport_transform.position = new_pos;
 
                 Instantiate(teleportationExplosion, player.position, Quaternion.identity);
-                aetherBar.CurrentVal--;                                                     // decresing the eather bar
+                aetherBar.CurrentVal--;
             }
         }
     }
@@ -100,8 +100,6 @@ public class PlayerScript : MonoBehaviour
             health.CurrentVal--;
             if (health.CurrentVal == 0)
             {
-
-                
                 animator.SetTrigger("PlayerDeath");   //caling the animation
                 Destroy(gameObject, 5);
                 //SceneManager.LoadScene("MainMenu", LoadSceneMode.Single);
