@@ -8,7 +8,7 @@ public class CannonFireScript : MonoBehaviour
 
     public float fireRate;      // Fire Rate of the Cannon
     public float harpoonSpeed;      // Speed of Harpoon
-        
+
     public GameObject Harpoon;
     public GameObject Missile;
 
@@ -18,9 +18,9 @@ public class CannonFireScript : MonoBehaviour
 
     private void Start()
     {
-
+       
     }
-
+    
     void Awake ()
     {
         firePoint = transform.Find("HarpoonSpawn");
