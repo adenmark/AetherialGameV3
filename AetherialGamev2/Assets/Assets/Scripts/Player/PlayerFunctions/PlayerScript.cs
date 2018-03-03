@@ -118,10 +118,6 @@ public class PlayerScript : MonoBehaviour
             health.CurrentVal--;
             if (health.CurrentVal == 0)
             {
-                anim.SetTrigger("PlayerDeath");   //caling the animation
-                Destroy(gameObject, 5);
-                //SceneManager.LoadScene("MainMenu", LoadSceneMode.Single);
-
                 anim.SetTrigger("PlayerDeath");                         //caling the animation
                 Destroy(GameObject.Find("Cannon"));                         //destroys the childe of player - cannon
                 deathTimer++;
