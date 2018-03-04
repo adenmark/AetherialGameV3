@@ -5,13 +5,13 @@ using UnityEngine;
 public class CannonFireScript : MonoBehaviour
 {
     private Vector3 mouseDirection;
-
+	public AudioClip HarpoonSound; //AudioClip for the harpoon being fired
     public float fireRate;      // Fire Rate of the Cannon
     public float harpoonSpeed;      // Speed of Harpoon
 
     public GameObject Harpoon;
     public GameObject Missile;
-
+	
     float timeToFire = 0;
     public Transform firePoint;
     public Transform missilePoint;
@@ -60,6 +60,9 @@ public class CannonFireScript : MonoBehaviour
         mouseDirection = new Vector3(mousePosition.x, mousePosition.y, 0f) - transform.position;                                                          // Getting the position of the mouse
 
         GameObject Projectile = Instantiate(Harpoon, firePoint.position, Quaternion.identity) as GameObject;                                              // Creating the Harpoon at the position and rotating it
+		
+		SoundManager.instance.PlaySingle (HarpoonSound);																								// Plays the sound effect for firing the harpoon. 
+		
         Projectile.transform.up = mouseDirection;                                                                                                         // Rotates Shot right way
 
         Projectile.GetComponent<Rigidbody2D>().AddForce(mouseDirection.normalized * harpoonSpeed);   // Giving the Harpoon velocity when it came out, Problem here

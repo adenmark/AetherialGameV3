@@ -677,6 +677,11 @@ Prefab:
       propertyPath: aetherBar.currentVal
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 114151534612034038, guid: 68a1378dfc1894842a9a72bd403997d7,
+        type: 2}
+      propertyPath: HarpoonSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 9514881db94c7cd468ff904059ecd3f9, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 68a1378dfc1894842a9a72bd403997d7, type: 2}
   m_IsPrefabParent: 0
