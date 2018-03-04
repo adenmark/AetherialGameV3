@@ -117,6 +117,8 @@ MonoBehaviour:
   player: {fileID: 4441329459307770, guid: 68a1378dfc1894842a9a72bd403997d7, type: 2}
   speed: 5
   health: 1
+  SkySlugSpawnSound: {fileID: 8300000, guid: 51a7ed7f084a1f849bd5cb1880005998, type: 3}
+  SkySlugExplosion: {fileID: 8300000, guid: b3e79f61ed5f2cf47888dfb54ab1c087, type: 3}
   explosion: {fileID: 1666918869126482, guid: 1b617aedabcb0f84c82123cfd2e1e792, type: 2}
   explosionEffect: {fileID: 1905283569719564, guid: 2d5e5251869f9654f82110e5bee7988c,
     type: 2}

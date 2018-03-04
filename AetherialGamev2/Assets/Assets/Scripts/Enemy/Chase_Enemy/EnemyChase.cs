@@ -8,6 +8,8 @@ public class EnemyChase : MonoBehaviour
 
     public float speed;
     public float health;
+	public AudioClip SkySlugSpawnSound;
+	public AudioClip SkySlugExplosion;
 
     public GameObject explosion;
     public GameObject explosionEffect;
@@ -15,6 +17,7 @@ public class EnemyChase : MonoBehaviour
     void Start ()
     {
         player = GameObject.FindWithTag("Player").transform;
+		SoundManager.instance.PlaySingle(SkySlugSpawnSound);
     }
 	
 	void Update ()
@@ -37,5 +40,6 @@ public class EnemyChase : MonoBehaviour
     {
         Instantiate(explosionEffect, transform.position, Quaternion.identity);
         Instantiate(explosion, transform.position, Quaternion.identity);
+		SoundManager.instance.PlaySingle(SkySlugExplosion);
     }
 }

@@ -26,6 +26,7 @@ public class PlayerScript : MonoBehaviour
     public float teleportCooldown;
     public float teleportDelayTime;
     public float invisibilityDuration;
+	public AudioClip TeleportSound; //Adds option to designate a sound for the player teleport ability
 
     [SerializeField]
     private Stat health;
@@ -105,6 +106,8 @@ public class PlayerScript : MonoBehaviour
 
                 Instantiate(teleportationExplosion, player.position, Quaternion.identity);
                 aetherBar.CurrentVal--;
+				
+				SoundManager.instance.PlaySingle(TeleportSound); //Plays the sound of the player's Teleport ability 
             }
         }
     }
