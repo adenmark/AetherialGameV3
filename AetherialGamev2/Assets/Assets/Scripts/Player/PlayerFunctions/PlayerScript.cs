@@ -115,8 +115,8 @@ public class PlayerScript : MonoBehaviour
 
                 Instantiate(teleportationExplosion, player.position, Quaternion.identity);
                 aetherBar.CurrentVal--;
-				
-				SoundManager.instance.PlaySingle(TeleportSound); //Plays the sound of the player's Teleport ability 
+
+                SoundManager.instance.PlaySingle(TeleportSound); //Plays the sound of the player's Teleport ability 
             }
         }
     }
@@ -139,12 +139,12 @@ public class PlayerScript : MonoBehaviour
             //invincible = true;
             //Invoke(methodName: "ResetInvinsibility", time: invisibilityDuration);
             health.CurrentVal--;
-            if (health.CurrentVal == 0)
+            if (health.CurrentVal <= 0)
             {
                 anim.SetTrigger("PlayerDeath");                         //caling the animation
                 Destroy(GameObject.Find("Cannon"));                         //destroys the childe of player - cannon
                 deathTimer++;
-                if (deathTimer > 5.0)                                       //workes but i thinks it laggs?
+                if (deathTimer > 2.5)                                       //workes but i thinks it laggs?
                 {
                    SceneManager.LoadScene("MainMenu", LoadSceneMode.Single);
                    Destroy(gameObject);
