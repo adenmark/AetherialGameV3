@@ -144,7 +144,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projectile: {fileID: 1755749297636656, guid: 34cd3f9b3a5247c4a9c46dd01faf5980, type: 2}
   target: {fileID: 0}
-  health: 1
+  AetherRayShot: {fileID: 8300000, guid: 0ea251dd4a9223841aea22d4c674b1c3, type: 3}
   speed: 10
   stoppingDistance: 10
   retreatDistance: 8
@@ -161,7 +161,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc15ffbde474dda44b3a838bac2c938e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 1
+  Health: 0
 --- !u!212 &212132834908380990
 SpriteRenderer:
   m_ObjectHideFlags: 1

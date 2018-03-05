@@ -8,6 +8,7 @@ public class EnemyProximity : MonoBehaviour {
     public GameObject projectile;
     public Transform target;
     private Animator animator;
+	public AudioClip AetherRayShot; //Adds the option to input an audioclip to be used when the enemy fires, add sound in Unity Inspector
     //private float deathTimer;
 
     [Header("Enemy Attributes")]
@@ -70,6 +71,7 @@ public class EnemyProximity : MonoBehaviour {
         //Bullet.transform. = target.position;
 
         Bullet.GetComponent<Rigidbody2D>().AddForce(fireTo.normalized * projectileSpeed);
+		SoundManager.instance.PlaySingle(AetherRayShot);	//Plays audio for the enemy shooting its projectile
     }
 
     void RotateToPlayer()
