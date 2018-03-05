@@ -133,7 +133,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b141fd456ff61674a8a30731a4321f8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  EnemyType: {fileID: 1142224820579342, guid: c671ffa87a34f0a46bec15e91e936168, type: 2}
+  EnemyType: {fileID: 1880692158035624, guid: 1f71977faaee5d546a1d131cc714883b, type: 2}
   DamageParticle: {fileID: 1572862221653884, guid: 7d92576cfb5172b4d930ed2b325f4356,
     type: 2}
   target: {fileID: 0}

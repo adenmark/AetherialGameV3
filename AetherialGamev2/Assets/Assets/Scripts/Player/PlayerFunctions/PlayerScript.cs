@@ -121,7 +121,7 @@ public class PlayerScript : MonoBehaviour
                 anim.SetTrigger("PlayerDeath");                         //caling the animation
                 Destroy(GameObject.Find("Cannon"));                         //destroys the childe of player - cannon
                 deathTimer++;
-                if (deathTimer > 5.0)                                       //workes but i thinks it laggs?
+                if (deathTimer > 2.0)                                       //workes but i thinks it laggs?
                 {
                    SceneManager.LoadScene("MainMenu", LoadSceneMode.Single);
                    Destroy(gameObject);
