@@ -56,7 +56,7 @@ public class PlayerScript : MonoBehaviour
 
         if (Input.GetMouseButtonDown(1) && teleportCooldownTimer == 0)
         {
-            anim.SetTrigger("PlayerDash");
+            
             //Cannon = this.gameObject.transform.GetChild(0);
             //Cannon.GetComponent<SpriteRenderer>().enabled = false;      //cant get the cannon to disapare during the animation and then appera again
             ////timer++;
@@ -67,6 +67,8 @@ public class PlayerScript : MonoBehaviour
 
             StartCoroutine(TeleportDelay());
             teleportCooldownTimer = teleportCooldown;
+            anim.SetTrigger("PlayerDash");
+
             
         }
     }
@@ -121,7 +123,7 @@ public class PlayerScript : MonoBehaviour
                 anim.SetTrigger("PlayerDeath");                         //caling the animation
                 Destroy(GameObject.Find("Cannon"));                         //destroys the childe of player - cannon
                 deathTimer++;
-                if (deathTimer > 5.0)                                       //workes but i thinks it laggs?
+                if (deathTimer > 2.0)                                       //workes but i thinks it laggs?
                 {
                    SceneManager.LoadScene("MainMenu", LoadSceneMode.Single);
                    Destroy(gameObject);
