@@ -8,6 +8,8 @@ TagManager:
   - Enemy
   - Scenery
   - Spawner
+  - LevelOne
+  - AetherPickup
   layers:
   - Default
   - TransparentFX

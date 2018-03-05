@@ -110,7 +110,7 @@ Animator:
   m_Controller: {fileID: 9100000, guid: e616ba02c5a93564ab0378fa95d2df1b, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
-  m_ApplyRootMotion: 0
+  m_ApplyRootMotion: 1
   m_LinearVelocityBlending: 0
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
@@ -144,11 +144,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projectile: {fileID: 1755749297636656, guid: 34cd3f9b3a5247c4a9c46dd01faf5980, type: 2}
   target: {fileID: 0}
-  health: 1
   speed: 10
   stoppingDistance: 10
   retreatDistance: 8
-  fireRate: 1
+  fireRate: 0.25
   projectileSpeed: 500
 --- !u!114 &114509357889646772
 MonoBehaviour:
@@ -161,7 +160,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc15ffbde474dda44b3a838bac2c938e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 1
+  Health: 0
 --- !u!212 &212132834908380990
 SpriteRenderer:
   m_ObjectHideFlags: 1
