@@ -5,7 +5,7 @@ using UnityEngine;
 public class HealthScript : MonoBehaviour {
 
     public float Health;
-    private float deathTimer;
+    //private float deathTimer;
 
     public void Damage()
     {

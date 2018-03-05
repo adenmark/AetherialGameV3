@@ -197,10 +197,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   teleportationExplosion: {fileID: 4049090492426686, guid: 25dee56ef954cbe4eaa6ea1852d54523,
     type: 2}
+  Missile: {fileID: 0}
+  missilePoint: {fileID: 0}
   speed: 12
   teleportCooldown: 0
-  teleportDelayTime: 0.2
+  teleportDelayTime: 0.05
   invisibilityDuration: 0
+  missileSwarmCount: 0
   health:
     bar: {fileID: 0}
     maxVal: 5
@@ -223,7 +226,6 @@ MonoBehaviour:
   fireRate: 2
   harpoonSpeed: 1500
   Harpoon: {fileID: 1519540075702588, guid: cd2a8d1324a7c1c4a9935714d5eaffc2, type: 2}
-  Laser: {fileID: 0}
   firePoint: {fileID: 4911923772263200}
 --- !u!114 &114946489952239586
 MonoBehaviour:
@@ -236,7 +238,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa17952bf069a834b8e7affb1e721b76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Cannon: {fileID: 0}
   speed: 50
 --- !u!212 &212471398013682396
 SpriteRenderer:

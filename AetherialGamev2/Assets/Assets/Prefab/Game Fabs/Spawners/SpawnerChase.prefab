@@ -23,6 +23,7 @@ GameObject:
   - component: {fileID: 58891173054639910}
   - component: {fileID: 114052035449874568}
   - component: {fileID: 50120348875143126}
+  - component: {fileID: 114107026903991314}
   m_Layer: 0
   m_Name: SpawnerChase
   m_TagString: Enemy
@@ -53,7 +54,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1390975733120648}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -7.01, y: 13.39, z: 0}
+  m_LocalPosition: {x: -30, y: 27.4, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4515616376048982}
@@ -119,10 +120,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5d6e50172c028649b1363666987d903, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 3
   DamageParticle: {fileID: 1155007538153334, guid: 357100ab2bad1744e9f87f91e561d3a3,
     type: 2}
   particlePosition: {fileID: 4302424845527514}
+--- !u!114 &114107026903991314
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1390975733120648}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc15ffbde474dda44b3a838bac2c938e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Health: 3
 --- !u!114 &114209086306766690
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -140,7 +152,7 @@ MonoBehaviour:
   target: {fileID: 0}
   particlePosition: {fileID: 4302424845527514}
   spawnRange: 20
-  spawnRate: 3
+  spawnRate: 1
   spawnCap: 5
   enemyPosition: {fileID: 4302424845527514}
 --- !u!212 &212783142480430568
@@ -178,7 +190,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 3c11144654ecebd438dccd4e90741223, type: 3}
-  m_Color: {r: 0, g: 0.97794116, b: 0.0472108, a: 1}
+  m_Color: {r: 0, g: 0.97794116, b: 0.047211036, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0

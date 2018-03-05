@@ -10,11 +10,9 @@ public class CannonFireScript : MonoBehaviour
     public float harpoonSpeed;      // Speed of Harpoon
 
     public GameObject Harpoon;
-    public GameObject Missile;
 
     float timeToFire = 0;
     public Transform firePoint;
-    public Transform missilePoint;
 
     private void Start()
     {
@@ -24,7 +22,6 @@ public class CannonFireScript : MonoBehaviour
     void Awake ()
     {
         firePoint = transform.Find("HarpoonSpawn");
-        missilePoint = transform.Find("MissileSpawn");
     }
 	
 	void Update ()
@@ -45,12 +42,6 @@ public class CannonFireScript : MonoBehaviour
                 FindShot();
             }
         }
-
-        // Shooting the Missiles // 
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            FireMissileSwarm();
-        }
     }
 
     void FindShot()
@@ -63,10 +54,5 @@ public class CannonFireScript : MonoBehaviour
         Projectile.transform.up = mouseDirection;                                                                                                         // Rotates Shot right way
 
         Projectile.GetComponent<Rigidbody2D>().AddForce(mouseDirection.normalized * harpoonSpeed);   // Giving the Harpoon velocity when it came out, Problem here
-    }
-
-    void FireMissileSwarm()
-    {
-        GameObject Missile = Instantiate(this.Missile, missilePoint.position, Quaternion.identity) as GameObject;
     }
 }

@@ -6,12 +6,12 @@ public class TurretBullet : MonoBehaviour
 {
     void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Player")
+        if (collision.CompareTag("Player"))
         {
             collision.gameObject.GetComponent<PlayerScript>().Damage();
             Die();
         }
-        if (collision.gameObject.tag == "Scenery")
+        if (collision.CompareTag("Scenery"))
         {
             Die();
         }

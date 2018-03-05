@@ -23,6 +23,8 @@ GameObject:
   - component: {fileID: 58246757146013734}
   - component: {fileID: 114194485043081714}
   - component: {fileID: 50359373774819382}
+  - component: {fileID: 114174707262171598}
+  - component: {fileID: 114712467375117862}
   m_Layer: 0
   m_Name: SpawnerProximity
   m_TagString: Enemy
@@ -66,7 +68,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1250470967973018}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.26, y: -0.98, z: 0}
+  m_LocalPosition: {x: 77.8, y: 25.7, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4559374060265530}
@@ -108,6 +110,18 @@ CircleCollider2D:
   m_Offset: {x: 0.0034418106, y: 0}
   serializedVersion: 2
   m_Radius: 0.5722723
+--- !u!114 &114174707262171598
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1250470967973018}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc15ffbde474dda44b3a838bac2c938e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Health: 3
 --- !u!114 &114194485043081714
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -119,10 +133,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5d6e50172c028649b1363666987d903, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 3
   DamageParticle: {fileID: 1155007538153334, guid: 357100ab2bad1744e9f87f91e561d3a3,
     type: 2}
   particlePosition: {fileID: 4872811498345286}
+--- !u!114 &114712467375117862
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1250470967973018}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc15ffbde474dda44b3a838bac2c938e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Health: 3
 --- !u!114 &114978962567262476
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -140,8 +165,8 @@ MonoBehaviour:
   target: {fileID: 0}
   particlePosition: {fileID: 4872811498345286}
   spawnRange: 20
-  spawnRate: 3
-  spawnCap: 2
+  spawnRate: 5
+  spawnCap: 10
   enemyPosition: {fileID: 4872811498345286}
 --- !u!212 &212309969129132096
 SpriteRenderer:
@@ -178,7 +203,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 3c11144654ecebd438dccd4e90741223, type: 3}
-  m_Color: {r: 0, g: 0.81607497, b: 0.97794116, a: 1}
+  m_Color: {r: 0.97794116, g: 0, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0

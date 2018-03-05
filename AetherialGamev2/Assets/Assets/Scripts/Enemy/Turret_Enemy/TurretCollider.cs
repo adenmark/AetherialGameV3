@@ -2,16 +2,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TurretBodyScript : MonoBehaviour
+public class TurretCollider : MonoBehaviour
 {
-    void Start ()
+	void Start ()
     {
-    }
-
-    void Update ()
+		
+	}
+	
+	void Update ()
     {
-
-    }
+		
+	}
 
     void OnCollisionEnter2D(Collision2D collision)
     {
@@ -19,10 +20,5 @@ public class TurretBodyScript : MonoBehaviour
         {
             collision.gameObject.GetComponent<PlayerScript>().Damage();
         }
-    }
-
-    void OnDestroy()
-    {
-        
     }
 }

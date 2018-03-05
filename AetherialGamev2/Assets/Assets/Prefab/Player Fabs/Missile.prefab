@@ -25,7 +25,7 @@ GameObject:
   - component: {fileID: 114699124265487038}
   m_Layer: 0
   m_Name: Missile
-  m_TagString: Untagged
+  m_TagString: PlayerProjectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -134,7 +134,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 0}
   enemyTag: Enemy
-  missileSpeed: 10
+  missileSpeed: 15
   rotateSpeed: 300
   missileRange: 15
 --- !u!198 &198773860611256628

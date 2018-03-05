@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class CannonMovementScript : MonoBehaviour
 {
-    public GameObject Cannon;
     public float speed;        //Speed at which the Cannon turns
 
     private void Update()

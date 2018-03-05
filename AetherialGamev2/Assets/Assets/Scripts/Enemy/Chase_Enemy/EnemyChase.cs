@@ -7,10 +7,10 @@ public class EnemyChase : MonoBehaviour
     public Transform player;
 
     public float speed;
-    public float health;
 
     public GameObject explosion;
     public GameObject explosionEffect;
+    public GameObject deathEffect;
 
     void Start ()
     {
@@ -19,9 +19,13 @@ public class EnemyChase : MonoBehaviour
 	
 	void Update ()
     {
-        if(player != null)
+        if (player != null)
         {
             transform.position = Vector2.MoveTowards(transform.position, player.position, speed * Time.deltaTime);
+        }
+        else // Can be removed, just cute <3
+        {
+            Destroy(gameObject);
         }
     }
 
@@ -37,5 +41,6 @@ public class EnemyChase : MonoBehaviour
     {
         Instantiate(explosionEffect, transform.position, Quaternion.identity);
         Instantiate(explosion, transform.position, Quaternion.identity);
+        Instantiate(deathEffect, transform.position, Quaternion.identity);
     }
 }

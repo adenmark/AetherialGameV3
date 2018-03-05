@@ -5,7 +5,11 @@ using UnityEngine;
 
 public class PlayerScript : MonoBehaviour
 {
+    [Header("Add-Ons")]
+
     public Transform teleportationExplosion;
+    public GameObject Missile;
+    public Transform missilePoint;
 
     private Transform player;
     private Rigidbody2D rb;
@@ -14,18 +18,17 @@ public class PlayerScript : MonoBehaviour
 
     private Animator anim;
     private float deathTimer = 0;
-    public float timer;
-    public Transform Cannon;
     
-
-
-
     [Header("Attributes")]
 
     public float speed;
     public float teleportCooldown;
     public float teleportDelayTime;
     public float invisibilityDuration;
+
+    [Header("Missiles")]
+    public float missileSwarmCount;
+    private float missileCounter;
 
     [SerializeField]
     private Stat health;
@@ -37,6 +40,8 @@ public class PlayerScript : MonoBehaviour
     {
         health.Initialize();
         aetherBar.Initialize();
+        missilePoint = transform.Find("MissileSpawn");
+        missileCounter = missileSwarmCount;
     }
 
     void Start()
@@ -44,8 +49,6 @@ public class PlayerScript : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         player = GameObject.FindGameObjectWithTag("Player").transform;
         anim = GetComponent<Animator>();
-        
-
     }
 
     void Update()
@@ -54,6 +57,7 @@ public class PlayerScript : MonoBehaviour
         rb.AddForce(new Vector2(0, Input.GetAxis("Vertical") * speed));
         TeleportCooldownFunction();
 
+        // Teleport //
         if (Input.GetMouseButtonDown(1) && teleportCooldownTimer == 0)
         {
             anim.SetTrigger("PlayerDash");
@@ -67,7 +71,12 @@ public class PlayerScript : MonoBehaviour
 
             StartCoroutine(TeleportDelay());
             teleportCooldownTimer = teleportCooldown;
-            
+        }
+
+        // Shooting the Missiles // 
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            InvokeRepeating("FireMissileSwarm", 0f, 0.2f);
         }
     }
 
@@ -109,12 +118,23 @@ public class PlayerScript : MonoBehaviour
         }
     }
 
+    void FireMissileSwarm()
+    {
+        Instantiate(Missile, missilePoint.position, Quaternion.identity);
+        --missileCounter;
+        if (missileCounter == 0)
+        {
+            CancelInvoke("FireMissileSwarm");
+            missileCounter = missileSwarmCount;
+        }
+    }
+
     public void Damage()
     {
         if (!invincible)
         {
-            invincible = true;
-            Invoke(methodName: "ResetInvinsibility", time: invisibilityDuration);
+            //invincible = true;
+            //Invoke(methodName: "ResetInvinsibility", time: invisibilityDuration);
             health.CurrentVal--;
             if (health.CurrentVal == 0)
             {
@@ -125,7 +145,6 @@ public class PlayerScript : MonoBehaviour
                 {
                    SceneManager.LoadScene("MainMenu", LoadSceneMode.Single);
                    Destroy(gameObject);
-
                 }
             }
         }

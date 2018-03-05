@@ -20,9 +20,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4871228190162964}
   - component: {fileID: 212172292947534214}
-  - component: {fileID: 114006204831943306}
   - component: {fileID: 58555749003893124}
   - component: {fileID: 50308814429333328}
+  - component: {fileID: 114006204831943306}
   - component: {fileID: 114397521992839604}
   m_Layer: 0
   m_Name: Turret_Bullet

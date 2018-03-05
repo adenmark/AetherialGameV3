@@ -57,11 +57,17 @@ public class HomingMissile : MonoBehaviour
     {
         if (collision.CompareTag("Enemy"))
         {
-            collision.GetComponent<HealthScript>().Damage();
+            DamageEnemy(collision);
             //Instantiate(missileExplosion, transform.up, transform.rotation);
             Destroy(gameObject);
         }
     }
+
+    private static void DamageEnemy(Collider2D collision)
+    {
+        collision.GetComponent<HealthScript>().Damage();
+    }
+
     void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.blue;
