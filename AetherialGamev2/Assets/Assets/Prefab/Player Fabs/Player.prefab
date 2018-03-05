@@ -203,6 +203,7 @@ MonoBehaviour:
   teleportCooldown: 0
   teleportDelayTime: 0.05
   invisibilityDuration: 0
+  TeleportSound: {fileID: 0}
   missileSwarmCount: 0
   health:
     bar: {fileID: 0}
@@ -225,6 +226,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fireRate: 2
   harpoonSpeed: 1500
+  HarpoonSound: {fileID: 8300000, guid: 9514881db94c7cd468ff904059ecd3f9, type: 3}
   Harpoon: {fileID: 1519540075702588, guid: cd2a8d1324a7c1c4a9935714d5eaffc2, type: 2}
   firePoint: {fileID: 4911923772263200}
 --- !u!114 &114946489952239586
