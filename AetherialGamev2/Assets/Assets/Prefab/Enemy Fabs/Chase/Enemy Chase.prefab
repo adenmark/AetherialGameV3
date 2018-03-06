@@ -40,7 +40,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1142224820579342}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -10.549999, y: -0.9200001, z: 0}
+  m_LocalPosition: {x: 8.70092, y: 4.4353766, z: 0}
   m_LocalScale: {x: 0.2, y: 0.2, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -90,9 +90,20 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 0, y: 0.5}
-      - {x: -0.4330127, y: -0.25000003}
-      - {x: 0.43301272, y: -0.24999996}
+    - - {x: -0.019755363, y: 2.134459}
+      - {x: -3.7562609, y: 4.1196704}
+      - {x: -5.1405478, y: 3.8857722}
+      - {x: -5.066428, y: 2.5625777}
+      - {x: -4.0310287, y: 2.3170042}
+      - {x: -3.0643559, y: 0.9735298}
+      - {x: -1.0799932, y: -0.70041656}
+      - {x: 0.7280159, y: -1.2744355}
+      - {x: 1.8843508, y: -2.5375307}
+      - {x: 3.412962, y: -5.0413523}
+      - {x: 4.258499, y: -4.2437887}
+      - {x: 3.2598448, y: -2.977314}
+      - {x: 2.0147371, y: -1.0951233}
+      - {x: 1.3891506, y: 0.50124884}
 --- !u!95 &95254089462534952
 Animator:
   serializedVersion: 3
@@ -148,13 +159,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 4441329459307770, guid: 68a1378dfc1894842a9a72bd403997d7, type: 2}
+  aetherPickup: {fileID: 1661759310518248, guid: c548b328bdcedd24eb00c0b8262eff18,
+    type: 2}
   speed: 10
   SkySlugSpawnSound: {fileID: 8300000, guid: 51a7ed7f084a1f849bd5cb1880005998, type: 3}
   SkySlugExplosion: {fileID: 8300000, guid: b3e79f61ed5f2cf47888dfb54ab1c087, type: 3}
   explosion: {fileID: 1666918869126482, guid: 1b617aedabcb0f84c82123cfd2e1e792, type: 2}
-  explosionEffect: {fileID: 1905283569719564, guid: 2d5e5251869f9654f82110e5bee7988c,
-    type: 2}
-  deathEffect: {fileID: 1600937404914032, guid: 13abd08b40dcc1e48af16a06ccc33452,
+  explosionEffect: {fileID: 1743927386615678, guid: 5d6e0975aa6cb1540a1bc1bb83f7641a,
     type: 2}
 --- !u!212 &212480359902501944
 SpriteRenderer:

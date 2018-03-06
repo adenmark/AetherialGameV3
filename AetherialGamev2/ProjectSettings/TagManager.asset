@@ -9,6 +9,7 @@ TagManager:
   - Scenery
   - LevelOne
   - PlayerProjectile
+  - AetherPickup
   layers:
   - Default
   - TransparentFX

@@ -26,6 +26,7 @@ public class PlayerScript : MonoBehaviour
     public float teleportDelayTime;
     public float invisibilityDuration;
 	public AudioClip TeleportSound; //Adds option to designate a sound for the player teleport ability
+    public float AetherPickupValue = 0.1f;
 
     [Header("Missiles")]
     public float missileSwarmCount;
@@ -125,7 +126,7 @@ public class PlayerScript : MonoBehaviour
     {
         Instantiate(Missile, missilePoint.position, Quaternion.identity);
         --missileCounter;
-        if (missileCounter == 0)
+        if (missileCounter == 0 && aetherBar.CurrentVal >= 1)
         {
             CancelInvoke("FireMissileSwarm");
             missileCounter = missileSwarmCount;
@@ -157,5 +158,10 @@ public class PlayerScript : MonoBehaviour
     void ResetInvinsibility()
     {
         invincible = false;
+    }
+
+    public void AetherPickup()
+    {
+        aetherBar.CurrentVal += AetherPickupValue;
     }
 }

@@ -5,13 +5,13 @@ using UnityEngine;
 public class EnemyChase : MonoBehaviour
 {
     public Transform player;
+    public GameObject aetherPickup;
 
     public float speed;
 	public AudioClip SkySlugSpawnSound;
 	public AudioClip SkySlugExplosion;
     public GameObject explosion;
     public GameObject explosionEffect;
-    public GameObject deathEffect;
 
     void Start ()
     {
@@ -21,6 +21,7 @@ public class EnemyChase : MonoBehaviour
 	
 	void Update ()
     {
+        RotateToPlayer();
         if (player != null)
         {
             transform.position = Vector2.MoveTowards(transform.position, player.position, speed * Time.deltaTime);
@@ -28,6 +29,16 @@ public class EnemyChase : MonoBehaviour
         else // Can be removed, just cute <3
         {
             Destroy(gameObject);
+        }
+    }
+
+    void RotateToPlayer()
+    {
+        if (player != null)
+        {
+            transform.LookAt(player.position);
+
+            transform.Rotate(new Vector3(0, 90, 0), Space.Self);
         }
     }
 
@@ -43,7 +54,7 @@ public class EnemyChase : MonoBehaviour
     {
         Instantiate(explosionEffect, transform.position, Quaternion.identity);
         Instantiate(explosion, transform.position, Quaternion.identity);
-        Instantiate(deathEffect, transform.position, Quaternion.identity);
-		SoundManager.instance.PlaySingle(SkySlugExplosion);
+        Instantiate(aetherPickup, transform.position, Quaternion.identity);
+        SoundManager.instance.PlaySingle(SkySlugExplosion);
     }
 }

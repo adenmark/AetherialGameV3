@@ -21,9 +21,9 @@ GameObject:
   - component: {fileID: 4834987986187850}
   - component: {fileID: 212064236324305016}
   - component: {fileID: 50783502681120716}
-  - component: {fileID: 61355259914008246}
-  - component: {fileID: 114176106550900044}
-  - component: {fileID: 114207438677891154}
+  - component: {fileID: 61256946988067786}
+  - component: {fileID: 114553599076708324}
+  - component: {fileID: 114325734708627288}
   m_Layer: 0
   m_Name: Turret_Legs
   m_TagString: Enemy
@@ -68,14 +68,14 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1189552664233430}
-  m_LocalRotation: {x: 0, y: 0, z: 0.06975647, w: 0.9975641}
-  m_LocalPosition: {x: 39.21, y: -0.34, z: 0}
-  m_LocalScale: {x: 0.20000005, y: 0.20000005, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0.9395716, w: 0.34235245}
+  m_LocalPosition: {x: 22.8, y: 15.6, z: 0}
+  m_LocalScale: {x: 0.20000023, y: 0.20000023, z: 1}
   m_Children:
   - {fileID: 4048021546249516}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 8}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -139.959}
 --- !u!50 &50337755000220998
 Rigidbody2D:
   serializedVersion: 4
@@ -115,8 +115,8 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
---- !u!61 &61355259914008246
+  m_Constraints: 7
+--- !u!61 &61256946988067786
 BoxCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -141,18 +141,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 5.5198565, y: 3.1011481}
   m_EdgeRadius: 0
---- !u!114 &114176106550900044
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1189552664233430}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4573b7e049222b45a655bed85687c28, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &114207438677891154
+--- !u!114 &114325734708627288
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -164,6 +153,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Health: 1
+--- !u!114 &114553599076708324
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1189552664233430}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4573b7e049222b45a655bed85687c28, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114848558106413848
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -217,7 +217,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 4f9515fc6e62f2c44aef46b484c88329, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.6666667, g: 0.6666667, b: 0.6666667, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -261,7 +261,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 9d5fc3056a89b9044a08257391e1b13e, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0.331, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0

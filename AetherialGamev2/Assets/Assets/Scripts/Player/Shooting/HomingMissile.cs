@@ -1,17 +1,22 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+
 [RequireComponent(typeof(Rigidbody2D))]
 public class HomingMissile : MonoBehaviour
 {
     public Transform target;
     private Rigidbody2D rb;
-    //public GameObject missileExplosion;
+    public GameObject missileExplosion;
+    public GameObject missileDamage;
     public string enemyTag = "Enemy";
+
     [Header("Missile Attributes")]
+
     public float missileSpeed;
     public float rotateSpeed;
     public float missileRange;
+
     void Start()
     {
         target = GameObject.FindGameObjectWithTag("Player").transform;
@@ -53,19 +58,25 @@ public class HomingMissile : MonoBehaviour
             rb.velocity = transform.up * missileSpeed;
         }
     }
+
     void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Enemy"))
         {
-            DamageEnemy(collision);
-            //Instantiate(missileExplosion, transform.up, transform.rotation);
+            EnemyCollision(collision);
             Destroy(gameObject);
         }
     }
 
-    private static void DamageEnemy(Collider2D collision)
+    private static void EnemyCollision(Collider2D collision)
     {
         collision.GetComponent<HealthScript>().Damage();
+    }
+
+    private void OnDestroy()
+    {
+        Instantiate(missileExplosion, transform.position, transform.rotation);
+        Instantiate(missileDamage, transform.position, Quaternion.identity);
     }
 
     void OnDrawGizmosSelected()

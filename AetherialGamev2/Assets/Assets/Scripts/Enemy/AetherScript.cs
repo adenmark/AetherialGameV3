@@ -13,7 +13,7 @@ public class AetherScript : MonoBehaviour
         player = GameObject.FindWithTag("Player").transform;
     }
 
-    void Update ()
+    void Update()
     {
         if (player != null)
         {
@@ -21,10 +21,11 @@ public class AetherScript : MonoBehaviour
         }
     }
 
-    void OnCollision2D(Collision2D collision)
+    void OnTriggerEnter2D(Collider2D trigger)
     {
-        if (collision.gameObject.tag == "Player")
+        if (trigger.CompareTag("Player"))
         {
+            trigger.GetComponent<PlayerScript>().AetherPickup();
             Destroy(gameObject);
         }
     }

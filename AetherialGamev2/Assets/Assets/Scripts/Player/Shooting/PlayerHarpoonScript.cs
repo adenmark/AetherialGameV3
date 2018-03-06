@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class PlayerHarpoonScript : MonoBehaviour
 {
-    public GameObject Turret;
 
 	void Start ()
     {
@@ -22,17 +21,12 @@ public class PlayerHarpoonScript : MonoBehaviour
         if (trigger.CompareTag("Enemy"))
         {
             trigger.GetComponent<HealthScript>().Damage();
-            Die();
+            Destroy(gameObject);
         }
         if (trigger.CompareTag("Scenery"))
         {
-            Die();
+            Destroy(gameObject);
         }
-    }
-
-    void Die()
-    {
-        Destroy(gameObject);
     }
 }
 
