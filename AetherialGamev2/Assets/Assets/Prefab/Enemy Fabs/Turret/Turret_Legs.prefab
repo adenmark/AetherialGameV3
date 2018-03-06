@@ -49,6 +49,21 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &1725740225874278
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4397190569320328}
+  m_Layer: 0
+  m_Name: Turet_BulletSpawn
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!4 &4048021546249516
 Transform:
   m_ObjectHideFlags: 1
@@ -56,10 +71,24 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1244039265489962}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.91, y: 3.37, z: -0.1}
+  m_LocalPosition: {x: 0.6, y: 3.49, z: -0.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 4397190569320328}
   m_Father: {fileID: 4834987986187850}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4397190569320328
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1725740225874278}
+  m_LocalRotation: {x: -0, y: -0, z: -0.36279485, w: 0.93186903}
+  m_LocalPosition: {x: 1.44, y: 0.37, z: 7.6}
+  m_LocalScale: {x: 2, y: 2, z: 0}
+  m_Children: []
+  m_Father: {fileID: 4048021546249516}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4834987986187850
@@ -69,7 +98,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1189552664233430}
   m_LocalRotation: {x: -0, y: -0, z: -0.9395716, w: 0.34235245}
-  m_LocalPosition: {x: 22.8, y: 15.6, z: 0}
+  m_LocalPosition: {x: 17.46944, y: 7.302468, z: 0}
   m_LocalScale: {x: 0.20000023, y: 0.20000023, z: 1}
   m_Children:
   - {fileID: 4048021546249516}
@@ -177,6 +206,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TurretBullet: {fileID: 1175312272523012, guid: 803c80f3fb9f20c4895d538def93bd1b,
     type: 2}
+  BulletSpawn: {fileID: 1725740225874278}
   target: {fileID: 0}
   range: 15
   fireRate: 1

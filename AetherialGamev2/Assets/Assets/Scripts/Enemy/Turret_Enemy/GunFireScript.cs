@@ -5,6 +5,7 @@ using UnityEngine;
 public class GunFireScript : MonoBehaviour
 {
     public GameObject TurretBullet;
+    public GameObject BulletSpawn;
     public Transform target;
     private Vector3 fireTo;
 
@@ -48,7 +49,7 @@ public class GunFireScript : MonoBehaviour
         Vector2 targetPosition = new Vector2(target.position.x, target.position.y);
         fireTo = new Vector3(targetPosition.x, targetPosition.y, 0f) - transform.position;
 
-        GameObject Bullet = Instantiate(TurretBullet, transform.position, Quaternion.identity) as GameObject;
+        GameObject Bullet = Instantiate(TurretBullet, BulletSpawn.transform.position, Quaternion.identity) as GameObject;
 
         Bullet.GetComponent<Rigidbody2D>().AddForce(fireTo.normalized * bulletSpeed);
     }

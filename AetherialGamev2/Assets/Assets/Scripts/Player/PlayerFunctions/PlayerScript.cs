@@ -137,8 +137,8 @@ public class PlayerScript : MonoBehaviour
     {
         if (!invincible)
         {
-            //invincible = true;
-            //Invoke(methodName: "ResetInvinsibility", time: invisibilityDuration);
+            invincible = true;
+            Invoke(methodName: "ResetInvinsibility", time: invisibilityDuration);
             health.CurrentVal--;
             if (health.CurrentVal <= 0)
             {

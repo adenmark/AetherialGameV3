@@ -8,6 +8,8 @@ public class BossScript : MonoBehaviour
 
     public float speed;
 
+    private float Health = 5;
+
     void Start ()
     {
         player = GameObject.FindWithTag("Player").transform;
@@ -19,5 +21,15 @@ public class BossScript : MonoBehaviour
         {
             transform.position = Vector2.MoveTowards(transform.position, player.position, speed * Time.deltaTime);
         }
+    }
+
+    public void Damage()
+    {
+        Health--;
+    }
+
+    private void OnDestroy()
+    {
+        speed = 0;
     }
 }
