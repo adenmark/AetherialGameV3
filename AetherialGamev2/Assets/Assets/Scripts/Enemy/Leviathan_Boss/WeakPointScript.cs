@@ -16,6 +16,6 @@ public class WeakPointScript : MonoBehaviour
 
     private void OnDestroy()
     {
-        GetComponent<BossScript>().Damage();
+        //GetComponent<BossScript>().Damage();
     }
 }

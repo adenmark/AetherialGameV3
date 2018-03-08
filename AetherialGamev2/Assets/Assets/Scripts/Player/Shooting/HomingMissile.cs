@@ -66,6 +66,10 @@ public class HomingMissile : MonoBehaviour
             EnemyCollision(collision);
             Destroy(gameObject);
         }
+        if (collision.CompareTag("Shield"))
+        {
+            Destroy(gameObject);
+        }
     }
 
     private static void EnemyCollision(Collider2D collision)

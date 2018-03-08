@@ -79,6 +79,7 @@ public class PlayerScript : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space))
         {
             InvokeRepeating("FireMissileSwarm", 0f, 0.2f);
+            aetherBar.CurrentVal--;
         }
     }
 
@@ -147,7 +148,8 @@ public class PlayerScript : MonoBehaviour
                 deathTimer++;
                 if (deathTimer > 2.5)                                       //workes but i thinks it laggs?
                 {
-                   SceneManager.LoadScene("MainMenu", LoadSceneMode.Single);
+                    Destroy(GameObject.Find("Canvas"));
+                    SceneManager.LoadScene("MainMenu", LoadSceneMode.Single);
                    Destroy(gameObject);
                 }
             }

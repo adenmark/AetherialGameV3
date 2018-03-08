@@ -35,6 +35,10 @@ public class PlayerHarpoonScript : MonoBehaviour
         {
             Destroy(gameObject);
         }
+        if (trigger.CompareTag("Shield"))
+        {
+            Destroy(gameObject);
+        }
     }
 
     private void OnDestroy()

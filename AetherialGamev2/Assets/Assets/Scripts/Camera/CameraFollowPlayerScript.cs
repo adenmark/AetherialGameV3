@@ -9,7 +9,14 @@ public class CameraFollowPlayerScript : MonoBehaviour
     public float smoothSpeed;   // Higher the value the faster it will look on (0-1)
     public Vector3 offset;
 
-    void FixedUpdate()
+    void Start()
+    {
+
+        player = GameObject.FindGameObjectWithTag("Player").transform;
+
+    }
+
+        void FixedUpdate()
     {
         if (player != null) // Temporary Fix
         {

@@ -2,8 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TurretBullet : MonoBehaviour
+public class BossTurretBullet : MonoBehaviour
 {
+    public GameObject destroyEffect;
+
     void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
@@ -16,5 +18,6 @@ public class TurretBullet : MonoBehaviour
     void Die()
     {
         Destroy(gameObject);
+        //Instantiate(destroyEffect, transform.position, Quaternion.identity);
     }
 }
