@@ -203,7 +203,8 @@ MonoBehaviour:
   teleportCooldown: 0
   teleportDelayTime: 0.05
   invisibilityDuration: 0
-  TeleportSound: {fileID: 0}
+  TeleportSound: {fileID: 8300000, guid: 1766245cd6a03824abfc99761e29bc71, type: 3}
+  AetherPickupValue: 0.1
   missileSwarmCount: 0
   health:
     bar: {fileID: 0}
