@@ -13,8 +13,8 @@ PlayerSettings:
   accelerometerFrequency: 60
   companyName: DefaultCompany
   productName: AetherialGamev2
-  defaultCursor: {fileID: 2800000, guid: 0f68a7877e6ffb44e9071f9c44a81e0e, type: 3}
-  cursorHotspot: {x: 8, y: 8}
+  defaultCursor: {fileID: 2800000, guid: 0098508b9d3a10442a0c2080c838dba8, type: 3}
+  cursorHotspot: {x: 50, y: 50}
   m_SplashScreenBackgroundColor: {r: 0.13725491, g: 0.12156863, b: 0.1254902, a: 1}
   m_ShowUnitySplashScreen: 1
   m_ShowUnitySplashLogo: 1
