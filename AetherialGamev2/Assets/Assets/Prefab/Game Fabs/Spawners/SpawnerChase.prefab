@@ -123,6 +123,8 @@ MonoBehaviour:
   DamageParticle: {fileID: 1155007538153334, guid: 357100ab2bad1744e9f87f91e561d3a3,
     type: 2}
   particlePosition: {fileID: 4302424845527514}
+  aetherPickup: {fileID: 1661759310518248, guid: c548b328bdcedd24eb00c0b8262eff18,
+    type: 2}
 --- !u!114 &114107026903991314
 MonoBehaviour:
   m_ObjectHideFlags: 1

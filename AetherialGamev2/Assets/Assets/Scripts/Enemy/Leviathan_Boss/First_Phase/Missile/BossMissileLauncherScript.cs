@@ -62,7 +62,7 @@ public class BossMissileLauncherScript : MonoBehaviour
     {
         if (collision.gameObject.tag == "PlayerProjectile")
         {
-            Instantiate(DamageParticle, transform.position, rotation: transform.rotation);
+            Instantiate(original: DamageParticle, position: transform.position, rotation: transform.rotation);
         }
         if (collision.gameObject.tag == "Player")
         {

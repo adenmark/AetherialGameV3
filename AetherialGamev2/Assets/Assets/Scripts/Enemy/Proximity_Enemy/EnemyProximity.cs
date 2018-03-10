@@ -6,6 +6,7 @@ public class EnemyProximity : MonoBehaviour {
 
     private Vector3 fireTo;
     public GameObject projectile;
+    public GameObject aetherPickup;
     public Transform target;
     private Animator animator;
 	public AudioClip AetherRayShot; //Adds the option to input an audioclip to be used when the enemy fires, add sound in Unity Inspector
@@ -35,7 +36,6 @@ public class EnemyProximity : MonoBehaviour {
 
         if (target != null) // Temporary Fix
         {
-         
             if (Vector2.Distance(transform.position, target.position) > stoppingDistance)
             {
                 transform.position = Vector2.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
@@ -86,7 +86,7 @@ public class EnemyProximity : MonoBehaviour {
 
     void OnDestroy()
     {
-
-            animator.SetTrigger("AetherDeath");
+        Instantiate(aetherPickup, transform.position, Quaternion.identity);
+        animator.SetTrigger("AetherDeath");
     }
 }
