@@ -12,6 +12,22 @@ public class MainMenuScript : MonoBehaviour {
 
     }
 
+    public void LoadCredits()
+    {
+        //SceneManager.LoadScene("Credits", LoadSceneMode.Single); //loads the credits scene
+
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 4); // load the credits scene, only if you are in the main menu!
+
+    }
+
+    public void ReturnToMenu()
+    {
+        //SceneManager.LoadScene("Credits", LoadSceneMode.Single); //loads the credits scene
+
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 4); // load the main menu scene, only if you are in the credits scene!
+
+    }
+
     public void QuitGame()
     {
         Debug.Log("Quit!");
