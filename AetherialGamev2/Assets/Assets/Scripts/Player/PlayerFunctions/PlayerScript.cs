@@ -10,6 +10,7 @@ public class PlayerScript : MonoBehaviour
     public Transform teleportationExplosion;
     public GameObject Missile;
     public Transform missilePoint;
+    public AudioClip DeathSound;
 
     private Transform player;
     private Rigidbody2D rb;
@@ -145,6 +146,7 @@ public class PlayerScript : MonoBehaviour
             {
                 anim.SetTrigger("PlayerDeath");                         //caling the animation
                 Destroy(GameObject.Find("Cannon"));                         //destroys the childe of player - cannon
+                SoundManager.instance.PlaySingle(DeathSound);               //Plays the AudioClip for player dying
                 deathTimer++;
                 if (deathTimer > 2.5)                                       //workes but i thinks it laggs?
                 {

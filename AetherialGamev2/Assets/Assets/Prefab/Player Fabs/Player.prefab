@@ -199,6 +199,7 @@ MonoBehaviour:
     type: 2}
   Missile: {fileID: 0}
   missilePoint: {fileID: 0}
+  DeathSound: {fileID: 8300000, guid: 493f3d96780ae9d41b42834d3f372236, type: 3}
   speed: 12
   teleportCooldown: 0
   teleportDelayTime: 0.05
