@@ -77,7 +77,7 @@ public class PlayerScript : MonoBehaviour
         }
 
         // Shooting the Missiles // 
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space) && aetherBar.CurrentVal >= 1)
         {
             InvokeRepeating("FireMissileSwarm", 0f, 0.2f);
             aetherBar.CurrentVal--;
@@ -128,7 +128,7 @@ public class PlayerScript : MonoBehaviour
     {
         Instantiate(Missile, missilePoint.position, Quaternion.identity);
         --missileCounter;
-        if (missileCounter == 0 && aetherBar.CurrentVal >= 1)
+        if (missileCounter == 0)
         {
             CancelInvoke("FireMissileSwarm");
             missileCounter = missileSwarmCount;

@@ -7,6 +7,8 @@ public class BossTurret : MonoBehaviour
     public GameObject Projectile;
     public Transform firePoint;
     public GameObject DamageParticle;
+    public GameObject DeathParticle;
+    public GameObject AetherPickup;
     private Transform target;
     private Vector3 fireTo;
 
@@ -75,6 +77,12 @@ public class BossTurret : MonoBehaviour
         {
             collision.gameObject.GetComponent<PlayerScript>().Damage();
         }
+    }
+
+    private void OnDestroy()
+    {
+        Instantiate(DeathParticle, transform.position, Quaternion.identity);
+        Instantiate(AetherPickup, transform.position, Quaternion.identity);
     }
 
     void OnDrawGizmosSelected()

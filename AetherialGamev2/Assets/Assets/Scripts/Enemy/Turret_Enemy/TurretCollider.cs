@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class TurretCollider : MonoBehaviour
 {
-	void Start ()
+    public GameObject aetherPickup;
+
+    void Start ()
     {
 		
 	}
@@ -20,5 +22,10 @@ public class TurretCollider : MonoBehaviour
         {
             collision.gameObject.GetComponent<PlayerScript>().Damage();
         }
+    }
+
+    private void OnDestroy()
+    {
+        Instantiate(aetherPickup, transform.position, Quaternion.identity);
     }
 }
