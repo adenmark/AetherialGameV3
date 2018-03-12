@@ -7,6 +7,7 @@ public class SpawnObjectScript : MonoBehaviour {
     public GameObject DamageParticle;
     public Transform particlePosition;
     public GameObject aetherPickup;
+    public GameObject DeathParticle;
 
     void Start () {
 		
@@ -28,5 +29,6 @@ public class SpawnObjectScript : MonoBehaviour {
     {
         Instantiate(DamageParticle, particlePosition.position, particlePosition.rotation);
         Instantiate(aetherPickup, transform.position, Quaternion.identity);
+        Instantiate(DeathParticle, transform.position, Quaternion.identity);
     }
 }

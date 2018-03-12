@@ -7,6 +7,8 @@ public class BossMissileLauncherScript : MonoBehaviour
     public GameObject Missile;
     public Transform missilePoint;
     public GameObject DamageParticle;
+    public GameObject DeathParticle;
+    public GameObject AetherPickup;
     private Transform target;
 
     [Header("Attributes")]
@@ -74,5 +76,11 @@ public class BossMissileLauncherScript : MonoBehaviour
     {
         Gizmos.color = Color.cyan;
         Gizmos.DrawWireSphere(transform.position, range);
+    }
+
+    private void OnDestroy()
+    {
+        Instantiate(DeathParticle, transform.position, Quaternion.identity);
+        Instantiate(AetherPickup, transform.position, Quaternion.identity);
     }
 }

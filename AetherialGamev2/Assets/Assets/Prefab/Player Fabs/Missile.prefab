@@ -221,9 +221,9 @@ MonoBehaviour:
   enemyTag: Enemy
   MissileLaunch: {fileID: 8300000, guid: 3bf2e4b989fff784b83ba05f8b753227, type: 3}
   MissileExplosion: {fileID: 8300000, guid: 60d4aad6103bed84abff3dd8701b77af, type: 3}
-  missileSpeed: 15
-  rotateSpeed: 300
-  missileRange: 15
+  missileSpeed: 20
+  rotateSpeed: 400
+  missileRange: 17
 --- !u!198 &198746816490330052
 ParticleSystem:
   m_ObjectHideFlags: 1

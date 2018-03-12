@@ -72,7 +72,6 @@ public class HomingMissile : MonoBehaviour
         }
         if (collision.CompareTag("Shield"))
         {
-            collision.GetComponent<HealthScript>().Damage();
             Destroy(gameObject);
         }
     }
