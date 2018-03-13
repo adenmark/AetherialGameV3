@@ -161,7 +161,7 @@ MonoBehaviour:
   player: {fileID: 4441329459307770, guid: 68a1378dfc1894842a9a72bd403997d7, type: 2}
   aetherPickup: {fileID: 1661759310518248, guid: c548b328bdcedd24eb00c0b8262eff18,
     type: 2}
-  speed: 15
+  speed: 10
   SkySlugSpawnSound: {fileID: 8300000, guid: 51a7ed7f084a1f849bd5cb1880005998, type: 3}
   SkySlugExplosion: {fileID: 8300000, guid: b3e79f61ed5f2cf47888dfb54ab1c087, type: 3}
   explosion: {fileID: 1666918869126482, guid: 1b617aedabcb0f84c82123cfd2e1e792, type: 2}

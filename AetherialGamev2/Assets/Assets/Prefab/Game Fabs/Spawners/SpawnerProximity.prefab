@@ -70,7 +70,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1250470967973018}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 77.8, y: 25.7, z: 0}
+  m_LocalPosition: {x: -101.469505, y: 10.565745, z: 0}
   m_LocalScale: {x: 0.2, y: 0.2, z: 1}
   m_Children:
   - {fileID: 4559374060265530}
@@ -109,9 +109,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.0034418106, y: 0}
+  m_Offset: {x: 0.61597824, y: 0}
   serializedVersion: 2
-  m_Radius: 0.5722723
+  m_Radius: 3.006382
 --- !u!95 &95395784497662890
 Animator:
   serializedVersion: 3
@@ -171,6 +171,7 @@ MonoBehaviour:
   particlePosition: {fileID: 4872811498345286}
   aetherPickup: {fileID: 1661759310518248, guid: c548b328bdcedd24eb00c0b8262eff18,
     type: 2}
+  DeathParticle: {fileID: 0}
 --- !u!114 &114712467375117862
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -200,7 +201,7 @@ MonoBehaviour:
   target: {fileID: 0}
   particlePosition: {fileID: 4872811498345286}
   spawnRange: 20
-  spawnRate: 5
+  spawnRate: 0.5
   spawnCap: 10
   enemyPosition: {fileID: 4872811498345286}
 --- !u!212 &212309969129132096
