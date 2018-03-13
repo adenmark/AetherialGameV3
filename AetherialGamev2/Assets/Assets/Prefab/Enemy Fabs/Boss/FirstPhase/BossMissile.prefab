@@ -24,6 +24,7 @@ GameObject:
   - component: {fileID: 60199098974543990}
   - component: {fileID: 114446610663245974}
   - component: {fileID: 114183150595426224}
+  - component: {fileID: 114641815284932258}
   m_Layer: 0
   m_Name: BossMissile
   m_TagString: Enemy
@@ -149,6 +150,18 @@ MonoBehaviour:
     type: 2}
   missileSpeed: 10
   rotateSpeed: 350
+--- !u!114 &114641815284932258
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1536196431423386}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d699baaa3ea27e4ab3fef4ee6d2cc4f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeToDestroy: 10
 --- !u!198 &198818044107120848
 ParticleSystem:
   m_ObjectHideFlags: 1
@@ -3599,7 +3612,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: e2b54d48baf02d845a9af621021d3f17, type: 3}
-  m_Color: {r: 0.122, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 0.29219064, b: 0.9852941, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
