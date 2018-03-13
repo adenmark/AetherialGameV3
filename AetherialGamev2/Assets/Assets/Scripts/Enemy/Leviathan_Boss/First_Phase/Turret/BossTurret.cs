@@ -32,7 +32,7 @@ public class BossTurret : MonoBehaviour
         {
             Vector2 direction = target.position - transform.position;
             float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-            Quaternion rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+            Quaternion rotation = Quaternion.AngleAxis(angle-90, Vector3.forward);
             transform.rotation = Quaternion.Slerp(transform.rotation, rotation, rotationSpeed * Time.deltaTime);
         }
 
@@ -62,7 +62,7 @@ public class BossTurret : MonoBehaviour
         Vector2 targetPosition = new Vector2(target.position.x, target.position.y);
         fireTo = new Vector3(targetPosition.x, targetPosition.y, 0f) - transform.position;
 
-        GameObject Bullet = Instantiate(Projectile, firePoint.transform.position, Quaternion.identity) as GameObject;
+        GameObject Bullet = Instantiate(Projectile, firePoint.transform.position, transform.rotation) as GameObject;
 
         Bullet.GetComponent<Rigidbody2D>().AddForce(fireTo.normalized * speed);
     }
@@ -83,6 +83,7 @@ public class BossTurret : MonoBehaviour
     {
         Instantiate(DeathParticle, transform.position, Quaternion.identity);
         Instantiate(AetherPickup, transform.position, Quaternion.identity);
+        GetComponentInParent<ShieldScript>().Damage(); //WHY
     }
 
     void OnDrawGizmosSelected()

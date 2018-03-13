@@ -6,7 +6,7 @@ public class GunFireScript : MonoBehaviour
 {
     public GameObject TurretBullet;
     public GameObject BulletSpawn;
-    public Transform target;
+    public GameObject target;
     private Vector3 fireTo;
 
     [Header("Attributes")]
@@ -27,15 +27,15 @@ public class GunFireScript : MonoBehaviour
 
     void Update ()
     {
-        if (target != null && Vector2.Distance(transform.position, target.position) < range)
+        if (target != null && Vector2.Distance(transform.position, target.transform.position) < range)
         {
-            Vector2 direction = target.position - transform.position;
+            Vector2 direction = target.transform.position - transform.position;
             float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
             Quaternion rotation = Quaternion.AngleAxis(angle, Vector3.forward);
             transform.rotation = Quaternion.Slerp(transform.rotation, rotation, rotationSpeed * Time.deltaTime);
         }
 
-        if (target != null && fireCountdown <= 0f && Vector2.Distance(transform.position, target.position) < range)
+        if (target != null && fireCountdown <= 0f && Vector2.Distance(transform.position, target.transform.position) < range)
         {
             Shoot();
             fireCountdown = 1f / fireRate;
@@ -46,7 +46,7 @@ public class GunFireScript : MonoBehaviour
 
     void Shoot()
     {
-        Vector2 targetPosition = new Vector2(target.position.x, target.position.y);
+        Vector2 targetPosition = new Vector2(target.transform.position.x, target.transform.position.y);
         fireTo = new Vector3(targetPosition.x, targetPosition.y, 0f) - transform.position;
 
         GameObject Bullet = Instantiate(TurretBullet, BulletSpawn.transform.position, Quaternion.identity) as GameObject;

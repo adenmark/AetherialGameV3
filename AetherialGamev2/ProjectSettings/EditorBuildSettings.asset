@@ -11,12 +11,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Master.unity
     guid: edd835e317d945a4382e3be5cbecc9f1
-  - enabled: 0
-    path: Assets/Oskar Sandbox.unity
-    guid: 50ac4350ed8154648adeba35c9fbc65a
   - enabled: 1
     path: Assets/LevelTwo.unity
     guid: 93d24e76fe14604499fa7db62aae82f8
   - enabled: 1
     path: Assets/LevelThree.unity
     guid: 33c3614a33d7e9f48b24597fd49a284f
+  - enabled: 1
+    path: Assets/Credits.unity
+    guid: cedbe61c83e943a48a371f9bc6e5b2e2

@@ -209,7 +209,7 @@ MonoBehaviour:
   TurretBullet: {fileID: 1175312272523012, guid: 803c80f3fb9f20c4895d538def93bd1b,
     type: 2}
   BulletSpawn: {fileID: 1725740225874278}
-  target: {fileID: 0}
+  target: {fileID: 1843716985747982, guid: 68a1378dfc1894842a9a72bd403997d7, type: 2}
   range: 15
   fireRate: 1
   bulletSpeed: 500
