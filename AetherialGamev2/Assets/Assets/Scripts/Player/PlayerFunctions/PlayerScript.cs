@@ -116,7 +116,6 @@ public class PlayerScript : MonoBehaviour
         {
             if (aetherBar.CurrentVal >= 1)
             {
-                //mathf.clamp
                 invincible = true;
                 Invoke(methodName: "ResetInvinsibility", time: invisibilityDuration);
                 Vector3 new_pos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
@@ -154,12 +153,12 @@ public class PlayerScript : MonoBehaviour
             {
                 anim.SetTrigger("PlayerDeath");                         //caling the animation
                 Destroy(GameObject.Find("Cannon"));                         //destroys the childe of player - cannon
-                deathTimer++;
-                if (deathTimer > 2.5)                                       //workes but i thinks it laggs?
+                deathTimer += Time.deltaTime;
+                if (deathTimer >= 2.5)                                       //workes but i thinks it laggs?
                 {
                     Destroy(GameObject.Find("Canvas"));
                     SceneManager.LoadScene("MainMenu", LoadSceneMode.Single);
-                   Destroy(gameObject);
+                    Destroy(gameObject);
                 }
             }
         }

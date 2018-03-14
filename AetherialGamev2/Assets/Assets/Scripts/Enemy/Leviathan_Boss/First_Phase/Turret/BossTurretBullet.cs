@@ -13,10 +13,6 @@ public class BossTurretBullet : MonoBehaviour
             collision.gameObject.GetComponent<PlayerScript>().Damage();
             Destroy(gameObject);
         }
-        if (collision.CompareTag("PlayerProjectile"))
-        {
-            Destroy(gameObject);
-        }
     }
 
     void OnDestroy()

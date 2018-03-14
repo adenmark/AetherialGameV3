@@ -55,7 +55,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1287492908480614}
   m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: -0.7071068}
-  m_LocalPosition: {x: -0.01, y: -0.19, z: 0}
+  m_LocalPosition: {x: -0.25, y: -3.3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4888812655425844}
@@ -68,7 +68,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1272262372674242}
   m_LocalRotation: {x: -0, y: -0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.78, y: 0.32, z: 0}
+  m_LocalPosition: {x: 5.7, y: -5.5, z: 0}
   m_LocalScale: {x: 0.2, y: 0.2, z: 1}
   m_Children:
   - {fileID: 4860486890109350}
@@ -227,7 +227,7 @@ MonoBehaviour:
   MissileExplosion: {fileID: 8300000, guid: 60d4aad6103bed84abff3dd8701b77af, type: 3}
   missileSpeed: 20
   rotateSpeed: 400
-  missileRange: 17
+  missileRange: 20
 --- !u!198 &198746816490330052
 ParticleSystem:
   m_ObjectHideFlags: 1

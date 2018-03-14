@@ -28,7 +28,6 @@ public class SpawnerScript : MonoBehaviour
 
     void Update()
     {
-
         if (target != null && Vector2.Distance(transform.position, target.position) < spawnRange)
         {
             Vector2 direction = target.position - transform.position;
