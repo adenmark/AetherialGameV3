@@ -4,7 +4,10 @@ using UnityEngine;
 
 public class ShieldScript : MonoBehaviour
 {
+    public GameObject NukeTarget;
+
     public GameObject ShieldExplosion;
+    public GameObject AetherStar;
 
     public float health;
 
@@ -23,12 +26,13 @@ public class ShieldScript : MonoBehaviour
         --health;
         if(health <= 0)
         {
+            Instantiate(ShieldExplosion, NukeTarget.transform.position, Quaternion.identity);
             Destroy(gameObject);
         }
     }
 
-    private void OnDestroy()
+    void OnDestroy()
     {
-        Instantiate(ShieldExplosion, transform.position, Quaternion.identity);
+        Instantiate(AetherStar, NukeTarget.transform.position, Quaternion.identity);
     }
 }

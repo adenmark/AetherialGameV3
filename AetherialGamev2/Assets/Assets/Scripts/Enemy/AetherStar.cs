@@ -2,9 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AetherScript : MonoBehaviour
+public class AetherStar : MonoBehaviour
 {
     private Transform player;
+    public GameObject AetherPickupEffect;
 
     public float speed;
     public float coolDown;
@@ -16,13 +17,13 @@ public class AetherScript : MonoBehaviour
     Vector3 posOffset = new Vector3();
     Vector3 tempPos = new Vector3();
 
-    void Start()
+    void Start ()
     {
         player = GameObject.FindWithTag("Player").transform;
         posOffset = transform.position;
     }
-
-    void Update()
+	
+	void Update ()
     {
         RotateLeft();
 
@@ -50,8 +51,12 @@ public class AetherScript : MonoBehaviour
     {
         if (trigger.CompareTag("Player"))
         {
-            trigger.GetComponent<PlayerScript>().AetherPickup();
             Destroy(gameObject);
         }
+    }
+
+    private void OnDestroy()
+    {
+        Instantiate(AetherPickupEffect, transform.position, Quaternion.identity);
     }
 }
