@@ -12,6 +12,7 @@ public class PlayerScript : MonoBehaviour
     public GameObject Nuke;
     public Transform missilePoint;
     public GameObject teleParticleEffect;
+    public GameObject QFlag;
 
     private Transform player;
     private Rigidbody2D rb;
@@ -97,7 +98,7 @@ public class PlayerScript : MonoBehaviour
         }
 
         // SHooting Da Nuke //
-        if (Input.GetKeyDown(KeyCode.F) && nukeMeter == 1)
+        if (Input.GetKeyDown(KeyCode.Q) && nukeMeter == 1)
         {
             Instantiate(Nuke, missilePoint.position, Quaternion.identity);
             nukeMeter--;
@@ -157,12 +158,13 @@ public class PlayerScript : MonoBehaviour
 
     public void Damage()
     {
-        if (!invincible)
-        {
-            invincible = true;
-            Invoke(methodName: "ResetInvinsibility", time: invisibilityDuration);
-            health.CurrentVal--;
-        }
+        health.CurrentVal--;
+        // if (!invincible)
+        // {
+            // invincible = true;
+            // Invoke(methodName: "ResetInvinsibility", time: invisibilityDuration);
+            // health.CurrentVal--;
+        // }
         
     }
 
@@ -174,5 +176,20 @@ public class PlayerScript : MonoBehaviour
     public void AetherPickup()
     {
         aetherBar.CurrentVal += AetherPickupValue;
+    }
+
+    void OnTriggerEnter2D(Collider2D trigger)
+    {
+        if (trigger.CompareTag("AetherStar"))
+        {
+            nukeMeter++;
+            Instantiate(QFlag, missilePoint.position, Quaternion.identity);
+        }
+    }
+
+    public void AetherStarPickup()
+    {
+        nukeMeter++;
+        Instantiate(QFlag, missilePoint.position, Quaternion.identity);
     }
 }

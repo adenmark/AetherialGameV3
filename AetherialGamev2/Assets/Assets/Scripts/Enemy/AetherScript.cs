@@ -8,6 +8,7 @@ public class AetherScript : MonoBehaviour
 
     public float speed;
     public float coolDown;
+    public float Angle;
 
     public float amplitude = 0.5f;
     public float frequency = 1f;
@@ -23,6 +24,8 @@ public class AetherScript : MonoBehaviour
 
     void Update()
     {
+        RotateLeft();
+
         coolDown -= Time.deltaTime;
         if (coolDown >= 0)
         {
@@ -36,6 +39,11 @@ public class AetherScript : MonoBehaviour
         {
             transform.position = Vector2.MoveTowards(transform.position, player.position, speed * Time.deltaTime);
         }
+    }
+
+    void RotateLeft()
+    {
+        transform.Rotate(Vector3.forward * -Angle);
     }
 
     void OnTriggerEnter2D(Collider2D trigger)

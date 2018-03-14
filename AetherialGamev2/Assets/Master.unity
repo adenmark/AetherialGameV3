@@ -549,7 +549,6 @@ MonoBehaviour:
   firePoint: {fileID: 1292546993}
   NukeExplosionParticle: {fileID: 0}
   NukeSpeedUp: {fileID: 0}
-  NukeTrail: {fileID: 1643603672}
   rotateSpeed: 100
 --- !u!50 &442215515
 Rigidbody2D:
@@ -733,6 +732,7 @@ MonoBehaviour:
     type: 2}
   AetherPickup: {fileID: 1661759310518248, guid: c548b328bdcedd24eb00c0b8262eff18,
     type: 2}
+  target: {fileID: 0}
   Cooldown: 1
   range: 30
   rotationSpeed: 100
@@ -1851,8 +1851,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c32726dadb78fa7489c54199b0a5fd93, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ShieldExplosion: {fileID: 0}
-  health: 4
+  NukeTarget: {fileID: 1985937475}
+  ShieldExplosion: {fileID: 1338899969019110, guid: 2913e2d415b7c684eb6ede2e6e48c1f9,
+    type: 2}
+  AetherStar: {fileID: 1213623823883308, guid: 6ee60a9baee5f0d478e8d78b2e329151, type: 2}
+  health: 1
 --- !u!1001 &745916818
 Prefab:
   m_ObjectHideFlags: 0
@@ -3428,11 +3431,6 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
---- !u!1 &1643603672 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1235576506040706, guid: 15623c921bc2ec545af3dcc13aef7765,
-    type: 2}
-  m_PrefabInternal: {fileID: 627093636}
 --- !u!4 &1643603675 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4794243446207086, guid: 15623c921bc2ec545af3dcc13aef7765,
@@ -4051,13 +4049,14 @@ PolygonCollider2D:
       - {x: 4.2799997, y: 2.5}
       - {x: 4.14, y: 2.45}
       - {x: 4.0108085, y: 2.3799999}
-      - {x: 4.0688224, y: 2.0454903}
-      - {x: 3.848709, y: 1.9830259}
-      - {x: 3.5200298, y: 1.9597028}
-      - {x: 3.3557892, y: 1.9521904}
-      - {x: 3.1652884, y: 1.999597}
-      - {x: 2.9779816, y: 2.0328968}
-      - {x: 2.8951926, y: 2.2865996}
+      - {x: 3.8596497, y: 2.3107872}
+      - {x: 3.726265, y: 2.268732}
+      - {x: 3.4690094, y: 2.0464363}
+      - {x: 3.401703, y: 1.9879036}
+      - {x: 3.2770996, y: 2.1486378}
+      - {x: 3.1550903, y: 2.2597923}
+      - {x: 3.0341034, y: 2.3083973}
+      - {x: 2.9717255, y: 2.368229}
       - {x: 2.9692943, y: 2.3869019}
       - {x: 2.98, y: 2.45}
       - {x: 2.83, y: 2.59}
@@ -4627,7 +4626,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1985937475}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.25, y: 0.84, z: 0}
+  m_LocalPosition: {x: 0.34, y: 1.03, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1916920738}

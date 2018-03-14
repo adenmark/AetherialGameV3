@@ -11,6 +11,7 @@ TagManager:
   - AetherPickup
   - Shield
   - Boss
+  - AetherStar
   layers:
   - Default
   - TransparentFX
