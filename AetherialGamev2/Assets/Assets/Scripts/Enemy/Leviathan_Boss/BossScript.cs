@@ -7,12 +7,14 @@ public class BossScript : MonoBehaviour
     public Transform player;
 
     public float speed;
+    private float deadSpeed;
 
     private float Health = 1;
 
     void Start ()
     {
         player = GameObject.FindWithTag("Player").transform;
+        deadSpeed = speed;
     }
 	
 	void Update ()
@@ -20,6 +22,18 @@ public class BossScript : MonoBehaviour
         if (player != null)
         {
             transform.position = Vector2.MoveTowards(transform.position, player.position, speed * Time.deltaTime);
+        }
+    }
+
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Nuke")
+        {
+            speed -= deadSpeed;
+        }
+        if (collision.gameObject.tag == "Player")
+        {
+            collision.gameObject.GetComponent<PlayerScript>().Damage();
         }
     }
 

@@ -75,7 +75,7 @@ PolygonCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -164,7 +164,6 @@ MonoBehaviour:
   speed: 10
   SkySlugSpawnSound: {fileID: 8300000, guid: 51a7ed7f084a1f849bd5cb1880005998, type: 3}
   SkySlugExplosion: {fileID: 8300000, guid: b3e79f61ed5f2cf47888dfb54ab1c087, type: 3}
-  explosion: {fileID: 1666918869126482, guid: 1b617aedabcb0f84c82123cfd2e1e792, type: 2}
   explosionEffect: {fileID: 1743927386615678, guid: 5d6e0975aa6cb1540a1bc1bb83f7641a,
     type: 2}
 --- !u!212 &212480359902501944
