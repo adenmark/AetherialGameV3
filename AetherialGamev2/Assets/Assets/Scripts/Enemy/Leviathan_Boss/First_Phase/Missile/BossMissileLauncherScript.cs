@@ -82,5 +82,6 @@ public class BossMissileLauncherScript : MonoBehaviour
     {
         Instantiate(DeathParticle, transform.position, Quaternion.identity);
         Instantiate(AetherPickup, transform.position, Quaternion.identity);
+        GetComponentInParent<ShieldScript>().Damage();
     }
 }

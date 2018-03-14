@@ -10,7 +10,6 @@ public class EnemyChase : MonoBehaviour
     public float speed;
 	public AudioClip SkySlugSpawnSound;
 	public AudioClip SkySlugExplosion;
-    public GameObject explosion;
     public GameObject explosionEffect;
 
     void Start ()
@@ -42,10 +41,11 @@ public class EnemyChase : MonoBehaviour
         }
     }
 
-    void OnCollisionEnter2D(Collision2D collision)
+    void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.tag=="Player")
+        if(collision.CompareTag("Player"))
         {
+            collision.GetComponent<PlayerScript>().Damage();
             Destroy(gameObject);
         }
     }
@@ -53,7 +53,6 @@ public class EnemyChase : MonoBehaviour
     void OnDestroy()
     {
         Instantiate(explosionEffect, transform.position, Quaternion.identity);
-        Instantiate(explosion, transform.position, Quaternion.identity);
         Instantiate(aetherPickup, transform.position, Quaternion.identity);
         SoundManager.instance.PlaySingle(SkySlugExplosion);
     }

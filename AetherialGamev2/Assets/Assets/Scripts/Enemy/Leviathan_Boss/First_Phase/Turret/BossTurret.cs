@@ -39,7 +39,7 @@ public class BossTurret : MonoBehaviour
         Fire();
         if (target != null && CooldownTimer <= 0f && Vector2.Distance(transform.position, target.position) < range)
         {
-            FireBossMissile();
+            FireBossTurret();
             CooldownTimer = Cooldown;
         }
     }
@@ -57,7 +57,7 @@ public class BossTurret : MonoBehaviour
         }
     }
 
-    void FireBossMissile()
+    void FireBossTurret()
     {
         Vector2 targetPosition = new Vector2(target.position.x, target.position.y);
         fireTo = new Vector3(targetPosition.x, targetPosition.y, 0f) - transform.position;
@@ -81,9 +81,9 @@ public class BossTurret : MonoBehaviour
 
     private void OnDestroy()
     {
-        Instantiate(DeathParticle, transform.position, Quaternion.identity);
         Instantiate(AetherPickup, transform.position, Quaternion.identity);
-        GetComponentInParent<ShieldScript>().Damage(); //WHY
+        GetComponentInParent<ShieldScript>().Damage();
+        Instantiate(DeathParticle, transform.position, Quaternion.identity);
     }
 
     void OnDrawGizmosSelected()

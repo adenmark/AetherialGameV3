@@ -8,7 +8,7 @@ public class BossScript : MonoBehaviour
 
     public float speed;
 
-    private float Health = 5;
+    private float Health = 1;
 
     void Start ()
     {
