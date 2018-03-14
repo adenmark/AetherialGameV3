@@ -78,8 +78,6 @@ public class PlayerScript : MonoBehaviour
             SoundManager.instance.PlaySingle(DeathSound); //Plays the sound of the player's death explosion
             anim.SetTrigger("PlayerDeath");
             Destroy(GameObject.Find("Cannon"));
-            speed = 0;
-            aetherBar.CurrentVal = 0;
             deathTimer += Time.deltaTime;
             if (deathTimer >= 2.5)
             {
@@ -92,7 +90,7 @@ public class PlayerScript : MonoBehaviour
         // Teleport //
         if (Input.GetMouseButtonDown(1) && teleportCooldownTimer == 0)
         {
-            //anim.SetTrigger("PlayerDash");
+            anim.SetTrigger("PlayerDash");
             StartCoroutine(TeleportDelay());
             teleportCooldownTimer = teleportCooldown;
         }
