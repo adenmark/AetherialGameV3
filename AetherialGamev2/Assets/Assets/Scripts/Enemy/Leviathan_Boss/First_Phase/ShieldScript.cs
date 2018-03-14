@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class ShieldScript : MonoBehaviour
 {
+    public GameObject ShieldExplosion;
+
     public float health;
 
 	void Start ()
@@ -27,6 +29,6 @@ public class ShieldScript : MonoBehaviour
 
     private void OnDestroy()
     {
-        
+        Instantiate(ShieldExplosion, transform.position, Quaternion.identity);
     }
 }
