@@ -9,12 +9,16 @@ public class TurretBullet : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             collision.gameObject.GetComponent<PlayerScript>().Damage();
-            Die();
+            Destroy(gameObject);
+        }
+        if (collision.CompareTag("Scenery"))
+        {
+            Destroy(gameObject);
         }
     }
 
-    void Die()
+    void OnDestroy()
     {
-        Destroy(gameObject);
+        
     }
 }

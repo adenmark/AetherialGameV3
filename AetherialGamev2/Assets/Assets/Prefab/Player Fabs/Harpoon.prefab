@@ -36,11 +36,11 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4536210394849396}
-  - component: {fileID: 212784003492458418}
   - component: {fileID: 114454733253210910}
-  - component: {fileID: 50314545333209228}
   - component: {fileID: 114715033182486234}
+  - component: {fileID: 212784003492458418}
   - component: {fileID: 68904608062119908}
+  - component: {fileID: 50314545333209228}
   m_Layer: 10
   m_Name: Harpoon
   m_TagString: PlayerProjectile
@@ -104,7 +104,7 @@ EdgeCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
