@@ -3182,6 +3182,7 @@ MonoBehaviour:
   range: 30
   rotationSpeed: 50
   speed: 1000
+  Angle: 0
 --- !u!60 &442797449
 PolygonCollider2D:
   m_ObjectHideFlags: 0
