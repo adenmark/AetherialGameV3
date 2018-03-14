@@ -48,6 +48,9 @@ public class PlayerScript : MonoBehaviour
     [SerializeField]
     private Stat aetherBar;
 
+    [Header("Audio")]
+    public AudioClip DeathSound; //Adds option to designate a sound for the player death
+
     private void Awake()
     {
         health.Initialize();
@@ -72,6 +75,7 @@ public class PlayerScript : MonoBehaviour
 
         if (health.CurrentVal <= 0)
         {
+            SoundManager.instance.PlaySingle(DeathSound); //Plays the sound of the player's death explosion
             anim.SetTrigger("PlayerDeath");
             Destroy(GameObject.Find("Cannon"));
             speed = 0;

@@ -334,6 +334,7 @@ MonoBehaviour:
     bar: {fileID: 0}
     maxVal: 5
     currentVal: 5
+  DeathSound: {fileID: 8300000, guid: 493f3d96780ae9d41b42834d3f372236, type: 3}
 --- !u!114 &114151534612034038
 MonoBehaviour:
   m_ObjectHideFlags: 1
