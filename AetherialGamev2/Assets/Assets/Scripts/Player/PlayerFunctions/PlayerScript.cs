@@ -9,12 +9,12 @@ public class PlayerScript : MonoBehaviour
 
     public Transform teleportationExplosion;
     public GameObject Missile;
+    public GameObject Nuke;
     public Transform missilePoint;
-    public AudioClip DeathSound;
+    public GameObject teleParticleEffect;
 
     private Transform player;
     private Rigidbody2D rb;
-    private float teleportCooldownTimer = 0;
     private bool invincible = false;
 
     private Animator anim;
@@ -23,15 +23,23 @@ public class PlayerScript : MonoBehaviour
     [Header("Attributes")]
 
     public float speed;
+    public float invisibilityDuration;
+    public float AetherPickupValue = 0.1f;
+
+    [Header("Teleport")]
     public float teleportCooldown;
     public float teleportDelayTime;
-    public float invisibilityDuration;
-	public AudioClip TeleportSound; //Adds option to designate a sound for the player teleport ability
-    public float AetherPickupValue = 0.1f;
+    public float teleportCost;
+    private float teleportCooldownTimer = 0;
+    public AudioClip TeleportSound; //Adds option to designate a sound for the player teleport ability
 
     [Header("Missiles")]
     public float missileSwarmCount;
     private float missileCounter;
+    public float rocketCost;
+
+    [Header("Missiles")]
+    private float nukeMeter;
 
     [SerializeField]
     private Stat health;
@@ -64,14 +72,6 @@ public class PlayerScript : MonoBehaviour
         if (Input.GetMouseButtonDown(1) && teleportCooldownTimer == 0)
         {
             anim.SetTrigger("PlayerDash");
-            //Cannon = this.gameObject.transform.GetChild(0);
-            //Cannon.GetComponent<SpriteRenderer>().enabled = false;      //cant get the cannon to disapare during the animation and then appera again
-            ////timer++;
-            //if (timer > 5)
-            //{
-            //    Cannon.GetComponent<SpriteRenderer>().enabled = true;
-            //}
-
             StartCoroutine(TeleportDelay());
             teleportCooldownTimer = teleportCooldown;
         }
@@ -79,8 +79,15 @@ public class PlayerScript : MonoBehaviour
         // Shooting the Missiles // 
         if (Input.GetKeyDown(KeyCode.Space) && aetherBar.CurrentVal >= 1)
         {
-            InvokeRepeating("FireMissileSwarm", 0f, 0.2f);
-            aetherBar.CurrentVal--;
+            InvokeRepeating("FireMissileSwarm", 0f, 0.15f);
+            aetherBar.CurrentVal -= rocketCost;
+        }
+
+        // SHooting Da Nuke //
+        if (Input.GetKeyDown(KeyCode.F) && nukeMeter == 1)
+        {
+            Instantiate(Nuke, missilePoint.position, Quaternion.identity);
+            nukeMeter--;
         }
     }
 
@@ -117,7 +124,8 @@ public class PlayerScript : MonoBehaviour
                 teleport_transform.position = new_pos;
 
                 Instantiate(teleportationExplosion, player.position, Quaternion.identity);
-                aetherBar.CurrentVal--;
+                Instantiate(teleParticleEffect, player.position, Quaternion.identity);
+                aetherBar.CurrentVal -= teleportCost;
 
                 SoundManager.instance.PlaySingle(TeleportSound); //Plays the sound of the player's Teleport ability 
             }
@@ -146,7 +154,6 @@ public class PlayerScript : MonoBehaviour
             {
                 anim.SetTrigger("PlayerDeath");                         //caling the animation
                 Destroy(GameObject.Find("Cannon"));                         //destroys the childe of player - cannon
-                SoundManager.instance.PlaySingle(DeathSound);               //Plays the AudioClip for player dying
                 deathTimer++;
                 if (deathTimer > 2.5)                                       //workes but i thinks it laggs?
                 {
