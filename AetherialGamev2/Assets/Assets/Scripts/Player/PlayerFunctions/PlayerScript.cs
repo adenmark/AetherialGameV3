@@ -68,10 +68,25 @@ public class PlayerScript : MonoBehaviour
         rb.AddForce(new Vector2(0, Input.GetAxis("Vertical") * speed));
         TeleportCooldownFunction();
 
+        if (health.CurrentVal <= 0)
+        {
+            anim.SetTrigger("PlayerDeath");
+            Destroy(GameObject.Find("Cannon"));
+            speed = 0;
+            aetherBar.CurrentVal = 0;
+            deathTimer += Time.deltaTime;
+            if (deathTimer >= 2.5)
+            {
+                Destroy(GameObject.Find("Canvas"));
+                SceneManager.LoadScene("MainMenu", LoadSceneMode.Single);
+                Destroy(gameObject);
+            }
+        }
+
         // Teleport //
         if (Input.GetMouseButtonDown(1) && teleportCooldownTimer == 0)
         {
-            anim.SetTrigger("PlayerDash");
+            //anim.SetTrigger("PlayerDash");
             StartCoroutine(TeleportDelay());
             teleportCooldownTimer = teleportCooldown;
         }
@@ -116,7 +131,6 @@ public class PlayerScript : MonoBehaviour
         {
             if (aetherBar.CurrentVal >= 1)
             {
-                //mathf.clamp
                 invincible = true;
                 Invoke(methodName: "ResetInvinsibility", time: invisibilityDuration);
                 Vector3 new_pos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
@@ -150,18 +164,6 @@ public class PlayerScript : MonoBehaviour
             invincible = true;
             Invoke(methodName: "ResetInvinsibility", time: invisibilityDuration);
             health.CurrentVal--;
-            if (health.CurrentVal <= 0)
-            {
-                anim.SetTrigger("PlayerDeath");                         //caling the animation
-                Destroy(GameObject.Find("Cannon"));                         //destroys the childe of player - cannon
-                deathTimer++;
-                if (deathTimer > 2.5)                                       //workes but i thinks it laggs?
-                {
-                    Destroy(GameObject.Find("Canvas"));
-                    SceneManager.LoadScene("MainMenu", LoadSceneMode.Single);
-                   Destroy(gameObject);
-                }
-            }
         }
         
     }

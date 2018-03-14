@@ -10,6 +10,7 @@ TagManager:
   - PlayerProjectile
   - AetherPickup
   - Shield
+  - Boss
   layers:
   - Default
   - TransparentFX

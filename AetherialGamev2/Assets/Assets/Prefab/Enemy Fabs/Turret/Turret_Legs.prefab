@@ -98,7 +98,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1189552664233430}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 19.3, y: 19.4, z: 0}
+  m_LocalPosition: {x: -5.3851357, y: 2.5182924, z: 0}
   m_LocalScale: {x: 0.20000023, y: 0.20000023, z: 1}
   m_Children:
   - {fileID: 4048021546249516}
@@ -210,12 +210,14 @@ MonoBehaviour:
   firePoint: {fileID: 4397190569320328}
   DamageParticle: {fileID: 1084671382287926, guid: e0a84dede8301524ba52c0a78b4d1962,
     type: 2}
+  DeathParticle: {fileID: 0}
   AetherPickup: {fileID: 1661759310518248, guid: c548b328bdcedd24eb00c0b8262eff18,
     type: 2}
   Cooldown: 1
   range: 20
   rotationSpeed: 10
   speed: 500
+  Angle: 0
 --- !u!212 &212064236324305016
 SpriteRenderer:
   m_ObjectHideFlags: 1

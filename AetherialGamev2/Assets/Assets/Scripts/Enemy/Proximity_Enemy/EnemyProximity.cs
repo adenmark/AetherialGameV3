@@ -54,7 +54,7 @@ public class EnemyProximity : MonoBehaviour {
             {
                 animator.SetTrigger("AetherAttack");
                 Shoot();
-                fireCountdown = 1f / fireRate;
+                fireCountdown = 1f / (fireRate -= Random.Range(.01f, .1f));
             }
 
             fireCountdown -= Time.deltaTime;
