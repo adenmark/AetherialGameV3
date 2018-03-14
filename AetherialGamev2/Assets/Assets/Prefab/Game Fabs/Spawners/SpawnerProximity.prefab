@@ -70,7 +70,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1250470967973018}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 8.299988, y: -0.9000001, z: -30}
+  m_LocalPosition: {x: 50.67, y: 9.82, z: -7.5}
   m_LocalScale: {x: 0.4, y: 0.4, z: 1}
   m_Children:
   - {fileID: 4559374060265530}
@@ -201,7 +201,7 @@ MonoBehaviour:
   target: {fileID: 0}
   particlePosition: {fileID: 4872811498345286}
   spawnRange: 20
-  spawnRate: 0.25
+  spawnRate: 0.1
   spawnCap: 10
   enemyPosition: {fileID: 4872811498345286}
 --- !u!212 &212309969129132096
