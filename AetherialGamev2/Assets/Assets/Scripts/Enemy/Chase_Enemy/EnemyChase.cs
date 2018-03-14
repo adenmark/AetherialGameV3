@@ -10,12 +10,15 @@ public class EnemyChase : MonoBehaviour
     public float speed;
 	public AudioClip SkySlugSpawnSound;
 	public AudioClip SkySlugExplosion;
+    AudioSource audioSource;
     public GameObject explosionEffect;
 
     void Start ()
     {
         player = GameObject.FindWithTag("Player").transform;
-		SoundManager.instance.PlaySingle(SkySlugSpawnSound);
+        //SoundManager.instance.PlaySingle(SkySlugSpawnSound);
+        audioSource = GetComponent<AudioSource>();
+        audioSource.PlayOneShot(SkySlugSpawnSound, 0.7F);
     }
 	
 	void Update ()
@@ -45,6 +48,7 @@ public class EnemyChase : MonoBehaviour
     {
         if(collision.CompareTag("Player"))
         {
+            audioSource.PlayOneShot(SkySlugExplosion, 0.7F);
             collision.GetComponent<PlayerScript>().Damage();
             Destroy(gameObject);
         }
