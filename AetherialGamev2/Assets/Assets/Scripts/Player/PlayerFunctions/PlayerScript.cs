@@ -32,6 +32,7 @@ public class PlayerScript : MonoBehaviour
     public float teleportCost;
     private float teleportCooldownTimer = 0;
     public AudioClip TeleportSound; //Adds option to designate a sound for the player teleport ability
+    AudioSource audioSource;
 
     [Header("Missiles")]
     public float missileSwarmCount;
@@ -60,6 +61,7 @@ public class PlayerScript : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         player = GameObject.FindGameObjectWithTag("Player").transform;
         anim = GetComponent<Animator>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     void Update()
@@ -140,8 +142,8 @@ public class PlayerScript : MonoBehaviour
                 Instantiate(teleportationExplosion, player.position, Quaternion.identity);
                 Instantiate(teleParticleEffect, player.position, Quaternion.identity);
                 aetherBar.CurrentVal -= teleportCost;
-
-                SoundManager.instance.PlaySingle(TeleportSound); //Plays the sound of the player's Teleport ability 
+                audioSource.PlayOneShot(TeleportSound, 0.7F);
+                //SoundManager.instance.PlaySingle(TeleportSound); //Plays the sound of the player's Teleport ability 
             }
         }
     }

@@ -9,14 +9,15 @@ public class CannonFireScript : MonoBehaviour
     public float fireRate;      // Fire Rate of the Cannon
     public float harpoonSpeed;      // Speed of Harpoon
 	public AudioClip HarpoonSound; //AudioClip for the harpoon being fired
+    AudioSource audioSource;
     public GameObject Harpoon;
 
     float timeToFire = 0;
     public Transform firePoint;
 
-    private void Start()
+    void Start()
     {
-       
+        audioSource = GetComponent<AudioSource>();
     }
     
     void Awake ()
@@ -54,6 +55,7 @@ public class CannonFireScript : MonoBehaviour
         Projectile.transform.up = mouseDirection;                                                                                                         // Rotates Shot right way
 
         Projectile.GetComponent<Rigidbody2D>().AddForce(mouseDirection.normalized * harpoonSpeed);   // Giving the Harpoon velocity when it came out, Problem here
-		SoundManager.instance.PlaySingle (HarpoonSound);																								// Plays the sound effect for firing the harpoon. 
+		//SoundManager.instance.PlaySingle (HarpoonSound);																								
+        audioSource.PlayOneShot(HarpoonSound, 0.3F); // Plays the sound effect for firing the harpoon.
     }
 }
