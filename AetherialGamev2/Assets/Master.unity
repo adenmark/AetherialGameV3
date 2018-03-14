@@ -5898,12 +5898,12 @@ Prefab:
     - target: {fileID: 114000987103770474, guid: 68a1378dfc1894842a9a72bd403997d7,
         type: 2}
       propertyPath: aetherBar.currentVal
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 114000987103770474, guid: 68a1378dfc1894842a9a72bd403997d7,
         type: 2}
       propertyPath: aetherBar.maxVal
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 114000987103770474, guid: 68a1378dfc1894842a9a72bd403997d7,
         type: 2}
@@ -5918,12 +5918,22 @@ Prefab:
     - target: {fileID: 114000987103770474, guid: 68a1378dfc1894842a9a72bd403997d7,
         type: 2}
       propertyPath: health.maxVal
-      value: 5
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 114000987103770474, guid: 68a1378dfc1894842a9a72bd403997d7,
         type: 2}
       propertyPath: health.currentVal
-      value: 5
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000987103770474, guid: 68a1378dfc1894842a9a72bd403997d7,
+        type: 2}
+      propertyPath: rocketCost
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000987103770474, guid: 68a1378dfc1894842a9a72bd403997d7,
+        type: 2}
+      propertyPath: teleportCost
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 68a1378dfc1894842a9a72bd403997d7, type: 2}
