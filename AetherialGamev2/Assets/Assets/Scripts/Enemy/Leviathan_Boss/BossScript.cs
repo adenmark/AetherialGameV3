@@ -5,20 +5,21 @@ using UnityEngine;
 public class BossScript : MonoBehaviour
 {
     public Transform player;
-    public float speed = 1f;
+
+    public float speed;
+    private float deadSpeed;
 
     private float Health = 1;
-
-    bool isMoving = true;
 
     void Start ()
     {
         player = GameObject.FindWithTag("Player").transform;
+        deadSpeed = speed;
     }
 	
 	void Update ()
     {
-        if (player != null && isMoving == true)
+        if (player != null)
         {
             transform.position = Vector2.MoveTowards(transform.position, player.position, speed * Time.deltaTime);
         }
@@ -28,7 +29,7 @@ public class BossScript : MonoBehaviour
     {
         if (collision.gameObject.tag == "Nuke")
         {
-            isMoving = false;
+            speed -= deadSpeed;
         }
         if (collision.gameObject.tag == "Player")
         {
