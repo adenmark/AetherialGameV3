@@ -56,7 +56,7 @@ GameObject:
   - component: {fileID: 50865104841513588}
   - component: {fileID: 114645962704282504}
   m_Layer: 0
-  m_Name: Nuke 1
+  m_Name: Nuke
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
