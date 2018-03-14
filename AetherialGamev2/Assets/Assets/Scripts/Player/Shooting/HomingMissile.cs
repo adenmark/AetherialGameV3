@@ -12,6 +12,7 @@ public class HomingMissile : MonoBehaviour
     public string enemyTag = "Enemy";
     public AudioClip MissileLaunch;
     public AudioClip MissileExplosion;
+    AudioSource audioSource;
 
 
     [Header("Missile Attributes")]
@@ -25,7 +26,9 @@ public class HomingMissile : MonoBehaviour
         target = GameObject.FindGameObjectWithTag("Player").transform;
         rb = GetComponent<Rigidbody2D>();
         InvokeRepeating("UpdateTarget", 0f, 0.5f);
-        SoundManager.instance.PlaySingle(MissileLaunch);
+        //SoundManager.instance.PlaySingle(MissileLaunch);
+        audioSource = GetComponent<AudioSource>();
+        audioSource.PlayOneShot(MissileLaunch, 0.5F); //Plays missile launch sound, and adjust colume of sound
     }
     void UpdateTarget()
     {
@@ -80,7 +83,7 @@ public class HomingMissile : MonoBehaviour
     {
         Instantiate(missileExplosion, transform.position, transform.rotation);
         Instantiate(missileDamage, transform.position, Quaternion.identity);
-        SoundManager.instance.PlaySingle(MissileExplosion);
+        SoundManager.instance.PlaySingle(MissileExplosion); //Plays missile explosion sound when the missile impacts.
     }
 
     void OnDrawGizmosSelected()
