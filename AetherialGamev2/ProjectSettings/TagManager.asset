@@ -12,6 +12,7 @@ TagManager:
   - Shield
   - Boss
   - AetherStar
+  - Nuke
   layers:
   - Default
   - TransparentFX

@@ -229,17 +229,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9bae7a5be6c6ece48a66377f13cbf01d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  teleportationExplosion: {fileID: 4049090492426686, guid: 25dee56ef954cbe4eaa6ea1852d54523,
+  teleportationExplosion: {fileID: 4244243716038816, guid: 246b491beaff5d9469c82ef612323a01,
     type: 2}
   Missile: {fileID: 1272262372674242, guid: 7bb0a3101cc6d8842a8b7d5a7058ac03, type: 2}
+  Nuke: {fileID: 1842227110963452, guid: 20376590f11c2ec4290393dcc694f073, type: 2}
   missilePoint: {fileID: 4261845197365182}
+  teleParticleEffect: {fileID: 0}
+  QFlag: {fileID: 1579274794746024, guid: 73db14345b3fffc419cc56ec8f18b9c0, type: 2}
   speed: 20
+  invisibilityDuration: 0.1
+  AetherPickupValue: 0.1
   teleportCooldown: 0.5
   teleportDelayTime: 0.05
-  invisibilityDuration: 0.1
+  teleportCost: 0
   TeleportSound: {fileID: 8300000, guid: 1766245cd6a03824abfc99761e29bc71, type: 3}
-  AetherPickupValue: 0.1
   missileSwarmCount: 5
+  rocketCost: 0
   health:
     bar: {fileID: 0}
     maxVal: 500

@@ -57,6 +57,6 @@ public class AetherStar : MonoBehaviour
 
     private void OnDestroy()
     {
-        Instantiate(AetherPickupEffect, transform.position, Quaternion.identity);
+        Instantiate(AetherPickupEffect, player.transform.position, Quaternion.identity);
     }
 }
