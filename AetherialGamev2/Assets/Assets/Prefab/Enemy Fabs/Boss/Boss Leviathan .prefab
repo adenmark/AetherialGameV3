@@ -23,6 +23,8 @@ GameObject:
   - component: {fileID: 50666929453853418}
   - component: {fileID: 60390906708777214}
   - component: {fileID: 114381492969757804}
+  - component: {fileID: 111197796059867728}
+  - component: {fileID: 95817915780131242}
   m_Layer: 10
   m_Name: 'Boss Leviathan '
   m_TagString: Scenery
@@ -516,6 +518,37 @@ PolygonCollider2D:
       - {x: 5.18, y: 0.84999996}
       - {x: 5.19, y: 0.82}
       - {x: 5.19, y: 0.83}
+--- !u!95 &95817915780131242
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1788809522998484}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 59b6a3dcbc9d2964ea0156630ba07a4d, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+--- !u!111 &111197796059867728
+Animation:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1788809522998484}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: f176b9b7370e6644383d78bdcd2a061d, type: 2}
+  m_Animations: []
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!114 &114381492969757804
 MonoBehaviour:
   m_ObjectHideFlags: 1
