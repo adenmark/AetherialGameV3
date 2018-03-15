@@ -9,57 +9,57 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1676272555572090}
+  m_RootGameObject: {fileID: 1505343586410854}
   m_IsPrefabParent: 1
---- !u!1 &1676272555572090
+--- !u!1 &1505343586410854
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4494947962520124}
-  - component: {fileID: 198166236169862578}
-  - component: {fileID: 199253904085167734}
-  - component: {fileID: 114804762460873298}
+  - component: {fileID: 4755286251086482}
+  - component: {fileID: 198066471712594344}
+  - component: {fileID: 199409713943163272}
+  - component: {fileID: 114989741467629562}
   m_Layer: 0
-  m_Name: NukeSpeedUp
+  m_Name: NukeExplosionPhase1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4494947962520124
+--- !u!4 &4755286251086482
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1676272555572090}
+  m_GameObject: {fileID: 1505343586410854}
   m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -26.352844, y: 1.3227062, z: 10.680862}
-  m_LocalScale: {x: 3.5, y: 2, z: 3.5}
+  m_LocalPosition: {x: 47.08896, y: 11.819965, z: 10.680862}
+  m_LocalScale: {x: 10, y: 2, z: 10}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &114804762460873298
+--- !u!114 &114989741467629562
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1676272555572090}
+  m_GameObject: {fileID: 1505343586410854}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0d699baaa3ea27e4ab3fef4ee6d2cc4f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   timeToDestroy: 1.9
---- !u!198 &198166236169862578
+--- !u!198 &198066471712594344
 ParticleSystem:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1676272555572090}
+  m_GameObject: {fileID: 1505343586410854}
   serializedVersion: 5
   lengthInSec: 2
   simulationSpeed: 1
@@ -114,7 +114,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: 532218244
+  randomSeed: 1121388735
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -162,7 +162,7 @@ ParticleSystem:
     startSpeed:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 100
+      scalar: 200
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -266,8 +266,8 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 1.5
-      minScalar: 0.5
+      scalar: 2.5
+      minScalar: 1.5
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -510,7 +510,7 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     randomizeRotationDirection: 0
-    maxNumParticles: 1000
+    maxNumParticles: 10000
     size3D: 0
     rotation3D: 0
     gravityModifier:
@@ -760,7 +760,7 @@ ParticleSystem:
       countCurve:
         serializedVersion: 2
         minMaxState: 0
-        scalar: 200
+        scalar: 5000
         minScalar: 0
         maxCurve:
           serializedVersion: 2
@@ -3466,13 +3466,13 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     vectorLabel1_3: W
---- !u!199 &199253904085167734
+--- !u!199 &199409713943163272
 ParticleSystemRenderer:
   serializedVersion: 4
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1676272555572090}
+  m_GameObject: {fileID: 1505343586410854}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -3501,7 +3501,7 @@ ParticleSystemRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_RenderMode: 0
   m_SortMode: 0
   m_MinParticleSize: 0
