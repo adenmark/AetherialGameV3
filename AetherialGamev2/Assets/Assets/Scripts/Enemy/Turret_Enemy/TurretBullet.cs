@@ -4,6 +4,15 @@ using UnityEngine;
 
 public class TurretBullet : MonoBehaviour
 {
+    public AudioClip TurretFireSound;
+    AudioSource audioSource;
+
+    void Start()
+    {
+        audioSource = GetComponent<AudioSource>();
+        audioSource.PlayOneShot(TurretFireSound, 0.7F);
+    }
+
     void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
