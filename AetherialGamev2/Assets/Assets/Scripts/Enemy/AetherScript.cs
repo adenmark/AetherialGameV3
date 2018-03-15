@@ -36,6 +36,10 @@ public class AetherScript : MonoBehaviour
         {
             transform.position = Vector2.MoveTowards(transform.position, player.position, speed * Time.deltaTime);
         }
+        else
+        {
+            Destroy(gameObject);
+        }
     }
 
     void OnTriggerEnter2D(Collider2D trigger)

@@ -5,11 +5,11 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody2D))]
 public class NukeScript : MonoBehaviour
 {
-    public Transform target;
+    private Transform target;
     public Transform firePoint;
     private Rigidbody2D rb;
 
-    public GameObject NukeExplosionParticle;
+    public GameObject NukeExplosionParticle1;
     public GameObject NukeSpeedUp;
 
     [Header("Nuke Attributes")]
@@ -63,12 +63,13 @@ public class NukeScript : MonoBehaviour
     {
         if (collision.CompareTag("Boss"))
         {
+            //Instantiate(NukeExplosionParticle1, firePoint.transform.position, transform.rotation);
             Destroy(gameObject);
         }
     }
 
     private void OnDestroy()
     {
-        Instantiate(NukeExplosionParticle, transform.position, transform.rotation);
+        Instantiate(NukeExplosionParticle1, transform.position, transform.rotation);
     }
 }
