@@ -12,10 +12,10 @@ public class SpawnerScript : MonoBehaviour
 
     [Header("Attributes")]
 
-    public float spawnRange;
+    private float spawnRange = 10;
     public float spawnRate;
     private float spawnCountdown;
-    public float spawnCap;
+    public float spawnCap = 7;
     public Transform enemyPosition;
     public float rotationSpeed;
 

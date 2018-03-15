@@ -15,7 +15,7 @@ public class BossMissileLauncherScript : MonoBehaviour
 
     public float missileCooldown;
     public float rotationSpeed;
-    public float range;
+    private float range = 30;
 
     private float MissileCooldownTimer = 0;
 

@@ -15,7 +15,7 @@ public class BossTurret : MonoBehaviour
     [Header("Attributes")]
 
     public float Cooldown;
-    public float range;
+    public float range = 30;
     public float rotationSpeed;
     public float speed;
     public float Angle;

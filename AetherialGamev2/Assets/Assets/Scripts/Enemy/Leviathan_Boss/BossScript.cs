@@ -6,7 +6,6 @@ using UnityEngine.SceneManagement;
 public class BossScript : MonoBehaviour
 {
     public Transform player;
-    public GameObject KillYourself;
     public float speed = 1f;
 
     private float Health = 1;
@@ -48,6 +47,7 @@ public class BossScript : MonoBehaviour
     private void OnDestroy()
     {
         Destroy(GameObject.Find("Player"));
+        Destroy(GameObject.Find("Canvas"));
         SceneManager.LoadScene("MainMenu", LoadSceneMode.Single);
     }
 
