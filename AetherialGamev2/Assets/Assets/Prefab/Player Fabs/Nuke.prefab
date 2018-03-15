@@ -493,7 +493,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 0}
   firePoint: {fileID: 4820731930421824}
-  NukeExplosionParticle: {fileID: 0}
+  NukeExplosionParticle: {fileID: 1505343586410854, guid: 52f25dbd3355b0a4c8977c365f1e8dee,
+    type: 2}
   NukeSpeedUp: {fileID: 1676272555572090, guid: 64c00e6123ce1df42ab5d17484cf9b9f,
     type: 2}
   NukeExplosion: {fileID: 8300000, guid: ecc2dac71210b67429408d2210a9c8e1, type: 3}

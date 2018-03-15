@@ -26,6 +26,6 @@ public class TurretCollider : MonoBehaviour
 
     private void OnDestroy()
     {
-        Instantiate(aetherPickup, transform.position, Quaternion.identity);
+        //Instantiate(aetherPickup, transform.position, Quaternion.identity);
     }
 }

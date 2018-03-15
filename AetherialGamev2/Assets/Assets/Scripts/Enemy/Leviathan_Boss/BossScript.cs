@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class BossScript : MonoBehaviour
 {
@@ -54,7 +55,7 @@ public class BossScript : MonoBehaviour
 
     private void OnDestroy()
     {
-        speed = 0;
+        SceneManager.LoadScene("MainMenu", LoadSceneMode.Single);
     }
 
     void whiteSprite()

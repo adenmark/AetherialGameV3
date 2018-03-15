@@ -2,13 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AetherScript : MonoBehaviour
+public class AetherStarScript : MonoBehaviour
 {
     private Transform player;
+    public GameObject AetherPickupEffect;
 
     public float speed;
     public float coolDown;
-    public float range;
+    public float Angle;
 
     public float amplitude = 0.5f;
     public float frequency = 1f;
@@ -24,6 +25,8 @@ public class AetherScript : MonoBehaviour
 
     void Update()
     {
+        RotateLeft();
+
         coolDown -= Time.deltaTime;
         if (coolDown >= 0)
         {
@@ -33,22 +36,27 @@ public class AetherScript : MonoBehaviour
             transform.position = tempPos;
         }
 
-        if (player != null && coolDown <= 0 && Vector2.Distance(transform.position, player.position) < range)
+        if (player != null && coolDown <= 0)
         {
             transform.position = Vector2.MoveTowards(transform.position, player.position, speed * Time.deltaTime);
         }
-        if (Vector2.Distance(transform.position, player.position) > range)
-        {
-            Destroy(gameObject);
-        }
+    }
+
+    void RotateLeft()
+    {
+        transform.Rotate(Vector3.forward * -Angle);
     }
 
     void OnTriggerEnter2D(Collider2D trigger)
     {
         if (trigger.CompareTag("Player"))
         {
-            trigger.GetComponent<PlayerScript>().AetherPickup();
             Destroy(gameObject);
         }
+    }
+
+    private void OnDestroy()
+    {
+        Instantiate(AetherPickupEffect, player.transform.position, Quaternion.identity);
     }
 }
