@@ -92,7 +92,7 @@ public class PlayerScript : MonoBehaviour
         // Teleport //
         if (Input.GetMouseButtonDown(1) && teleportCooldownTimer == 0)
         {
-            anim.SetTrigger("PlayerDash");
+            //anim.SetTrigger("PlayerDash");
             StartCoroutine(TeleportDelay());
             teleportCooldownTimer = teleportCooldown;
         }
