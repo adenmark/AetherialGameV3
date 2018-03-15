@@ -113,20 +113,9 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
-<<<<<<< HEAD
 --- !u!4 &7646 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4230141514201792, guid: b7b895cdc2f62844da4ed2dd7af582d1,
-=======
---- !u!4 &258266078 stripped
-Transform:
-  m_PrefabParentObject: {fileID: 4872811498345286, guid: a48fc3d08efbb08429ec198c569705cd,
-    type: 2}
-  m_PrefabInternal: {fileID: 342203115}
---- !u!4 &308450550 stripped
-Transform:
-  m_PrefabParentObject: {fileID: 4441329459307770, guid: 68a1378dfc1894842a9a72bd403997d7,
->>>>>>> Marcus-Pre-Beta
     type: 2}
   m_PrefabInternal: {fileID: 1659944467}
 --- !u!1 &9904740
@@ -136,23 +125,15 @@ GameObject:
   m_PrefabInternal: {fileID: 0}
   serializedVersion: 5
   m_Component:
-<<<<<<< HEAD
   - component: {fileID: 9904742}
   - component: {fileID: 9904741}
   m_Layer: 0
   m_Name: CLOUD6_01 (23)
-=======
-  - component: {fileID: 326836457}
-  - component: {fileID: 326836458}
-  m_Layer: 5
-  m_Name: 3 - Player
->>>>>>> Marcus-Pre-Beta
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
-<<<<<<< HEAD
 --- !u!212 &9904741
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -231,44 +212,6 @@ Transform:
     type: 2}
   m_PrefabInternal: {fileID: 744933446}
 --- !u!1001 &74845896
-=======
---- !u!224 &326836457
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 326836456}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.1475, y: 1.1475, z: 1.1475}
-  m_Children:
-  - {fileID: 308450550}
-  m_Father: {fileID: 0}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 400, y: 176.03487}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &326836458
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 326836456}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 801d579d9c824aa4da68df80b7835b97, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!4 &327404466 stripped
-Transform:
-  m_PrefabParentObject: {fileID: 4095586997785790, guid: a774126f455472f4e91da5157be38dcc,
-    type: 2}
-  m_PrefabInternal: {fileID: 846799190}
---- !u!1001 &342203115
->>>>>>> Marcus-Pre-Beta
 Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -402,7 +345,6 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
-<<<<<<< HEAD
 --- !u!4 &79692192
 Transform:
   m_ObjectHideFlags: 0
@@ -622,9 +564,6 @@ Transform:
   m_RootOrder: 33
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0.125}
 --- !u!1 &122278328
-=======
---- !u!1 &474957934
->>>>>>> Marcus-Pre-Beta
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
@@ -874,7 +813,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1963a0124b2c53a48b208c92ca39d1ad, type: 2}
   m_IsPrefabParent: 0
-<<<<<<< HEAD
 --- !u!1 &169930398
 GameObject:
   m_ObjectHideFlags: 0
@@ -949,14 +887,6 @@ Transform:
   m_RootOrder: 45
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0.125}
 --- !u!1 &174273523
-=======
---- !u!4 &487037768 stripped
-Transform:
-  m_PrefabParentObject: {fileID: 4884255890981594, guid: 1da49e28548675b4eac7682e6add9f23,
-    type: 2}
-  m_PrefabInternal: {fileID: 487037767}
---- !u!1 &520060926
->>>>>>> Marcus-Pre-Beta
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
@@ -1179,7 +1109,6 @@ Transform:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-<<<<<<< HEAD
   m_GameObject: {fileID: 186284380}
   m_LocalRotation: {x: -0, y: -0, z: -0.70736766, w: 0.7068459}
   m_LocalPosition: {x: -60.8, y: -0.4166667, z: -19}
@@ -1340,10 +1269,6 @@ Transform:
   m_RootOrder: 59
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90.04201}
 --- !u!1001 &196561715
-=======
-  m_GameObject: {fileID: 578216132}
---- !u!1001 &660083254
->>>>>>> Marcus-Pre-Beta
 Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -1410,7 +1335,6 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 4333679917758658, guid: 1963a0124b2c53a48b208c92ca39d1ad,
     type: 2}
-<<<<<<< HEAD
   m_PrefabInternal: {fileID: 1210481558}
 --- !u!1 &237418497
 GameObject:
@@ -1518,72 +1442,6 @@ GameObject:
   m_IsActive: 1
 --- !u!212 &246086846
 SpriteRenderer:
-=======
-  m_PrefabInternal: {fileID: 660083254}
---- !u!1001 &728823831
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 1096224705}
-    m_Modifications:
-    - target: {fileID: 4589819764954276, guid: 2d5e95758556d7045ad2d9bbdd9da334, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 220.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4589819764954276, guid: 2d5e95758556d7045ad2d9bbdd9da334, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 29.4
-      objectReference: {fileID: 0}
-    - target: {fileID: 4589819764954276, guid: 2d5e95758556d7045ad2d9bbdd9da334, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4589819764954276, guid: 2d5e95758556d7045ad2d9bbdd9da334, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4589819764954276, guid: 2d5e95758556d7045ad2d9bbdd9da334, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4589819764954276, guid: 2d5e95758556d7045ad2d9bbdd9da334, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4589819764954276, guid: 2d5e95758556d7045ad2d9bbdd9da334, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4589819764954276, guid: 2d5e95758556d7045ad2d9bbdd9da334, type: 2}
-      propertyPath: m_RootOrder
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114929652286860188, guid: 2d5e95758556d7045ad2d9bbdd9da334,
-        type: 2}
-      propertyPath: target
-      value: 
-      objectReference: {fileID: 308450550}
-    - target: {fileID: 114380411764101608, guid: 2d5e95758556d7045ad2d9bbdd9da334,
-        type: 2}
-      propertyPath: target
-      value: 
-      objectReference: {fileID: 308450550}
-    - target: {fileID: 1788809522998484, guid: 2d5e95758556d7045ad2d9bbdd9da334, type: 2}
-      propertyPath: m_Name
-      value: Leviathan
-      objectReference: {fileID: 0}
-    - target: {fileID: 114381492969757804, guid: 2d5e95758556d7045ad2d9bbdd9da334,
-        type: 2}
-      propertyPath: player
-      value: 
-      objectReference: {fileID: 308450550}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: 2d5e95758556d7045ad2d9bbdd9da334, type: 2}
-  m_IsPrefabParent: 0
---- !u!1001 &745916818
-Prefab:
->>>>>>> Marcus-Pre-Beta
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
@@ -2262,27 +2120,7 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
-<<<<<<< HEAD
 --- !u!4 &325548949
-=======
---- !u!1 &965370469
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 965370470}
-  - component: {fileID: 965370471}
-  m_Layer: 0
-  m_Name: CLOUD9_01
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &965370470
->>>>>>> Marcus-Pre-Beta
 Transform:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
@@ -2405,38 +2243,8 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f28c9a3b658a665498d2e8e0c4e0cf54, type: 2}
   m_IsPrefabParent: 0
-<<<<<<< HEAD
 --- !u!1001 &349049403
 Prefab:
-=======
---- !u!4 &1108729086 stripped
-Transform:
-  m_PrefabParentObject: {fileID: 4230141514201792, guid: b7b895cdc2f62844da4ed2dd7af582d1,
-    type: 2}
-  m_PrefabInternal: {fileID: 1108729085}
---- !u!4 &1125346294 stripped
-Transform:
-  m_PrefabParentObject: {fileID: 4872811498345286, guid: a48fc3d08efbb08429ec198c569705cd,
-    type: 2}
-  m_PrefabInternal: {fileID: 1678611886}
---- !u!1 &1205787426
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 1205787427}
-  m_Layer: 0
-  m_Name: Spawners
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!4 &1205787427
-Transform:
->>>>>>> Marcus-Pre-Beta
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
@@ -2519,45 +2327,8 @@ Transform:
   m_LocalPosition: {x: 1.186887, y: -0.005121518, z: 5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-<<<<<<< HEAD
   - {fileID: 1831603314}
   - {fileID: 1709298564}
-=======
-  - {fileID: 258266078}
-  - {fileID: 1125346294}
-  m_Father: {fileID: 1205787427}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1294513454
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 1294513455}
-  m_Layer: 8
-  m_Name: 5 - UI
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1294513455
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1294513454}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.2499695, y: -0.000015258789, z: 0}
-  m_LocalScale: {x: 0.14, y: 0.14, z: 0.13944735}
-  m_Children:
-  - {fileID: 1448121225}
-  - {fileID: 2115351513}
-  - {fileID: 1989497629}
-  - {fileID: 1700660746}
->>>>>>> Marcus-Pre-Beta
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3468,7 +3239,6 @@ MonoBehaviour:
   firePoint: {fileID: 2036893338}
   DamageParticle: {fileID: 1084671382287926, guid: e0a84dede8301524ba52c0a78b4d1962,
     type: 2}
-<<<<<<< HEAD
   DeathParticle: {fileID: 1683751845761066, guid: 01e05575b92f0284293f76bcef9a4d9b,
     type: 2}
   AetherPickup: {fileID: 1661759310518248, guid: c548b328bdcedd24eb00c0b8262eff18,
@@ -16195,32 +15965,21 @@ Prefab:
   m_ParentPrefab: {fileID: 100100000, guid: f6300af7bc932fa47b1f056c22192667, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &2003801065
-=======
-  m_PrefabInternal: {fileID: 1946507725}
---- !u!1 &1831603313
->>>>>>> Marcus-Pre-Beta
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   serializedVersion: 5
   m_Component:
-<<<<<<< HEAD
   - component: {fileID: 2003801067}
   - component: {fileID: 2003801066}
   m_Layer: 0
   m_Name: CLOUD6_01 (86)
-=======
-  - component: {fileID: 1831603314}
-  m_Layer: 9
-  m_Name: Bounds
->>>>>>> Marcus-Pre-Beta
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
-<<<<<<< HEAD
 --- !u!212 &2003801066
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -16266,9 +16025,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
 --- !u!4 &2003801067
-=======
---- !u!4 &1831603314
->>>>>>> Marcus-Pre-Beta
 Transform:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
@@ -16446,7 +16202,6 @@ Transform:
   m_Father: {fileID: 998581698}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-<<<<<<< HEAD
 --- !u!212 &2036721069
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -16762,14 +16517,6 @@ Transform:
     type: 2}
   m_PrefabInternal: {fileID: 606771529}
 --- !u!1001 &2087705651
-=======
---- !u!4 &1916920738 stripped
-Transform:
-  m_PrefabParentObject: {fileID: 4589819764954276, guid: 2d5e95758556d7045ad2d9bbdd9da334,
-    type: 2}
-  m_PrefabInternal: {fileID: 728823831}
---- !u!1001 &1946507725
->>>>>>> Marcus-Pre-Beta
 Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -16839,7 +16586,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 34ca6131a262ac74f88053940e1b9340, type: 2}
   m_IsPrefabParent: 0
-<<<<<<< HEAD
 --- !u!4 &2092520849 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4333679917758658, guid: 1963a0124b2c53a48b208c92ca39d1ad,
@@ -16924,9 +16670,6 @@ Transform:
   m_RootOrder: 32
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0.125}
 --- !u!1 &2113176799
-=======
---- !u!1 &1989497627
->>>>>>> Marcus-Pre-Beta
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
@@ -17159,26 +16902,7 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
-<<<<<<< HEAD
 --- !u!4 &2127014523
-=======
---- !u!1 &2061980960
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 2061980961}
-  m_Layer: 0
-  m_Name: Chase
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2061980961
->>>>>>> Marcus-Pre-Beta
 Transform:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
