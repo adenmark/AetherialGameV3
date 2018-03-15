@@ -11,6 +11,10 @@ TagManager:
   - AetherPickup
   - Shield
   - Boss
+  - Nuke
+  - AetherStar
+  - KillYourself
+  - BossTarget
   layers:
   - Default
   - TransparentFX

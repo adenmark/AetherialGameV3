@@ -166,13 +166,7 @@ public class PlayerScript : MonoBehaviour
 
     public void Damage()
     {
-        if (!invincible)
-        {
-            invincible = true;
-            Invoke(methodName: "ResetInvinsibility", time: invisibilityDuration);
-            health.CurrentVal--;
-        }
-        
+        health.CurrentVal--;
     }
 
     void ResetInvinsibility()

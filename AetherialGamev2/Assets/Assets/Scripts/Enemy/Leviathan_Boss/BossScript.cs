@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class BossScript : MonoBehaviour
 {
     public Transform player;
+    public GameObject KillYourself;
     public float speed = 1f;
 
     private float Health = 1;
@@ -40,21 +41,13 @@ public class BossScript : MonoBehaviour
         {
             isMoving = false;
             Invoke("whiteSprite", 0.3f);
-            Destroy(gameObject, 0.7f);
+            Destroy(gameObject, 1.0f);
         }
-        if (collision.gameObject.tag == "Player")
-        {
-            collision.gameObject.GetComponent<PlayerScript>().Damage();
-        }
-    }
-
-    public void Damage()
-    {
-        Health--;
     }
 
     private void OnDestroy()
     {
+        Destroy(GameObject.Find("Player"));
         SceneManager.LoadScene("MainMenu", LoadSceneMode.Single);
     }
 

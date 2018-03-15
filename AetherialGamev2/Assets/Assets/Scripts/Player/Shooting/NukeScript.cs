@@ -23,7 +23,7 @@ public class NukeScript : MonoBehaviour
 
     void Start ()
     {
-        target = GameObject.FindGameObjectWithTag("Boss").transform;
+        target = GameObject.FindGameObjectWithTag("BossTarget").transform;
         rb = GetComponent<Rigidbody2D>();
         audioSource = GetComponent<AudioSource>();
     }
@@ -64,7 +64,7 @@ public class NukeScript : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Boss"))
+        if (collision.CompareTag("BossTarget"))
         {
             audioSource.PlayOneShot(NukeExplosion, 0.7F);
             Destroy(gameObject);

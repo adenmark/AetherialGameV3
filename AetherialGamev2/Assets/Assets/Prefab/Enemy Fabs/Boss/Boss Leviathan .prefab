@@ -1428,6 +1428,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
+  KillYourself: {fileID: 1271198369645672, guid: 6740c228fd690a449a695bddf6461933,
+    type: 2}
   speed: 1
 --- !u!114 &114503024649008302
 MonoBehaviour:

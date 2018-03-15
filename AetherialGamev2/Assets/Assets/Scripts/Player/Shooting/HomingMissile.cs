@@ -70,7 +70,7 @@ public class HomingMissile : MonoBehaviour
     {
         if (collision.CompareTag("Enemy"))
         {
-            collision.GetComponent<HealthScript>().Damage(); // SOmething wrong with this
+            collision.GetComponent<HealthScript>().Damage();
             Destroy(gameObject);
         }
         if (collision.CompareTag("Shield"))

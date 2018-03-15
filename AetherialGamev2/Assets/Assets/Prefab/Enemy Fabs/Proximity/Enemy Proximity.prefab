@@ -232,7 +232,7 @@ MonoBehaviour:
   stoppingDistance: 20
   retreatDistance: 15
   fireRate: 1
-  projectileSpeed: 1000
+  projectileSpeed: 1250
 --- !u!114 &114509357889646772
 MonoBehaviour:
   m_ObjectHideFlags: 1
