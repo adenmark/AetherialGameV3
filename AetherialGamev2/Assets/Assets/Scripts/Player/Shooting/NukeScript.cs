@@ -11,6 +11,8 @@ public class NukeScript : MonoBehaviour
 
     public GameObject NukeExplosionParticle;
     public GameObject NukeSpeedUp;
+    public AudioClip NukeExplosion;
+    AudioSource audioSource;
 
     [Header("Nuke Attributes")]
 
@@ -23,6 +25,7 @@ public class NukeScript : MonoBehaviour
     {
         target = GameObject.FindGameObjectWithTag("Boss").transform;
         rb = GetComponent<Rigidbody2D>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     private void Update()
@@ -63,6 +66,7 @@ public class NukeScript : MonoBehaviour
     {
         if (collision.CompareTag("Boss"))
         {
+            audioSource.PlayOneShot(NukeExplosion, 0.7F);
             Destroy(gameObject);
         }
     }
