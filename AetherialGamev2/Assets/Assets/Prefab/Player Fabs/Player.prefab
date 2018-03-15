@@ -234,8 +234,9 @@ MonoBehaviour:
   Missile: {fileID: 1272262372674242, guid: 7bb0a3101cc6d8842a8b7d5a7058ac03, type: 2}
   Nuke: {fileID: 1842227110963452, guid: 20376590f11c2ec4290393dcc694f073, type: 2}
   missilePoint: {fileID: 4261845197365182}
-  teleParticleEffect: {fileID: 0}
-  QFlag: {fileID: 1579274794746024, guid: 73db14345b3fffc419cc56ec8f18b9c0, type: 2}
+  teleParticleEffect: {fileID: 1116180252147180, guid: c2405790beab4084391c1244ea0b0b03,
+    type: 2}
+  QFlag: {fileID: 1835924581106210, guid: 1438e507987551349afb1aadd32e38ea, type: 2}
   speed: 20
   invisibilityDuration: 0.1
   AetherPickupValue: 0.1
