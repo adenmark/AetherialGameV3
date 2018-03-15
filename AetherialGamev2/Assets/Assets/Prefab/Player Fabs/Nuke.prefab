@@ -331,7 +331,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 1198ea292913c2441bca7f85b85a7314, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.153
+  m_Volume: 0.2
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -496,7 +496,7 @@ MonoBehaviour:
   NukeExplosionParticle: {fileID: 0}
   NukeSpeedUp: {fileID: 1676272555572090, guid: 64c00e6123ce1df42ab5d17484cf9b9f,
     type: 2}
-  NukeExplosion: {fileID: 0}
+  NukeExplosion: {fileID: 8300000, guid: ecc2dac71210b67429408d2210a9c8e1, type: 3}
   rotateSpeed: 1000
 --- !u!198 &198897948182688680
 ParticleSystem:
