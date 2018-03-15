@@ -5,21 +5,29 @@ using UnityEngine;
 public class BossScript : MonoBehaviour
 {
     public Transform player;
-
-    public float speed;
-    private float deadSpeed;
+    public float speed = 1f;
 
     private float Health = 1;
+    private float whiteTimer = 0.2f;
 
-    void Start ()
+    bool isMoving = true;
+
+    private SpriteRenderer myRenderer;
+    private Shader shaderGUItext;
+    private Shader shaderSpritesDefault;
+
+    void Start()
     {
+        myRenderer = gameObject.GetComponent<SpriteRenderer>();
+        shaderGUItext = Shader.Find("GUI/Text Shader");
+        shaderSpritesDefault = Shader.Find("Sprites/Default"); // or whatever sprite shader is being used
+
         player = GameObject.FindWithTag("Player").transform;
-        deadSpeed = speed;
     }
 	
 	void Update ()
     {
-        if (player != null)
+        if (player != null && isMoving == true)
         {
             transform.position = Vector2.MoveTowards(transform.position, player.position, speed * Time.deltaTime);
         }
@@ -29,7 +37,9 @@ public class BossScript : MonoBehaviour
     {
         if (collision.gameObject.tag == "Nuke")
         {
-            speed -= deadSpeed;
+            isMoving = false;
+            Invoke("whiteSprite", 0.3f);
+            Destroy(gameObject, 0.7f);
         }
         if (collision.gameObject.tag == "Player")
         {
@@ -45,5 +55,11 @@ public class BossScript : MonoBehaviour
     private void OnDestroy()
     {
         speed = 0;
+    }
+
+    void whiteSprite()
+    {
+        myRenderer.material.shader = shaderGUItext;
+        myRenderer.color = Color.white;
     }
 }

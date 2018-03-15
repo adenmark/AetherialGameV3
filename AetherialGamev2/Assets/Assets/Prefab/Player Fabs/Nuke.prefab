@@ -57,7 +57,7 @@ GameObject:
   - component: {fileID: 114645962704282504}
   m_Layer: 0
   m_Name: Nuke
-  m_TagString: Untagged
+  m_TagString: Nuke
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -117,7 +117,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.01
-  m_GravityScale: 1
+  m_GravityScale: 10
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -167,9 +167,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e0e98f538918a24da2fd444fa9b69f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 0}
   firePoint: {fileID: 4820731930421824}
-  NukeExplosionParticle: {fileID: 0}
+  NukeExplosionParticle1: {fileID: 1505343586410854, guid: fc3dbf4af7c4f084b9e8f99e19079a48,
+    type: 2}
   NukeSpeedUp: {fileID: 1676272555572090, guid: 64c00e6123ce1df42ab5d17484cf9b9f,
     type: 2}
   rotateSpeed: 1000

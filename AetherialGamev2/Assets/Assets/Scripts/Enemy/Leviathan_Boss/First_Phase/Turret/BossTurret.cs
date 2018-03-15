@@ -9,7 +9,7 @@ public class BossTurret : MonoBehaviour
     public GameObject DamageParticle;
     public GameObject DeathParticle;
     public GameObject AetherPickup;
-    private Transform target;
+    public Transform target;
     private Vector3 fireTo;
 
     [Header("Attributes")]
