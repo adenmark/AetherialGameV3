@@ -55,7 +55,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1287492908480614}
   m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: -0.7071068}
-  m_LocalPosition: {x: -0.01, y: -0.19, z: 0}
+  m_LocalPosition: {x: -0.25, y: -3.3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4888812655425844}
@@ -68,7 +68,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1272262372674242}
   m_LocalRotation: {x: -0, y: -0, z: 0, w: 1}
-  m_LocalPosition: {x: 13.465595, y: 8.749202, z: 0}
+  m_LocalPosition: {x: 5.7, y: -5.5, z: 0}
   m_LocalScale: {x: 0.2, y: 0.2, z: 1}
   m_Children:
   - {fileID: 4860486890109350}
@@ -119,9 +119,13 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 0, y: 0.5}
-      - {x: -0.4330127, y: -0.25000003}
-      - {x: 0.43301272, y: -0.24999996}
+    - - {x: -1.1798239, y: 0.9915933}
+      - {x: -1.6619945, y: -0.8399117}
+      - {x: -1.3251019, y: -3.9192865}
+      - {x: 0.6895125, y: -3.849482}
+      - {x: 0.85313916, y: -2.8589737}
+      - {x: 0.7105422, y: -2.472386}
+      - {x: 0.8754468, y: 0.9298238}
 --- !u!82 &82670771222862182
 AudioSource:
   m_ObjectHideFlags: 1
@@ -223,7 +227,7 @@ MonoBehaviour:
   MissileExplosion: {fileID: 8300000, guid: 60d4aad6103bed84abff3dd8701b77af, type: 3}
   missileSpeed: 20
   rotateSpeed: 400
-  missileRange: 17
+  missileRange: 20
 --- !u!198 &198746816490330052
 ParticleSystem:
   m_ObjectHideFlags: 1

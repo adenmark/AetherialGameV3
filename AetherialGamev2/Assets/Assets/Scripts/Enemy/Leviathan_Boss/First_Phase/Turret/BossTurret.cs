@@ -9,7 +9,7 @@ public class BossTurret : MonoBehaviour
     public GameObject DamageParticle;
     public GameObject DeathParticle;
     public GameObject AetherPickup;
-    private Transform target;
+    public Transform target;
     private Vector3 fireTo;
 
     [Header("Attributes")]
@@ -18,6 +18,7 @@ public class BossTurret : MonoBehaviour
     public float range;
     public float rotationSpeed;
     public float speed;
+    public float Angle;
 
     private float CooldownTimer = 0;
 
@@ -32,14 +33,14 @@ public class BossTurret : MonoBehaviour
         {
             Vector2 direction = target.position - transform.position;
             float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-            Quaternion rotation = Quaternion.AngleAxis(angle-90, Vector3.forward);
+            Quaternion rotation = Quaternion.AngleAxis(angle-Angle, Vector3.forward);
             transform.rotation = Quaternion.Slerp(transform.rotation, rotation, rotationSpeed * Time.deltaTime);
         }
 
         Fire();
         if (target != null && CooldownTimer <= 0f && Vector2.Distance(transform.position, target.position) < range)
         {
-            FireBossMissile();
+            FireBossTurret();
             CooldownTimer = Cooldown;
         }
     }
@@ -57,7 +58,7 @@ public class BossTurret : MonoBehaviour
         }
     }
 
-    void FireBossMissile()
+    void FireBossTurret()
     {
         Vector2 targetPosition = new Vector2(target.position.x, target.position.y);
         fireTo = new Vector3(targetPosition.x, targetPosition.y, 0f) - transform.position;
@@ -81,9 +82,9 @@ public class BossTurret : MonoBehaviour
 
     private void OnDestroy()
     {
-        Instantiate(DeathParticle, transform.position, Quaternion.identity);
         Instantiate(AetherPickup, transform.position, Quaternion.identity);
-        GetComponentInParent<ShieldScript>().Damage(); //WHY
+        GetComponentInParent<ShieldScript>().Damage();
+        Instantiate(DeathParticle, transform.position, Quaternion.identity);
     }
 
     void OnDrawGizmosSelected()

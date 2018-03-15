@@ -10,6 +10,7 @@ TagManager:
   - PlayerProjectile
   - AetherPickup
   - Shield
+  - Boss
   layers:
   - Default
   - TransparentFX
@@ -23,8 +24,8 @@ TagManager:
   - Background
   - Enemy
   - Other
-  - 
-  - 
+  - Cloud
+  - CloudCover
   - 
   - 
   - 
@@ -58,4 +59,10 @@ TagManager:
     locked: 0
   - name: Enemy
     uniqueID: 1357040123
+    locked: 0
+  - name: Cloud
+    uniqueID: 2468172303
+    locked: 0
+  - name: CloudCover
+    uniqueID: 3923636445
     locked: 0

@@ -85,7 +85,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1725740225874278}
   m_LocalRotation: {x: -0, y: -0, z: -0.36279485, w: 0.93186903}
-  m_LocalPosition: {x: 1.44, y: 0.37, z: 7.6}
+  m_LocalPosition: {x: 1.39, y: 0.23, z: 7.6}
   m_LocalScale: {x: 2, y: 2, z: 0}
   m_Children: []
   m_Father: {fileID: 4048021546249516}
@@ -97,14 +97,14 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1189552664233430}
-  m_LocalRotation: {x: -0, y: -0, z: -0.9395716, w: 0.34235245}
-  m_LocalPosition: {x: -113.9, y: 11.3, z: 0}
-  m_LocalScale: {x: 0.20000023, y: 0.20000023, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0.9842551, w: -0.17675386}
+  m_LocalPosition: {x: 215.02, y: 14.58, z: -5}
+  m_LocalScale: {x: 0.19999996, y: 0.19999996, z: 1}
   m_Children:
   - {fileID: 4048021546249516}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -139.959}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -200.361}
 --- !u!50 &50337755000220998
 Rigidbody2D:
   serializedVersion: 4
@@ -203,17 +203,21 @@ MonoBehaviour:
   m_GameObject: {fileID: 1244039265489962}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 87f8b4fc1b7e605419ff9db12bff3dbd, type: 3}
+  m_Script: {fileID: 11500000, guid: daebe02bfe63ba94f8be6a61f728abef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TurretBullet: {fileID: 1175312272523012, guid: 803c80f3fb9f20c4895d538def93bd1b,
+  Projectile: {fileID: 1175312272523012, guid: 803c80f3fb9f20c4895d538def93bd1b, type: 2}
+  firePoint: {fileID: 4397190569320328}
+  DamageParticle: {fileID: 1084671382287926, guid: e0a84dede8301524ba52c0a78b4d1962,
     type: 2}
-  BulletSpawn: {fileID: 1725740225874278}
-  target: {fileID: 1843716985747982, guid: 68a1378dfc1894842a9a72bd403997d7, type: 2}
-  range: 15
-  fireRate: 1
-  bulletSpeed: 500
+  DeathParticle: {fileID: 0}
+  AetherPickup: {fileID: 1661759310518248, guid: c548b328bdcedd24eb00c0b8262eff18,
+    type: 2}
+  Cooldown: 2
+  range: 20
   rotationSpeed: 10
+  speed: 500
+  Angle: 0
 --- !u!212 &212064236324305016
 SpriteRenderer:
   m_ObjectHideFlags: 1

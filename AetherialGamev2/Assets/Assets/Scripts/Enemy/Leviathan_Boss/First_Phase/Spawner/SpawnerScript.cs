@@ -5,8 +5,8 @@ using UnityEngine;
 public class SpawnerScript : MonoBehaviour
 {
     public GameObject DamageParticle;
-    public GameObject aetherPickup;
     public GameObject DeathParticle;
+    public GameObject aetherPickup;
     public Transform target;
     public GameObject EnemyType;
 
@@ -28,7 +28,6 @@ public class SpawnerScript : MonoBehaviour
 
     void Update()
     {
-
         if (target != null && Vector2.Distance(transform.position, target.position) < spawnRange)
         {
             Vector2 direction = target.position - transform.position;
@@ -62,9 +61,9 @@ public class SpawnerScript : MonoBehaviour
 
     void OnDestroy()
     {
-        Instantiate(DamageParticle, transform.position, transform.rotation);
         Instantiate(aetherPickup, transform.position, Quaternion.identity);
         Instantiate(DeathParticle, transform.position, Quaternion.identity);
+        GetComponentInParent<ShieldScript>().Damage();
     }
 
     void OnDrawGizmosSelected()
