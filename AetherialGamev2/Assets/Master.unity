@@ -4479,7 +4479,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fillAmount: 1
-  lerpSpeed: 1
+  lerpSpeed: 3
   content: {fileID: 1999561699}
 --- !u!114 &578216135
 MonoBehaviour:
@@ -12571,8 +12571,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ece7c28169775e747a6ad672d2d8402d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fillAmount: 10
-  lerpSpeed: 1
+  fillAmount: 1
+  lerpSpeed: 3
   content: {fileID: 1350487268}
 --- !u!1 &1696237833
 GameObject:
